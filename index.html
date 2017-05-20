@@ -1,11 +1,35 @@
 ---
 layout: page
-title: Hey, I'm Amithash
+title: Amithash K J
 subtitle: This page is dedicated to my rants and ramblings!
-use-site-title: true
+meta-title: "Hi, I'm Anudit"
 bigimg:
-	- "/img/big-imgs/amsterdam-2013.jpg" : "Amsterdam, Netherlands (2013)"
+  - "/img/big-imgs/amsterdam-2013.jpg" : "Amsterdam, Netherlands (2013)"
 ---
+
+<!-- Typed.js --> 
+<script src="/js/jquery-1.11.2.min.js"></script>
+<script src="/js/typed.js" type="text/javascript"></script>
+<script>
+  $(function(){
+    $(".typed").typed({
+      strings: ["Technology.","Triathlon.","Travel."],
+      typeSpeed: 100,
+      loop: true,
+      backDelay: 1000
+    });
+  });
+</script>
+
+<div class="typed-js-hide">
+  <div class="row">
+    <div class="col-sm-12">
+      <div class="text-center">
+          <h1>What I like <span class="typed" style="color:#a50509";></span></h1>
+      </div>
+    </div>
+  </div>
+</div>
 
 <div class="posts-list">
   {% for post in paginator.posts %}
