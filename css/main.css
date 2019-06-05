@@ -22,9 +22,9 @@ p {
   margin: 30px 0;
 }
 h1,h2,h3,h4,h5,h6 {
-  font-family: 'Lora', 'Regular', 'Open Sans', 'Helvetica Neue', Helvetica, Arial, sans-serif; 
-  font-weight: 600;
-  color: rgb(109, 132, 180)
+  font-family: 'Montserrat', 'Regular', 'Open Sans', 'Helvetica Neue', Helvetica, Arial, sans-serif; 
+  font-weight: 400;
+  color: rgb(0, 96, 255)
 }
 a {
   color: {{ site.link-col }};
