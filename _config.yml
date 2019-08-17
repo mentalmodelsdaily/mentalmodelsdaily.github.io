@@ -27,7 +27,7 @@ navbar-links:
 # Projects: "https://github.com/kjamithash"
   Twitter: "https://twitter.com/kjamithash"
   LinkedIn: "https://www.linkedin.com/in/amithash/"
-  Résumé: "https://github.com/kjamithash/LatexDocs/blob/master/Resume/Resume_Amithash.pdf" 
+#  Résumé: "https://github.com/kjamithash/LatexDocs/blob/master/Resume/Resume_Amithash.pdf" 
 
 # Image to show in the navigation bar - image must be a square (width = height)
 # Remove this parameter if you don't want an image in the navbar
