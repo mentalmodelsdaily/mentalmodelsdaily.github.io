@@ -24,7 +24,7 @@ p {
 h1,h2,h3,h4,h5,h6 {
   font-family: 'Montserrat', 'Regular', 'Open Sans', 'Helvetica Neue', Helvetica, Arial, sans-serif; 
   font-weight: 400;
-  color: rgba(39, 103, 177, 0.952)
+  color: rgb(108, 131, 158)
 }
 a {
   color: {{ site.link-col }};
