@@ -503,6 +503,7 @@ footer .theme-by {
   display: block;
   font-family: 'Roboto', sans-serif;
   font-weight: 100;
+  font-style: light;
   color: rgb(0, 0, 0)
   margin: 10px 0 0;
 }
