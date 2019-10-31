@@ -7,10 +7,21 @@ layout: null
 /* --- General --- */
 
 body {
+  /*
   font-family: 'Open Sans', 'Times New Roman', serif;
-  /* font-size: 18px; */
+  font-size: 18px; 
   font-style: bold;
   color: #404040;
+  */
+  font-family: "Open Sans", sans-serif;
+  font-size: 14px;
+  font-style: normal;
+  font-weight: normal;
+  letter-spacing: normal;
+  line-height: 30px;
+  text-transform: none;
+  color: #000000;
+
   position: relative;
   background-color: {{ site.page-col }};
   {% if site.page-img %}
