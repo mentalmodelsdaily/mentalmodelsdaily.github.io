@@ -39,12 +39,7 @@ h1 {
   font-size: 72px;
   color: rgb(0, 0, 0)
 }
-h2 {
-  font-family: 'Roboto', sans-serif;
-  font-weight: 200;
-  color: rgb(0, 0, 0)
-}
-h3,h4,h5,h6 {
+h2,h3,h4,h5,h6 {
   font-family: 'Playfair Display', serif;
   font-style: bold;
   color: rgb(108, 131, 158)
@@ -506,8 +501,9 @@ footer .theme-by {
   font-size: 27px;
   line-height: 1.1;
   display: block;
-  font-family: 'Open Sans', 'Helvetica Neue', Helvetica, Arial, sans-serif;
-  font-weight: 300;
+  font-family: 'Roboto', sans-serif;
+  font-weight: 200;
+  color: rgb(0, 0, 0)
   margin: 10px 0 0;
 }
 .intro-header .post-heading .post-subheading {
