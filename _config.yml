@@ -14,7 +14,7 @@ baseurl: ""
 # Of course don't forget to change the username and projectname to YOUR username and project
 
 # Name of website
-title: "@kjamithash"
+title: "HOME"
 
 # Short description of your site
 #description: A virtual proof that I'm awesome
@@ -33,7 +33,8 @@ title: "@kjamithash"
 
 # List of links in the navigation bar
 navbar-links:
-  Home: ""
+  Book Notes: "books" 
+  Projects: ""
 # Projects: "https://github.com/kjamithash"
   Twitter: "https://twitter.com/kjamithash"
   LinkedIn: "https://www.linkedin.com/in/amithash/"
