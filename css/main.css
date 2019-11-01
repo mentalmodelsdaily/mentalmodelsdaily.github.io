@@ -41,8 +41,8 @@ h1 {
 }
 h2,h3,h4,h5,h6 {
   font-family: 'Playfair Display', serif;
-  font-style: bold;
-  color: rgb(108, 131, 158)
+  font-style: regular;
+  color: rgb(142, 142, 144)
 }
 
 a {
