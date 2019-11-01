@@ -41,13 +41,14 @@ h1 {
 h2 {
   font-family: 'Playfair Display', serif;
   font-style: regular;
-  font-size: 27px;
+  font-size: 25px;
   color: rgb(0, 0, 0)
 }
 h3,h4,h5,h6 {
-  font-family: 'Playfair Display', serif;
-  font-style: regular;
-  color: rgb(0, 0, 0)
+  font-family: 'Roboto', sans-serif;
+  font-size: 19px;
+  font-style: meduim;
+  color: rgb(225, 232, 240)
 }
 
 a {
