@@ -46,8 +46,8 @@ h2 {
 }
 h3,h4,h5,h6 {
   font-family: 'Roboto', sans-serif;
-  font-size: 18px;
-  font-style: light;
+  font-size: 16px;
+  font-style: thin;
   color: rgb(0, 0, 0)
 }
 
