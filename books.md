@@ -7,12 +7,11 @@ subtitle: Detailed notes from the books I’ve read
 A small summary, and also detailed notes for each. 
 This page will constantly update as I read more, so bookmark it if you want to check back in a few months.
 
-<img style="float: right;" width="155" height="187" src="/img/mentalModels.jpg">
-
 ## The Great Mental Models: General Thinking Concepts - by Farnam Street (Shane Parish)
-
 ##### Date read: 1-11-2019 
 ##### How strongly I recommend it: 7/10
+
+<img style="float: right;" width="155" height="187" src="/img/mentalModels.jpg">
 
 This book is the first volume of the series and covers 9 mental models which can be used to better understand the world and make smarter decisions. A mental model is a way to look at a problem through a certain lens. Shane has popularized mental models through his blog Farnam Street.
 
