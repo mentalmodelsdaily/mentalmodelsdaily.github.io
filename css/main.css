@@ -13,10 +13,10 @@ body {
   font-style: bold;
   color: #404040;
   */
-  font-family: "Open Sans", sans-serif;
+  font-family: 'Roboto', sans-serif;
   font-size: 14px;
-  font-style: normal;
-  font-weight: normal;
+  font-style: light;
+  font-weight: 100;
   letter-spacing: normal;
   line-height: 30px;
   text-transform: none;

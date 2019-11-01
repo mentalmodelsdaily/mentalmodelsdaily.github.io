@@ -34,7 +34,7 @@ title: "HOME"
 # List of links in the navigation bar
 navbar-links:
   Book Notes: "books" 
-  Projects: ""
+  Projects: "projects"
 # Projects: "https://github.com/kjamithash"
   Twitter: "https://twitter.com/kjamithash"
   LinkedIn: "https://www.linkedin.com/in/amithash/"
