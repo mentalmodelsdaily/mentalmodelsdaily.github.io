@@ -47,8 +47,8 @@ h2 {
 h3,h4,h5,h6 {
   font-family: 'Roboto', sans-serif;
   font-size: 19px;
-  font-style: meduim;
-  color: rgb(225, 232, 240)
+  font-style: regular;
+  color: rgb(0, 0, 0)
 }
 
 a {
