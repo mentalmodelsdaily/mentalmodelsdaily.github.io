@@ -8,6 +8,10 @@ comments: true
 ---
 <img style="float: right;" src="/img/bookImages/mentalModels.jpg">
 
+The more tools you have at your disposal, the more likely you'll use the right tool for the job. The same is true when it comes to your thinking. The quality of your outcomes depends on the mental models in your head. 
+
+This book consists of 9 mental models which can be used to better understand the world and make smarter decisions.
+
 **General Thinking Concepts:**
  
  1. **The Map is not the Territory** - Reality check
@@ -26,8 +30,11 @@ comments: true
  2. **Necessity and Sufficiency** 
  3. **Causation vs. Correlation**
 
-**1. The Map is not the Territory** 
-### Reality check
+---
+**General Thinking Concepts:**
+---
+
+**1. The Map is not the Territory** - Reality check
 
 - Maps can be anything: From travelling to a new city, to becoming a parent. Stereotypes are also maps. 
 - Maps help us navigate that terrain. But we sould update them based on our own experiences in the territory. 
@@ -38,8 +45,9 @@ Eg. Netownian physics map which Einstein changed.
 
 *The tragedy of commons* : What is common to many is taken care the least
 
-**2. Circle of Competence** 
-### What you know and don't know
+---
+
+**2. Circle of Competence** - What you know and don't know
 
 How to maintain Circle of Competence? 
   
@@ -55,8 +63,9 @@ How to operate outside Circle of Competence?
 Eg. Sherpas in the Himalayas has their CoC in hiking the Himalayas\
 Queen Elizabeth I make a council of advisors.
 
-**3. First Principles Thinking**
-### Go back to basics
+---
+
+**3. First Principles Thinking** - Go back to basics
 
 Tool to seperate facts and assumptions. 
 
@@ -72,8 +81,9 @@ Understand principles to successfully select your won methods.
 To imporve something, we need to understand why it is successsful or not. 
 Even incremental improvement is not possible if we dont identify the first principles. 
 
-**4. Thought Experiment** 
-### Imagine the possibilities
+--- 
+
+**4. Thought Experiment** - Imagine the possibilities
 
 Thought experiment is the device of the imagination used to investigate the nature of things
 
@@ -95,8 +105,9 @@ Eg. Lebron James vs Woody Allen (who would win?)\
 Einstein in the elevator with glued feet\
 Trolley experiment -  The problem of abortion and the doctrine of double effect
 
-**5. Second-Order Thinking**
-### What happens next? 
+---
+
+**5. Second-Order Thinking** - What happens next? 
 
 "Always consider the effects of effects - *Law of Unintended Consequences*"
 
@@ -109,8 +120,9 @@ Trolley experiment -  The problem of abortion and the doctrine of double effect
 Eg. Rewards for dead snakes in Delhi caused more snakes to be bred and killed.\
     Cleopatra siding with Caesar.
 
-**6. Probabilistic Thinking**
-### What are the chances?
+---
+
+**6. Probabilistic Thinking** - What are the chances?
 
 Estimate the likelyhood of any specific outcome coming to pass.
 
@@ -129,6 +141,8 @@ Estimate the likelyhood of any specific outcome coming to pass.
   Leave on time, arrive 20% early: NEVER\
   Leave on time, arrive 20% late: ALWAYS
 
+#
+
 *Orders of magnitude*
 
 Nassim Taleb in Black Swan:
@@ -137,6 +151,8 @@ Nassim Taleb in Black Swan:
 Not 10% wrong, but 100 or 1000 times wrong. 
 
 - It is important to deal with fat-tail domains by positioning ourselves to survive or benefit from the wodely unpredictable future, by planning for a world we don't understand. 
+
+#
 
 *Antifragility*
 
@@ -149,22 +165,16 @@ The anti-fragile mindset is a unique one. Whenever possible try to create scener
   - Prepare : Arm ourselves with anti-fragility so we can benefit from the volatility of the world. 
 
 - How to prepare?
-  1.  Upside Optionality\
-  Seek out situations that we expect, have good odds of offereing us oppoutunities. Eg. A party with important guests and nothing to lose. 
+  1.  Upside Optionality
+      - Seek out situations that we expect, have good odds of offereing us oppoutunities. Eg. A party with important guests and nothing to lose. 
   
   2.  Learn how to fail properly
-      1.  Never take a risk where your are taken out of the game completely (100% loss)
-      2.  Develop personal resiliance to learn from failures and start again. 
+      - Never take a risk where your are taken out of the game completely (100% loss)
+      - Develop personal resiliance to learn from failures and start again. 
 
+---
 
-
-
-
-
-
-
-**7. Inversion**
-### Change your perspective
+**7. Inversion** - Change your perspective
 
 Inversion is powerful tool, which helps you identify and remove obstacles to success. 
 
@@ -175,8 +185,9 @@ Inversion is powerful tool, which helps you identify and remove obstacles to suc
 Eg. Jacobi solving Math theorems by assuming the hypothesis is true and working backwards\
 Lucky Strike sold cigarettes to women by creating an envirom´nment for women to smoke. (Selling cigarettes instead of sweets to improve body shape, and making small kitchen canisters to hold cigarettes) 
 
-**8. Occam’s Razor**
-### Keep it simple
+---
+
+**8. Occam’s Razor** - Keep it simple
 
 Simpler explanations are more likely to be true than complicated ones. 
 
@@ -192,6 +203,8 @@ If each variable has a 99% chance of being correct:\
  The first explanation is only 3% likely to be wrong.\
  The second more complex explanation is about 9 times as likely to be wrong or 26%
 
+---
+
 **9.  Hanlon’s Razor** 
 ### Dont assume the worst
 
@@ -205,14 +218,23 @@ We should not attribute to malice (desire to cause harm to another), that which 
 
 Eg. How Arkhinov saved the world from a nuclear lauch. 
 
+---
+**Supporting Ideas:**
+---
 **Falsifiability** 
 
 If a theory cannot be proven false, because there is no way of testing them, then the best we can do is trying to determine the probability of being true. 
+
+---
 
 **Necessity and Sufficiency** 
 
 Necessary conditions for success ~= Sufficient conditions for success
 
+---
+
 **Causation vs. Correlation**
 
 We notice 2 things happening at the same time (corelation) and mistakingly conclude that one causes the other (causation).
+
+---
