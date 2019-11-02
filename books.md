@@ -15,4 +15,4 @@ This page will constantly update as I read more, so bookmark it if you want to c
 
 This book is the first volume of the series and covers 9 mental models which can be used to better understand the world and make smarter decisions. A mental model is a way to look at a problem through a certain lens. Shane has popularized mental models through his blog Farnam Street.
 
-[Read my notes](https://amithash.com/2019-11-01-mentalModels/), or go to the [Amazon](https://www.amazon.com/Great-Mental-Models-Thinking-Concepts-ebook/dp/B07P79P8ST) page for details and reviews.
+[Read my notes](https://amithash.com/2019-11-01-mentalModels/), or go to the [Amazon](https://amzn.to/2oAZQ8y) page for details and reviews.
