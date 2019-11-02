@@ -1,7 +1,7 @@
 ---
 layout: post
 title: 'Book Notes: 1'
-subtitle: 'The Great Mental Models: General Thinking Concepts - Shane Parish'
+subtitle: 'The Great Mental Models - Vol 1: General Thinking Concepts - by Shane Parish'
 published: true
 tags: [mental models, book notes, summaries, notes, lessons, farnam street] 
 comments: true
@@ -205,8 +205,7 @@ If each variable has a 99% chance of being correct:\
 
 ---
 
-**9.  Hanlon’s Razor** 
-### Dont assume the worst
+**9.  Hanlon’s Razor** - Dont assume the worst
 
 We should not attribute to malice (desire to cause harm to another), that which is more easily explained by stupidity. 
 
