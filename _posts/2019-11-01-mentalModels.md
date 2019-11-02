@@ -43,24 +43,24 @@ Eg. Netownian physics map which Einstein changed.
 
 How to maintain Circle of Competence? 
   
--  The world is dynamic, knowledge gets updated, and so too must our circle. 
--  Curiosity, Deisre to Learn, Monitoring and Feedback. 
--  Get a COACH!!
+- The world is dynamic, knowledge gets updated, and so too must our circle. 
+- Curiosity, Deisre to Learn, Monitoring and Feedback. 
+- Get a COACH!!
 
 How to operate outside Circle of Competence? 
   
--  Learn atelast the basics, while acknowldeging your are a stranger and not a lifer. 
--  Talk to someone whose Circle of Competence in that field is strong. 
+- Learn atelast the basics, while acknowldeging your are a stranger and not a lifer. 
+- Talk to someone whose Circle of Competence in that field is strong. 
 
-Eg. Sherpas in the Himalayas has their CoC in hiking the Himalayas; Queen Elizabeth I make a council of advisors.  
+Eg. Sherpas in the Himalayas has their CoC in hiking the Himalayas\
+Queen Elizabeth I make a council of advisors.
 
 **3. First Principles Thinking**
 ### Go back to basics
 
 Tool to seperate facts and assumptions. 
 
-There may be a million methods, but only a few principles. 
-
+There may be a million methods, but only a few principles.\ 
 Understand principles to successfully select your won methods. 
 
 2 techniques:
@@ -75,21 +75,135 @@ Even incremental improvement is not possible if we dont identify the first princ
 **4. Thought Experiment** 
 ### Imagine the possibilities
 
+Thought experiment is the device of the imagination used to investigate the nature of things
+
+*Creativity is intelligence having fun*
+
+Steps:
+- Ask a question
+- Conduct background research
+- Construct hypothesis
+- Test with thought experiments
+- Analyze outcomes and draw conclusions
+- Compare to hypothesis and adjust
+
+A thought experiment allows us to verify if our natural intuition to correct by running experiments in our consious minds to make a point clear. 
+
+In order to improve our decision making and increase our own chances of success, we must be willing to prove all of the possibilities we can think of. 
+
+Eg. Lebron James vs Woody Allen (who would win?)\
+Einstein in the elevator with glued feet\
+Trolley experiment -  The problem of abortion and the doctrine of double effect
+
 **5. Second-Order Thinking**
 ### What happens next? 
+
+"Always consider the effects of effects - *Law of Unintended Consequences*"
+
+- Prioritize long term benifits over immediate gains
+- Arguements are more effective if we consider the second-order effects and put effort into verifying that they are desirable as well. 
+- If we are worried about all the possible effects of effects of our actions, we would likely never do anything, and we'd be wrong. 
+- How you'll balance the need for higher-order thinking with practical, limiting judgement must be taken on a case by case basis. 
+- A little time spent thinking ahead can save us massive amounts of time later. 
+
+Eg. Rewards for dead snakes in Delhi caused more snakes to be bred and killed.\
+    Cleopatra siding with Caesar.
 
 **6. Probabilistic Thinking**
 ### What are the chances?
 
+Estimate the likelyhood of any specific outcome coming to pass.
+
+*Bayesian Thinking*
+- Take into account what we already know when we learn something new
+- Use all relavent prior information in making decisions. 
+
+*Fat-tailed curves*
+- Bell curve - Extremes are predictable. Deviation from the mean is predictable
+- Fat-tail curve - No cap on extreme events. The more extreme events possible, the higher the probability that one of them will occur. 
+
+*Asymmetries*
+- Metaprobability: The probability that your probability estimates themselves are good. 
+- Estimation errors are asymmetric. 
+  - Eg. Estimate the effect of traffice on travel time:\
+  Leave on time, arrive 20% early: NEVER\
+  Leave on time, arrive 20% late: ALWAYS
+
+*Orders of magnitude*
+
+Nassim Taleb in Black Swan:
+
+- Small error in measuring the risk of an extreme event can mean we're not just slightly off, but way off in orders of magniture.\
+Not 10% wrong, but 100 or 1000 times wrong. 
+
+- It is important to deal with fat-tail domains by positioning ourselves to survive or benefit from the wodely unpredictable future, by planning for a world we don't understand. 
+
+*Antifragility*
+
+Nassim Talem in Antifragile:
+
+The anti-fragile mindset is a unique one. Whenever possible try to create scenerios where randomness and uncertainity are your friends and not your enemies. 
+
+- 2 ways to deal with volatile environments:
+  - Predict : never works
+  - Prepare : Arm ourselves with anti-fragility so we can benefit from the volatility of the world. 
+
+- How to prepare?
+  1.  Upside Optionality\
+  Seek out situations that we expect, have good odds of offereing us oppoutunities. Eg. A party with important guests and nothing to lose. 
+  
+  2.  Learn how to fail properly
+      1.  Never take a risk where your are taken out of the game completely (100% loss)
+      2.  Develop personal resiliance to learn from failures and start again. 
+
+
+
+
+
+
+
+
 **7. Inversion**
 ### Change your perspective
+
+Inversion is powerful tool, which helps you identify and remove obstacles to success. 
+
+- Approach a situation from the opposite end of the normal starting point. - Flip the problem around and think backward
+- Start by assuming that what you're trying to prove is either True or False, then show what else would have to be true. 
+- INVERT when stuck!!
+
+Eg. Jacobi solving Math theorems by assuming the hypothesis is true and working backwards\
+Lucky Strike sold cigarettes to women by creating an envirom´nment for women to smoke. (Selling cigarettes instead of sweets to improve body shape, and making small kitchen canisters to hold cigarettes) 
 
 **8. Occam’s Razor**
 ### Keep it simple
 
+Simpler explanations are more likely to be true than complicated ones. 
+
+*"Anybody can meke the simple complicated. Creativity is making the complicated simple"*
+
+- If all else is equal, i.e if two competing models both have equal explanatory power, it's more likely that the simple solution suffices. 
+
+Eg. Take 2 competing explanations, each of which seem to equally explain a given phenomenon:
+
+If one of them requires the interaction of 3 variables and the other the intercation of 30 variables, which of these is more liekly to be in error?
+
+If each variable has a 99% chance of being correct:\
+ The first explanation is only 3% likely to be wrong.\
+ The second more complex explanation is about 9 times as likely to be wrong or 26%
+
 **9.  Hanlon’s Razor** 
 ### Dont assume the worst
 
+We should not attribute to malice (desire to cause harm to another), that which is more easily explained by stupidity. 
+
+*Devil Fallacy - To attribute conditions to villainy, that simple result from stupidity.*
+
+- Failing to prioritize stupidity over malice causes things like paranoia. 
+- Malice puts you at the center of everyone else's world. This is an incredibly self-centered approach to life. 
+- In reality, for every act of malice, there is almost certainly far more ignorance, stupidity and laziness. 
+
+Eg. How Arkhinov saved the world from a nuclear lauch. 
 
 **Falsifiability** 
 
