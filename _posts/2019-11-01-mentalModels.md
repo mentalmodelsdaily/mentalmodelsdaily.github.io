@@ -1,11 +1,12 @@
 ---
 layout: post
 title: 'The Great Mental Models: General Thinking Concepts - Shane Parish'
-published: false
+published: true
 subtitle: Each post also has a subtitle
 tags: [mental models, book notes, summaries, notes, lessons, farnam street] 
 comments: true
 ---
+<img style="float: right;" src="/img/bookImages/mentalModels.jpg">
 
  #### General Thinking Concepts: 
  
