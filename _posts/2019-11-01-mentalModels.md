@@ -6,7 +6,7 @@ published: true
 tags: [mental models, book notes, summaries, notes, lessons, farnam street] 
 comments: true
 ---
-<img style="float: right;" src="/img/bookImages/mentalModels.jpg">
+<img style="float: right;" src="/img/bookImages/mentalModels/mentalModels.jpg">
 
 The more tools you have at your disposal, the more likely you'll use the right tool for the job. The same is true when it comes to your thinking. The quality of your outcomes depends on the mental models in your head. 
 
@@ -48,6 +48,8 @@ Eg. Netownian physics map which Einstein changed.
 ---
 
 **2. Circle of Competence** - What you know and don't know
+
+<img style="float: right;" src="/img/bookImages/mentalModels/CoC.png">
 
 How to maintain Circle of Competence? 
   
@@ -141,8 +143,6 @@ Estimate the likelyhood of any specific outcome coming to pass.
   Leave on time, arrive 20% early: NEVER\
   Leave on time, arrive 20% late: ALWAYS
 
-#
-
 *Orders of magnitude*
 
 Nassim Taleb in Black Swan:
@@ -151,8 +151,6 @@ Nassim Taleb in Black Swan:
 Not 10% wrong, but 100 or 1000 times wrong. 
 
 - It is important to deal with fat-tail domains by positioning ourselves to survive or benefit from the wodely unpredictable future, by planning for a world we don't understand. 
-
-#
 
 *Antifragility*
 
@@ -193,6 +191,8 @@ Simpler explanations are more likely to be true than complicated ones.
 
 *"Anybody can meke the simple complicated. Creativity is making the complicated simple"*
 
+<img style="float: right;" src="/img/bookImages/mentalModels/OccamRazor.png">
+
 - If all else is equal, i.e if two competing models both have equal explanatory power, it's more likely that the simple solution suffices. 
 
 Eg. Take 2 competing explanations, each of which seem to equally explain a given phenomenon:
@@ -221,6 +221,7 @@ Eg. How Arkhinov saved the world from a nuclear lauch.
 ---
 **Supporting Ideas:**
 ---
+
 **Falsifiability** 
 
 If a theory cannot be proven false, because there is no way of testing them, then the best we can do is trying to determine the probability of being true. 
