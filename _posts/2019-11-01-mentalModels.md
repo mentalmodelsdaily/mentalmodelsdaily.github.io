@@ -8,8 +8,6 @@ comments: true
 ---
 <img style="float: right;" src="/img/bookImages/mentalModels/mentalModels.jpg">
 
-Go to the [Amazon page](https://amzn.to/2oAZQ8y) for details and reviews.
-
 The more tools you have at your disposal, the more likely you'll use the right tool for the job. The same is true when it comes to your thinking. The quality of your outcomes depends on the mental models in your head. 
 
 This book consists of 9 mental models which can be used to better understand the world and make smarter decisions.
