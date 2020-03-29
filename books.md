@@ -21,7 +21,7 @@ This book is the first volume of the series and covers 9 mental models which can
 ##### Date read: 26-03-2020 
 ##### How strongly I recommend it: 8/10
 
-<img style="float: right;" width="155" height="187" src="/img/bookImages/PoP/cover.jpg">
+<img style="float: right;" width="140" height="200" src="/img/bookImages/PoP/cover.jpg">
 
 Inspired by Charlie Munger's "Poor Charlie's Almanac" Laurence Endersen puts together this consise, clearly written, incredible little "Lessons for life" book, packed with wisdom on a wide range of topics from decision making, career choice to having kids. 
 
