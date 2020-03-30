@@ -23,7 +23,7 @@ This book is the first volume of the series and covers 9 mental models which can
 
 <img style="float: right;" width="140" height="200" src="/img/bookImages/PoP/cover.jpg">
 
-Inspired by Charlie Munger's "Poor Charlie's Almanac" Laurence Endersen puts together this consise, clearly written, incredible little "Lessons for life" book, packed with wisdom on a wide range of topics from decision making, career choice to having kids. 
+Inspired by Charlie Munger's "Poor Charlie's Almanac" Laurence Endersen puts together this concise, clearly written, incredible little "Lessons for life" book, packed with wisdom on a wide range of topics from decision making, career choice to having kids. 
 
 [Read my notes](https://amithash.com/2020-03-27-PoP/)
 
