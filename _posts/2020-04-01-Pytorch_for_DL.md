@@ -1,7 +1,6 @@
 ---
 layout: post
-title: 'Project: 1'
-subtitle: 'Creating and Deploying Deep Learning applications in PyTorch'
+subtitle: '*Project* : Creating and Deploying Deep Learning applications in PyTorch'
 published: true
 tags: [projects] 
 comments: true

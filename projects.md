@@ -19,4 +19,6 @@ I create the following models:
 - Experiment with transfer learning to improve the accuracy of the CNN model. 
 - Using tensorboard to visualize a neural network with Pytorch
 
-[Read my notes](https://amithash.com/2020-04-01-Pytorch_for_DL/)
+[Project Notes](https://amithash.com/2020-04-01-Pytorch_for_DL/)
+
+[Github Link](https://github.com/kjamithash/Pytorch_DeepLearning_Experiments)
