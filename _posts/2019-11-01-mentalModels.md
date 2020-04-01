@@ -3,7 +3,7 @@ layout: post
 title: 'Book Notes: 1'
 subtitle: 'The Great Mental Models - Vol 1: General Thinking Concepts - by Shane Parish'
 published: true
-tags: [mental models, book notes, summaries, notes, lessons, farnam street] 
+tags: [mental models, book notes] 
 comments: true
 ---
 <img style="float: right;" src="/img/bookImages/mentalModels/mentalModels.jpg">
