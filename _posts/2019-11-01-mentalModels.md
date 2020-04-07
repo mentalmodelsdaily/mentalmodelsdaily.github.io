@@ -1,10 +1,11 @@
 ---
 layout: post
-title: 'Book Notes: 1'
-subtitle: 'The Great Mental Models - Vol 1: General Thinking Concepts - by Shane Parish'
+title: 'The Great Mental Models - Vol 1: General Thinking Concepts - by Shane Parish'
+subtitle: 'Book Notes: 1'
 published: true
 tags: [mental models, book notes] 
 comments: true
+image: "/img/bookImages/mentalModels/mentalModels-circle.png"
 ---
 <img style="float: right;" src="/img/bookImages/mentalModels/mentalModels.jpg">
 

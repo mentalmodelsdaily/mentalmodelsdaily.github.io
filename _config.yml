@@ -120,7 +120,7 @@ share-links-active:
 google_analytics: "UA-141122678-1"
 
 #pagination
-gems: [jekyll-paginate]
+plugins: [jekyll-paginate]
 paginate: 5
 paginate_path: "blog/page:num"
 

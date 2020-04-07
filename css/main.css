@@ -363,17 +363,18 @@ footer .theme-by {
 .post-preview .post-title {
   font-size: 30px;
   margin-top: 0;
+  margin-bottom: 5px;
 }
 .post-preview .post-subtitle {
   margin: 0;
   font-weight: 300;
-  margin-bottom: 10px;
+  margin-top: 0;
+  margin-bottom: 18px;
 }
 .post-preview .post-meta,
 .post-heading .post-meta {
   color: #808080;
-  font-size: 18px;
-  font-style: italic;
+  font-size: 15px;
   margin: 0 0 10px;
 }
 .post-preview .post-entry {
@@ -402,12 +403,15 @@ footer .theme-by {
   width: 192px;
 }
 .post-preview .post-read-more {
-  font-weight: 800;
+  font-weight: 450;
+  font-family: 'Roboto', sans-serif;
+  font-size: 16px;
+  font-style: thin;
 }
 
 @media only screen and (min-width: 768px) {
   .post-preview .post-title {
-    font-size: 36px;
+    font-size: 21px;
   }
 }
 
