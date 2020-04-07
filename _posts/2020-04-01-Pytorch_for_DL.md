@@ -5,6 +5,8 @@ subtitle: 'Project: 1'
 published: true
 tags: [projects, pytorch, deep learning] 
 comments: true
+gh-repo: kjamithash/Pytorch_DeepLearning_Experiments
+gh-badge: [star, fork, follow]
 image: "/img/bookImages/pytorch/pytorch-logo-circle.png"
 
 ---
