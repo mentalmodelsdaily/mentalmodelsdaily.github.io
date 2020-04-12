@@ -15,7 +15,6 @@ The book is split into four core themes:
 - Part THREE - The Physics and Mathematics of Misjudgments
 - Part FOUR - Guidelines to Better Thinking
 
-
 ## Contents:
 
 [**PART ONE - WHAT INFLUENCES OUR THINKING?**](#part-one---what-influences-our-thinking)
@@ -108,7 +107,25 @@ TEXT
 ---
 ### 1. **Systems thinking** 
 ---
-TEXT 
+* *Wanted & unwanted consequences* - Failing to consider that actions have both intended and unintended consequences. Includes failing to consider secondary and higher order consequences and inevitable implications.
+
+    - By solving one problem, we generate another one and sometimes create an even worse one.
+
+* *The whole system* - Failing to consider the whole system in which actions and reactions take place, the important factors that make up the system, their relationships and effects of changes on system outcome.
+
+    - Try to optimize the whole and not a system's individual parts.
+
+* *Reactions of others* - Failing to consider the likely reactions of others - what is best to do may depend on what others do.
+
+* *The winner's curse* - Failing to consider the implications of winning a bid - overestimating value and paying too much.
+
+    - Auction: What you won was the right to pay more for something than everyone else thought it was worth.
+
+    - The other party is most likely to accept our offer when it is least favorable to us.
+
+* *Predictions* - Overestimating predictive ability or using unknowable factors in making predictions.
+
+    - Nobody can forecast interest or currency rates, the GDP, turning points in the economy, the stock market, etc. Massive amounts of information don't help.
 
 [Back to contents](#contents)
 
@@ -116,7 +133,21 @@ TEXT
 
 ### 2. **Scale and limits** 
 ---
-TEXT 
+* *Scale of size and time* - Failing to consider that changes in size or time influence form, function and behavior.
+
+    - Adding $20k to the payroll should be evaluated as a $3M decision, over lifetime, factoring in raises, benefits, and other expenses.
+
+* *Breakpoints, critical thresholds or limits* - Failing to consider breakpoints, critical thresholds or limits
+
+    - Advantage of scale: In some businesses, things cascade toward the overwhelming dominance of one firm - to a winner-take-all situation.
+
+* *Constraints* - Failing to consider constraints - that a system's performance is constrained by its weakest link.
+
+    - Warren Buffett says: "It is not necessary to do extraordinary things to get extraordinary results."
+
+    - In many business activities a few things can produce much of the value.
+
+Ask: How do we allocate our time, work, attention and money? Can we identify the few things that really matter? 
 
 [Back to contents](#contents)
 
