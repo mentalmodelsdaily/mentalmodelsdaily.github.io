@@ -19,13 +19,23 @@ This book is the first volume of the series and covers 9 mental models which can
 
 ## Pebbles of Perception - by Laurence Endersen
 ##### Date read: 26-03-2020 
-##### How strongly I recommend it: 8/10
+##### How strongly I recommend it: 9/10
 
 <img style="float: right;" width="140" height="200" src="/img/bookImages/PoP/cover.jpg">
 
 Inspired by Charlie Munger's "Poor Charlie's Almanac" Laurence Endersen puts together this concise, clearly written, incredible little "Lessons for life" book, packed with wisdom on a wide range of topics from decision making, career choice to having kids. 
 
 [Read my notes](https://amithash.com/2020-03-27-PoP/)
+
+## Seeking Wisdom - From Darwin to Munger - by Peter Bevelin
+##### Date read: 12-04-2020 
+##### How strongly I recommend it: 7/10
+
+<img style="float: right;" width="140" height="200" src="/img/bookImages/seekingWisdom/cover.jpg">
+
+A great compilation of Buffet and Munger's words of wisdom, and their approach to clear thinking in the context of work, investing and in life. This book reads like information dump. It takes a certain intelligence to be able to read it at all, but if you can follow it, it will change your life. This is the kind of the book, whose knowledge if applied, could give you the highest rewards in the long run.
+
+[Read my notes](https://amithash.com/2020-04-12-seekingWisdom/)
 
 
 
