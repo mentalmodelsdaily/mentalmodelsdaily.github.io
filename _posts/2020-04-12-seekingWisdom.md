@@ -113,7 +113,7 @@ TEXT
 
 * __*The whole system*__ - Failing to consider the whole system in which actions and reactions take place, the important factors that make up the system, their relationships and effects of changes on system outcome.
 
-    - Try to optimize the whole and not a system's individual parts.
+    - Try to optimize the whole and not a system's individual parts. Think through what other variables may change when we alter a factor in a system. 
 
 * __*Reactions of others*__ - Failing to consider the likely reactions of others - what is best to do may depend on what others do.
 
@@ -126,6 +126,8 @@ TEXT
 * __*Predictions*__ - Overestimating predictive ability or using unknowable factors in making predictions.
 
     - Nobody can forecast interest or currency rates, the GDP, turning points in the economy, the stock market, etc. Massive amounts of information don't help.
+
+    - "We try and predict what individual investments will swim well in relation to the tide. And then we tend to accept the effects of the tide as those effects fall." - Charles Munger 
 
 [Back to contents](#contents)
 
@@ -141,9 +143,11 @@ TEXT
 
     - Advantage of scale: In some businesses, things cascade toward the overwhelming dominance of one firm - to a winner-take-all situation.
 
-* __*Constraints*__ - Failing to consider constraints - that a system's performance is constrained by its weakest link.
+* __*Size and frequency*__ - The frequency of some events and attributes are inversely proportional to their size. 
 
     - Warren Buffett says: "It is not necessary to do extraordinary things to get extraordinary results."
+
+* __*Constraints*__ - Failing to consider constraints - that a system's performance is constrained by its weakest link.
 
     - In many business activities a few things can produce much of the value.
 
@@ -313,7 +317,70 @@ __*Ask:*__ How do we allocate our time, work, attention and money? Can we identi
 ---
 ### 1. **Models of reality** 
 ---
-TEXT 
+
+Developing the habit of mastering the multiple models which underlie reality is the best thing you can do.. .It's just so much fun - and it works so well.
+
+Ask:
+
+- What is the underlying big idea?
+- Do I understand its application in practical life?
+- Does it help me understand the world?
+- How does it work?
+- Why does it work?
+- Under what conditions does it work?
+- How reliable is it?
+- What are its limitations?
+- How does it relate to other models?
+
+* __*What characterizes a useful model?*__ -
+
+    Eg. A useful idea from chemistry is autocatalysis: If you get a certain kind of process going on in chemistry, it speeds up on it's own. You accomplish A - and, all of a sudden, you're getting A + B + C for a while. 
+
+    Disney and Coke are good examples of autocatalysis, where they prospered when the video casette and refrigeration where invented. 
+
+    A valuable model produces meaningful explanations and predictions of likely future consequences where the cost of being wrong is high. 
+
+    A model should be simple to use. If it is complicated, we don't use it. 
+
+* __*Considering many ideas help us achieve a holistic view.*__ - 
+
+    Since no single discipline has all the answers, we need to understand and use the big ideas from all the important disciplines - mathematics, physics, chemistry, engineering, biology, psychology, and rank and use them in order of their reliability. 
+
+    If you don't have the full repertoire of models, you'll overutilize the limited repertoire you have - including use of models that are inappropriate just because they're available to you in the limited stock you have in mind.
+
+    Have a full kit of tools. Go through them in your mind checklist-style.
+
+    Find connections between ideas. Derive new ideas from these connections.
+
+    We can combine ideas from different disciplines. The ideas of scaling from mathematics, systems and constraints from physics, and competitive advantage from microeconomics often explain how business value is created or destroyed. 
+
+    We can try to see relationships between phenomena, and try to find one principle that can explain them all. Maxwell combined in one model the laws of electricity and magnetism with the laws of behavior of light. This single model explained optical, electrical and magnetic phenomena. 
+
+    We can find similarities or functional equivalents within or between disciplines. The functional equivalent of viscosity from chemistry is stickiness in economics. 
+
+
+* __*How to learn an idea so it sticks to our memory?*__ -
+
+    - One sentence explanation
+
+        Feynman's explanation of scientific knowledge in a sentence is *All things are made up of atoms - little particles that move around in perpetual motion, attracting each other when they are a little distance apart, but repelling upon being squeezed into one another*
+
+        Psychology - *We get what we reward for.*
+
+
+    - Give it a hook
+    
+        Associate the model with a dramatic real-life story, analogy, individual, or picture. 
+
+* __*Search for explanations*__ -
+
+    One way of forcing us to learn models tis to open our eyes and look at things we see around us and ask "why" things are happening. 
+
+    There are no foolish questions and no man becomes a fool until he has stopped asking questions. 
+
+    All knowledge is subject to change as new evidence arrives. This means we have to continuously learn and re-learn. 
+
+    *The people who use their brains don't lose them.*
 
 [Back to contents](#contents)
 
