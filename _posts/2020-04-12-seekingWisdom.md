@@ -17,11 +17,6 @@ The book is split into four core themes:
 
 ## Contents:
 
-[**PART ONE - WHAT INFLUENCES OUR THINKING?**](#part-one---what-influences-our-thinking)
-1. [Our anatomy sets the limits for our behavior](#1-our-anatomy-sets-the-limits-for-our-behavior)
-2. [Evolution selected the connections that produce useful behavior for survival and reproduction](#2-evolution-selected-the-connections-that-produce-useful-behavior-for-survival-and-reproduction)
-3. [Adaptive behavior for survival and reproduction](#3-adaptive-behavior-for-survival-and-reproduction)
-
 [**PART TWO - THE PSYCHOLOGY OF MISJUDGMENTS**](#part-two---the-psychology-of-misjudgments)
 1. [Misjudgments explained by psychology](#1-misjudgments-explained-by-psychology)
 2. [Psychological reasons for mistakes](#2-psychological-reasons-for-mistakes)
@@ -51,35 +46,10 @@ The book is split into four core themes:
 11. [Risk](#11-risk) 
 12. [Attitudes](#12-attitudes) 
 
- ---
- ---
-## PART ONE - WHAT INFLUENCES OUR THINKING
- ---
- ---
-### 1. **Our anatomy sets the limits for our behavior**
----
-TEXT 
-
-[Back to contents](#contents)
+[**Book Takeaways**](#takeaways)
 
  ---
-### 2. **Evolution selected the connections that produce useful behavior for survival and reproduction**
----
-TEXT 
-
-
-[Back to contents](#contents)
-
- ---
-
-### 3. **Adaptive behavior for survival and reproduction**
----
-TEXT 
-
-
-[Back to contents](#contents)
-
- ---
+ 
 
 ---
 ## PART TWO - THE PSYCHOLOGY OF MISJUDGMENTS
@@ -87,7 +57,198 @@ TEXT
 ---
 ### 1. **Misjudgments explained by psychology** 
 ---
-TEXT 
+
+28 REASONS FOR MISJUDGEMENTS AND MISTAKES:
+
+#### 1. Bias from mere association
+
+Automatically connecting a stimulus with pain or pleasure; including liking or disliking something associated with something bad or good. Includes seeing situations as identical because they seem similar. Also bias from Persian Messenger Syndrome - not wanting to be the carrier of bad news.
+
+#### 2. Underestimating the power of rewards and punishment
+
+People repeat actions that result in rewards and avoid actions that they are punished for.
+
+If people don't have to pay for a benefit, they often overuse it.
+
+After a success, we become overly optimistic risk-takers. After a failure, we become overly pessimistic and risk-averse, even in cases where success or failure was merely a result of chance.
+
+We do not improve the man we hang. We improve others by him.
+
+Incentives to performance: make people share both the upside and downside. Make them understand the link between their performance, their reward, and what you finally want to accomplish.
+
+Reward individual performance, not effort or length in organization.
+
+#### 3. Underestimating bias from own self-interest and incentives.
+
+We never look at projections, but we look very deeply at track records. It's naive to think that projections have any utility whatsoever.
+
+Do not train learning by force. Lead them by what amuses them.
+
+Convince people by asking questions that illuminate consequences.
+
+#### 4. Self-serving bias
+
+Overly positive view of our abilities and future. Includes over-optimism.
+
+The more we think we know about a subject, the less willing we are to use other ideas. We solve a problem in a way that agrees with our area of expertise.
+
+Try to be consistently not stupid, instead of trying to be very intelligent.
+
+It's the strong swimmers who drown.
+
+Ask: How can I be wrong? Who can tell me if I'm wrong?
+
+Successes draw far more attention than failures.
+
+#### 5. Self-deception and denial
+
+Distortion of reality to reduce pain or increase pleasure. Includes wishful thinking.
+
+#### 6. Bias from consistency tendency 
+
+Being consistent with our prior commitments and ideas even when acting against our best interest or in the face of disconfirming evidence. Includes confirmation bias - looking for evidence that confirms our actions and beliefs and ignoring or distorting disconfirming evidence.
+
+We look for evidence that confirms our ideas, beliefs, and actions. When we've made an investment or entered into a relationship, we tend to seek out evidence confirming that it was the right decision and to ignore information that shows it was wrong.
+
+The more public a decision is, the less likely it is that we will change it.
+
+We don't have a strategic plan. Thus we feel no need to proceed in an ordained direction, but can instead simply decide what makes sense.
+
+The task of man is not to see what lies dimly in the distance, but to do what lies dearly at hand.
+
+Respond intelligently and diligently to the information and challenges at hand.
+
+Make it voluntary, for people to take inner responsibility for their actions. When internally motivated by satisfaction or interest, we feel in control, free from incentives or outside pressure.
+
+Convictions are more dangerous enemies of truth than lies.
+
+To say you are wrong is saying you are wiser today than yesterday.
+
+When you find yourself in a hole, stop digging.
+
+#### 7. Bias from deprival syndrome
+
+Strongly reacting (including desiring and valuing more) when something we like and have (or almost have) is (or threatens to be) taken away or "lost." Includes desiring and valuing more what we can't have or what is (or threatens less available to be).
+
+In investing, it's a mistake to try to make it back the way you lost it.
+
+People respond to immediate crisis and threats. Anything that happens gradually, they tend to put off If we want people to take a risk, we should make them feel behind (losing). If we want them to stay with the status quo or reject risk, we should make them feel safe.
+
+#### 8. Status quo bias and do-nothing syndrome
+
+Keeping things the way they are. Includes minimizing effort and a preference for default options.
+
+Predicting rain doesn't count; building arks does.
+
+It took Noah 20 years to build an ark. And people said he was being silly because the skies were beautiful. And of course, the whole time, he looked stupid - until it started raining. You can spend a long time building an ark while everybody else is out there enjoying the sun.
+
+Make yourself do the thing you have to do when it ought to be done whether you like it or not.
+
+#### 9. Impatience 
+
+Valuing the present more highly than the future.
+
+#### 10. Bias from envy and jealousy.
+
+Man will do many things to get himself loved; he will do all things to get himself envied.
+
+#### 11. Distortion by contrast comparison 
+
+Judging and perceiving the absolute magnitude of something not by itself but based only on its difference to something else presented closely in time or space or to some earlier adaptation level. Also underestimating the consequences over time of gradual changes.
+
+#### 12. Bias from anchoring 
+
+Over-weighing certain initial information as a reference point for future decisions.
+
+#### 13. Over-influence by vivid or the most recent information.
+
+Back up vivid stories with facts and numbers.
+
+#### 14. Omission and abstract blindness 
+
+Only seeing stimuli we encounter or that grabs our attention, and neglecting important missing information or the abstract. Includes inattentional blindness.
+
+Today 14 million people didn't win the lottery.
+
+We don't see the quiet losers. We don't see those who didn't predict well.
+
+Missing information doesn't draw our attention.
+
+#### 15. Bias from reciprocation tendency 
+
+Repaying in kind what others have done for or to us like favors, concessions, information and attitudes.
+
+Our managers are independently wealthy. They don't need to get up and go to work at all. So I've got to create an environment where they thing they want to do most in the world is go to work. What would make me feel that way?
+
+People don't want to feel indebted. Allow people to give back what we've given them.
+
+#### 16. Bias from over-influence by liking tendency 
+
+Believing, trusting and agreeing with people we know and like. Includes bias from over-desire for liking and social acceptance and for avoiding social disapproval. Also bias from disliking - our tendency to avoid and disagree with people we don't like.
+
+Talk to a man about himself and he will listen for hours.
+
+#### 17. Bias from over-influence by social proof - imitating the behavior of many others or similar others. Includes crowd folly.
+
+When all are accountable, no one is accountable.
+
+#### 18. Bias from over-influence by authority 
+
+Trusting and obeying a perceived authority or expert.
+
+After the break-in at John's office, he said: "Of course, I believed he was a security guard, since he had a uniform."
+
+#### 19. Sensemaking 
+
+Constructing explanations that fit an outcome. Includes being too quick in drawing conclusions. Also thinking events that have happened were more predictable than they were.
+
+Everything seems stupid when it fails. In hindsight, everything seems obvious. Look at earlier decisions in the context of their own time.
+
+If our predictions have been a little better than other people's, it's because we've tried to make fewer of them.
+
+#### 20. Reason-respecting 
+
+Complying with requests merely because we've been given a reason. Includes underestimating the power in giving people reasons.
+
+If you always tell people why, they'll understand it better, they'll consider it more important, and they'll be more likely to comply.
+
+You cannot reason a person out of a position he did not reason himself into in the first place.
+
+People are more moved by what they feel than by what they understand.
+
+#### 21. Believing first and doubting later 
+Believing what is not true, especially when distracted.
+
+#### 22. Memory limitations 
+Remembering selectively and wrong. Includes influence by suggestions.
+
+#### 23. Do-something syndrome - acting without a sensible reason.
+
+Man finds nothing so intolerable as to be in a state of complete rest, without passions, without occupation, without diversion, without effort.
+
+#### 24. Mental confusion from say-something syndrome - feeling a need to say something when we have nothing to say.
+
+I have often regretted my speech, never my silence.
+
+#### 25. Emotional arousal
+
+ Making hasty judgments under the influence of intense emotions. Includes exaggerating the emotional impact of future events.
+
+#### 26. Mental confusion from stress.
+
+I have no stress whatsoever - zero. I get to do what I love to do every day. I'm surrounded by people that are terrific. All the businesses I run don't take 5% of my time. We don't have regular staff meetings. If you've got good businesses and the right managers, you don't need that sort of thing.
+
+It is not stress that harms us but distress.
+
+Complete freedom from stress is death.
+
+#### 27. Mental confusion from physical or psychological pain, the influence of chemicals or diseases.
+
+#### 28. Bias from over-influence by the combined effect of many psychological tendencies operating together.
+
+Once they start stealing, the consistency principle will make stealing habitual.
+
+It's very very important to create human systems that are hard to cheat. 
 
 [Back to contents](#contents)
 
@@ -95,7 +256,17 @@ TEXT
 
 ### 2. **Psychological reasons for mistakes** 
 ---
-TEXT 
+No man was fit to hold public office who wasn't perfectly willing to leave it at any time.
+
+You can learn to make fewer mistakes than other people - and how to fix your mistakes faster when you do make them. Get so you can handle mistakes.
+
+People go broke because they can't stop, rethink and say, "I can afford to write this one off and live to fight again. I don't have to pursue this thing as an obsession." You must learn how to handle mistakes and new facts that change the odds.
+
+I now use a two-track analysis:
+One approach is rationality. Evaluating the real interests, the real probabilities.
+The other is to evaluate the psychological factors that cause subconscious conclusions - many of which are wrong.
+
+Take all the main models from psychology and use them as a checklist in reviewing outcomes in complex systems.
 
 [Back to contents](#contents)
 
@@ -388,7 +559,59 @@ Ask:
 
 ### 2. **Meaning** 
 ---
-TEXT 
+Bad terminology is the enemy of good thinking.
+
+To understand meaning, ask basic questions:
+#### Meaning of words:
+ What do the words mean? What do they imply? Do they Anything? Can we translate words, ideas or statements into an ordinary n that tells us something? An expression is always relative. We have to 1d measure it against something.
+
+#### Meaning of an event: 
+What effect is produced? What is really happening using T words? What is it doing? What is accomplished? Under what Ins does it happen? What else does it mean?
+
+#### Causes: 
+What is happening here and why? Is this working? Why or why not? i that happen? Why does it work here but not there? How can it What are the mechanisms behind? What makes it happen?
+
+#### Implications: 
+What is the consequence of this observation, event, or :e? What does that imply?
+
+#### Purpose: 
+Why should we do that? Why do I want this to happen?
+
+#### Reason: 
+Why is this better than that?
+
+#### Usefulness: 
+What is the applicability of this? Does it mean anything in relation want to achieve?
+
+
+
+"If you can't explain it simply, you don't understand it well enough." - Einstein
+
+We use the risk-free rate merely to equate one item to another. In other words, we're looking for whatever is the most attractive. In order to estimate the present value of anything, we're going to use a number. And, obviously, we can always buy government bonds. Therefore, that becomes the yardstick rate to simply compare all kinds of investment opportunities across the spectrum: oil wells, farms, whatever it may be.
+
+Value is an estimate rather than a precise figure.
+
+Using precise numbers is, in fact, foolish; working with a range of possibilities is the better approach.
+
+Look at all the cash a business will produce between now and judgment day and discount it back to the present using an appropriate discount rate and buy a lot cheaper than that.
+
+Money doesn't know where it comes from. There's no sense in paying more for a glamorous business if you're getting the same amount of money.
+
+What counts in investing is not how much they know, but rather how realistically they define what they don't know.
+
+We love owning common stocks - if they can be purchased at attractive prices... Unless, however, we see a very high probability of at least 10% pre-tax returns, we will sit on the sidelines.
+
+John estimates that he can take out $300,000 in cash every year. Knowing he can always buy a risk-free government bond, John uses a bond rate of 6% as the discount rate. He also knows he can reinvest whatever cash he can take out from the store at 6%. The value of the store is then $5 million ($300,000/0.06). If John's required rate of return is 10%, the value of the store is $3 million.
+
+If you can pinpoint it, you're kidding yourself. You'd be amazed at how inexact we are.
+
+The margin of safety ought to be so attractive. The decision should be obvious.
+
+If we simply don't know what's going to happen in the future, we just give up. We only buy businesses about which we're quite certain.
+
+In hiring, look for three things: intelligence, energy, and character. If they don't have the last one, the first two will kill you.
+
+When a management with a reputation for brilliance tackles a business with a reputation for poor fundamental economics, it is the reputation of the business that remains intact.
 
 [Back to contents](#contents)
 
@@ -396,7 +619,33 @@ TEXT
 
 ### 3. **Simplification** 
 ---
-TEXT 
+Make fewer and better decisions. Why? Because it forces us to think more on each decision and thereby reduces our chance of mistakes.
+
+The art of being wise is the art of knowing what to overlook.
+
+Often we try to get too much information, including misinformation, or information of no use to explain or predict. We also focus on details and what's irrelevant or unknowable and overlook the obvious truths. Dealing with what's important forces us to prioritize. There are often just a few actions that produce most of what we are trying to achieve.
+
+There are huge dangers in getting too caught up in the minutiae of using a computer so that you miss the organized common sense.
+
+After 25 years, I have not learned how to solve difficult business problems. What we have learned to avoid them.
+
+In both business and investments it is usually far more profitable to simply stick with the easy and obvious than it is to resolve the difficult.
+
+A good business throws up one easy decision after another, whereas a bad one gives you horrible choices - decisions that are extremely hard to make.
+
+To do two things at once is to do neither.
+
+Decisions: Is it knowable? Is it important?
+
+"The formulation of a problem is often more essential than its solution, which may be merely a matter of mathematical or experimental skill." - Albert Einstein
+
+Start with basic questions like: What does it mean? What is the simplest example? What is the number one question? How can I tell if the answer is right? Can I come up with an example that makes it clear what the problem is?
+
+Buffett's genius was largely a genius of character - of patience, discipline and rationality. His talent sprang from his unrivaled independence of mind and ability to focus on his work and shut out the world.
+
+If you feel like you have to invest every day, you're going to make a lot of mistakes. Wait for the fat pitch.
+
+A few major opportunities, clearly recognizable as such, will usually come to one who continuously searches and waits, with a curious mind.
 
 [Back to contents](#contents)
 
@@ -404,7 +653,23 @@ TEXT
 
 ### 4. **Rules and filters** 
 ---
-TEXT 
+Walk away from anything I don't understand or cant quantify or doesn't work. Only deal with people I trust.
+
+Extraordinary discipline does not eliminate losses; it does prevent foolish losses.
+
+We can say no in 10 seconds to 90%+ of all things, simply because we have these filters.
+
+Evaluate new business ideas, use 4 criteria as filters:
+* Can I understand it?
+* Does it look like it has some kind of sustainable competitive advantage?
+* Is the management composed of able and honest people?
+* Is the price right?
+
+Understanding is thinking that we have a reasonable probability of being able to assess where the business will be in 10 years.
+
+If there are very important items that aren't on your checklist, you can crash.
+
+A checklist must include each critical item necessary for "safety" and avoiding "accidents" so we don't need to rely on memory for items to be checked 
 
 [Back to contents](#contents)
 
@@ -420,7 +685,11 @@ TEXT
 
 ### 6. **Alternatives** 
 ---
-TEXT 
+Opportunity cost. Our time and money are limited. If we make a decision to do one thing we are deciding not to do some other available thing. Every minute we choose to spend on one thing is a minute unavailable to spend on other things. Every dollar we invest is a dollar unavailable for other available investments. If we decide to spend money today instead of investing for the future we give up the opportunity to spend more in the future. If I decide to play golf today I miss the opportunity to finish this book on time.
+
+Warren Buffett tells us what to look for in a spouse: "Look for someone who will love you unconditionally and will subtly encourage you to be better than you thought you can be."
+
+Some decisions have a greater influence on our lives. A decision that will influence our lives ten years from now is far more important than one that will influence us only today. But if we choose the wrong spouse, education, career, friends, or investment, it may haunt us a long, long time.  
 
 [Back to contents](#contents)
 
@@ -428,7 +697,13 @@ TEXT
 
 ### 7. **Consequences** 
 ---
-TEXT 
+Whenever someone makes an assertion to you, is to always ask, "And then what?" Ask it about everything.
+
+Projections with the amount you'll save don't do the second step - to determine how much is going to stay home and how much is just going to flow through to the customer. The benefit of the cost reductions didn't go to the guy who bought the equipment.
+
+Some systems should be made deliberately a little unfair if they carry better consequences for us all.
+
+With the Navy Model there's no excuse. Very simply, if your ship goes aground, your career is over. It doesn't matter whether it was your fault or not. Nobody's interested in your fault. It's just a rule for the good of all, all effects considered. Civilization works better with some of these no-fault rules. Considering the net benefit, I don't care if one captain has some unfairness in his life. 
 
 [Back to contents](#contents)
 
@@ -436,7 +711,17 @@ TEXT
 
 ### 8. **Quantification** 
 ---
-TEXT 
+How can we evaluate if a decision is intelligent or not if we can't measure it against a relevant and important yardstick? Some things can't be measured exactly, so estimating a range is the next best alternative.
+
+Everybody overweighs the stuff that can be numbered, because it yields to the statistical techniques they're taught in academia. The hard-to-measure stuff may be more important.
+
+The best business to own is one that over an extended period can employ large amounts of incremental capital at very high rates of return.
+
+Be suspicious of companies that trumpet earnings projections and growth expectations. Businesses seldom operate in a tranquil, no-surprise environment, and earnings simply don't advance smoothly (except in the offering books of investment bankers). We're suspicious of those CEOs who claim to know the future - and we become downright incredulous if they consistently reach their declared targets. Managers that always promise to "make the numbers" will at some point be tempted to make up the numbers.
+
+The more our calculation depends on cash flows far out in the future, the more opportunities there are for unwanted events, and the more uncertain our expected return.
+
+Whether a business sells nails or telecom equipment, if more money is going out than coming in, on a present value basis, it is worthless. Value is destroyed, not created, by any business that loses money over its lifetime, no matter how high its interim valuation may get. 
 
 [Back to contents](#contents)
 
@@ -444,7 +729,39 @@ TEXT
 
 ### 9. **Evidence** 
 ---
-TEXT 
+Do what scientists do: Strive for objectivity. Scientists try to describe the world as it is, not as they want it to be.
+
+Science is the great antidote to the poison of enthusiasm and superstition.
+
+The scientific process involves the following steps:
+- Problem or observation. Wonder what happens and why.
+- Find a possible solution or an explanation that can be proved or disproved by testing it against experiment and observation.
+- Predict consequences - see what would be implied if our guess was right.
+- Test - repeat the experiment against error, fraud, coincidence, and change in circumstances or environment. Report results honestly.
+
+It does not make any difference how beautiful your guess is. If it disagrees with experiment it is wrong.
+
+If we don't "guess why", there can be no experiments since a test has nothing to guide it.
+
+"All observation must be for or against some view if it is to be of any service." - Darwin
+
+Have to have some idea of why you're looking for information. Don't just collect endless amounts of data and then only later try to make sense of it. You have to start with some ideas of reality. Look to see whether what you're seeing fits in with that basic thought structure.
+
+Mrs. B. who ran our Furniture Mart. Over a 50-year period, we'd seen her take $ 500 and turn it into a business that made $18 million pretax. So we knew she was competent. The past record is the best single guide.
+
+Then you run into the problem of the 14-year-old horse. Is there anything about the past record that makes it a poor guideline as a forecaster of the future?
+
+Instead of verifying a statement, it is sometimes better to prove it false. A single piece of evidence in favor of a statement does not prove its truth - it only supports it. But a single piece of evidence against it will show that it is false. Albert Einstein said: "No number of experiments can prove me right; a single experiment can prove me wrong."
+
+Archaeology: just because something hasn't been found doesn't mean it won't be found.
+
+"Since a lot of evidence agrees with my explanation, I must be right." Not necessarily, the same evidence may agree with other explanations. Look for evidence that disproves your explanation.
+
+Ask: What test can disprove this?
+
+Engage in self-criticism. Question your assumptions. Explain the opposite of your beliefs. Ask: Assume I'm wrong, how will I know? Why may an opposite theory be correct? Assuming my answer is correct, what would cause me to change my mind? Then, look for that evidence. Often we don't see our weaknesses and thus are not motivated to improve.
+
+Take your initial assumption and try to disprove it. Automatic tendency in psychology called "first-conclusion bias". But you can train yourself away from it. 
 
 [Back to contents](#contents)
 
@@ -452,7 +769,32 @@ TEXT
 
 ### 10. **Backward thinking** 
 ---
-TEXT 
+A lot of success comes from knowing what you really want to avoid
+
+Avoid what causes the opposite of what you want to achieve.
+
+If you want to ruin your civilization, pass laws where people can easily cheat. It's much better to let life be hard - than to create systems that are easy to cheat.
+
+Wise men profit more from fools than fools from wise men; for the wise men shun the mistakes of the fools, but fools do not imitate the successes of the wise.
+
+To reduce mistakes, we should study failures with severe consequences.
+
+Often we learn more from understanding why something doesn't work than from why it does.
+
+Ask:
+Why did that happen?
+Was was the mistake?
+What circumstances were present?
+What's the lesson?
+How can we create the best conditions to avoid mistakes?
+How can we prevent causes that can't be eliminated?
+How can we limit the consequences and probability?
+
+Assume we've achieved our goal, then ask: What was the purpose? Was this what I wanted? What is needed to achieve this? Then work backward to the beginning.
+
+"We need discipline in schools." What would be the consequences if this statement were false? Turn a statement backwards and show that the opposite is worse. What are the consequences? Unbelievable or negative?
+
+Study evidence that implies the opposite of what is normal and ask "why." Use "negative" rules - tell people what they can't do. Practice zero base thinking - start with a clean sheet of paper and ask: If we that we do, how can we best achieve our goal?  
 
 [Back to contents](#contents)
 
@@ -460,7 +802,19 @@ TEXT
 
 ### 11. **Risk** 
 ---
-TEXT 
+We think of business risk in terms of what can happen five, 10 or 15 years from now that will destroy, modify or reduce the economic strengths we believe currently exist in the business. If we can think of very much that can go wrong, we just forget it.
+
+The best way to minimize risk is to think.
+
+I had a relative by marriage who died in his late 80s. And I don't think he ever had a loss. He only did about eight things in his lifetime. He started with a small poke, and if something wasn't a near cinch, he didn't do it. He lived well and died rich. I think it's possible for a great many people to live a life like that where there isn't much risk of disaster and where they're virtually sure to get ahead a reasonable amount. It takes a lot of judgment, a lot of discipline and an absence of hyperactivity. By this method, I think most intelligent people can take a lot of risk out of life.
+
+A single, big mistake could wipe out a long string of successes. We therefore need someone genetically programmed to recognize and avoid serious risks, including those never before encountered.
+
+Temperament is also important. Independent thinking, emotional stability, and a keen understanding of both human and institutional behavior is vital to long-term success.
+
+Ask: What is the cost of being wrong versus the benefit of being right compared to other investment opportunities? Cost: John may lose money, reputation, and experience mental stress. It will also take his focus away from other business. Benefit: Possibility to make more money over a period of time. Alternative: More time to concentrate on the present business or other opportunities.
+
+Consequences: Can I handle them? Are they reversible? In which alternative do I lose less?  
 
 [Back to contents](#contents)
 
@@ -468,9 +822,108 @@ TEXT
 
 ### 12. **Attitudes** 
 ---
-TEXT 
+It's not that we have so little time but that we waste much of it.
+
+Life, if you know how to use it, is long.
+
+You will hear many men saying, "When I am 50..." - but what guarantee do you have that your life will last longer?
+
+What do we want out of life? The shorter the list, the more likely it is to focus on things that matter.
+
+Know what you understand and what you don't understand. It's not how big the circle is. But it's terribly important that you know where the perimeter is.
+
+Why should we want to play a competitive game in a field where we have no advantage - maybe a disadvantage - instead of playing in a field where we have a clear advantage?
+
+Use your advantages.
+
+Where do I have an edge over others?
+
+If we have nothing to hide, we have nothing to fear.
+
+Would I be willing to see my action described by an informed and critical reporter on the front page?
+
+Act as an exemplar.
+
+Avoid controversies.
+
+Optimists live longer than pessimists. 
 
 [Back to contents](#contents)
 
  ---
+
+---
+## TAKEAWAYS
+---
+
+ Pick out the person you admire the most. Write the reasons why you admire him, then try to figure out why you can't have the same qualities.
+
+Find the people you don't like and figure out what you don't like about them. Ask yourself if you have some of those qualities in you.
+
+When an owner auctions off his business, exhibiting a total lack of interest in what follows, you will frequently find that it has been dressed up for sale. If owners behave with little regard for their business, their conduct will often contaminate attitudes and practices throughout the company.
+
+The expert tends only to use models from one's own segment of a discipline, ignoring or underweighing others. Overconfident misuse.
+
+Good ideas cause more mischief than bad ideas. It is so easy to push a good idea to wretched excess. Mix in a little social proof, and brains turn to mush.
+
+Advantage of scale can be an informational advantage. If I go to some remote place, I may see Wrigley gum alongside Glotz's gum. I don't know anything about Glotz's. So if one is $0.40 and one is $0.30, am I going to take something I don't know and put it in my mouth - which is a pretty personal place - all for a lousy dime?
+
+If everybody's buying something, we think it's better. We don't like to be the one guy who's out of step.
+
+A magazine about Motorcross (for example) is a total necessity to fans of that. Its profit margins would make you salivate. Narrowcast publishing. Occasionally, scaling down and intensifying gives you the big advantage. Bigger is not always better.
+
+In a bureaucracy, you think the work is done when it goes out of your inbox into someone else's inbox.
+
+HOW TO GET WORLDLY WISDOM:
+You need a latticework of mental models.
+Hang your actual experience and vicarious experience (books, etc) on this latticework of powerful models.
+With that system, things gradually fit together in a way that enhances cognition.
+You need the best 100 or so models from microeconomics, physiology, psychology, elementary mathematics, hard science, engineering, and so on.
+You don't have to be an expert in any of those. Take the really big ideas and learn them early and well.
+You have to learn the models so that they become part of your ever-used repertoire.
+
+[Back to contents](#contents)
+
+---
+### 3 TIMELESS IDEAS FOR INVESTING:
+---
+
+1. Look at stocks as part-ownership of a business
+2. Look at market fluctuations as your friend by profiting from folly rather than participating in it.
+3. Margin of safety.
+It seems like a waste to get a PhD in Economics and have it all come back to that. There's a tendency to overlook anything that simple and important.
+
+[Back to contents](#contents)
+
+---
+### HOW TO EVALUATE BUSINESSES:
+---
+
+A bird in the hand is worth two in the bush.
+1. How certain are you that there are birds in the bush?
+2. When will they emerge and how many will there be?
+3. What is the risk-free interest rate (yield on long-term bonds)?
+Answer these three questions, and you'll know the maximum value of the bush - and the maximum number of birds that should be offered for it.
+This applies to outlays for farms, oil royalties, bonds, stocks, lottery tickets, and manufacturing plants.
+Just insert the correct numbers, and you can rank the attractiveness of all possible uses of capital throughout the universe.
+
+If the buyer cares little about whose product or distribution services he uses, industry economics are certain to be unexciting, or even disastrous.
+
+This works with candy bars: customers buy by brand name, not by asking for a "two-ounce candy bar". But it doesn't work with sugar: people don't ask for "a coffee with cream and C&H Sugar".
+
+[Back to contents](#contents)
+
+---
+### SIMPLICITY:
+---
+
+I don't like difficult problems.
+People think that if they just hire somebody with the apppropriate labels, they can do something very difficult.
+That is one of the most dangerous ideas a human being can have. All kinds of things can create problems by causing complexity.
+At least make fewer mistakes than people who think they can do anything, no matter how complex, by just hiring somebody with a credible label.
+You don't have to hire out your thinking if you keep it simple.
+
+The big thing to do is avoid being wrong.
+
+[Back to contents](#contents)
 

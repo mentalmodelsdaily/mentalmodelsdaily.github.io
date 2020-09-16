@@ -2,7 +2,7 @@
 layout: post
 title: 'Creating and Deploying Deep Learning applications in PyTorch'
 subtitle: 'Project: 1'
-published: true
+published: false
 tags: [projects, pytorch, deep learning] 
 comments: true
 gh-repo: kjamithash/Pytorch_DeepLearning_Experiments
