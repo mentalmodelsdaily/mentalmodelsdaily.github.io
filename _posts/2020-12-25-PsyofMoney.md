@@ -143,7 +143,7 @@ Tails drive everything.
 
  ---
 
- ### 7. **Freedom** 
+### 7. **Freedom** 
 ---
 *Controlling your time is the highest dividend money pays.*
 
@@ -157,7 +157,7 @@ When you accept how true that statement is, you realize that aligning money towa
 
  ---
 
- ### 8. **Man in the Car Paradox** 
+### 8. **Man in the Car Paradox** 
 ---
 *No one is impressed with your possessions as much as you are.*
 
@@ -169,7 +169,7 @@ It’s a subtle recognition that people generally aspire to be respected and adm
 
  ---
 
- ### 9. **Wealth is what you don't see** 
+### 9. **Wealth is what you don't see** 
 ---
 *Spending money to show people how much money you have is the fastest way to have less money.*
 
@@ -183,7 +183,7 @@ The world is filled with people who look modest but are actually wealthy and peo
 
  ---
 
- ### 10. **Save Money** 
+### 10. **Save Money** 
 ---
 *The only factor you can control generates one of the only things that matters. How wonderful.*
 
@@ -210,7 +210,7 @@ Having more control over your time and options is becoming one of the most valua
 
  ---
 
- ### 11. **Reasonable > Rational** 
+### 11. **Reasonable > Rational** 
 ---
 *Aiming to be mostly reasonable works better than trying to be coldly rational.*
 
@@ -222,7 +222,7 @@ Invest in a promising company you don’t care about, and you might enjoy it whe
 
  ---
 
- ### 12. **Surprise!** 
+### 12. **Surprise!** 
 ---
 *History is the study of change, ironically used as a map of the future.*
 
@@ -244,7 +244,7 @@ But specific trends, specific trades, specific sectors, specific causal relation
 
  ---
 
- ### 13. **Room for Error** 
+### 13. **Room for Error** 
 ---
 *The most important part of every plan is planning on your plan not going according to plan*
 
@@ -256,7 +256,7 @@ The purpose of the margin of safety is to render the forecast unnecessary.
 
  ---
 
- ### 14. **You'll Change** 
+### 14. **You'll Change** 
 ---
 *Long-term planning is harder than it seems because people's goals and desires change over time.*
 
@@ -276,7 +276,7 @@ Sunk costs — anchoring decisions to past efforts that can’t be refunded — 
 
  ---
 
- ### 15. **Nothing's Free** 
+### 15. **Nothing's Free** 
 ---
 *Everything has a price, but not all prices appear on labels.*
 
@@ -290,7 +290,7 @@ It sounds trivial, but thinking of market volatility as a fee rather than a fine
 
  ---
 
- ### 16. **You & Me** 
+### 16. **You & Me** 
 ---
 *Beware taking financial cues from people playing a different game than you are.*
 
@@ -302,7 +302,7 @@ Few things matter more with money than understanding your own time horizon and n
 
  ---
 
- ### 17. **The Seduction of Pessimism** 
+### 17. **The Seduction of Pessimism** 
 ---
 *Optimism sounds like a sales pitch. Pessimism sounds like someone trying to help you.*
 
@@ -318,7 +318,7 @@ Things make financial pessimism easy, common, and more persuasive than optimism:
 
  ---
 
- ### 18. **When You'll Believe Anything** 
+### 18. **When You'll Believe Anything** 
 ---
 *Appealing fictions, and why stories are more powerful than statistics.*
 
@@ -330,7 +330,7 @@ Things make financial pessimism easy, common, and more persuasive than optimism:
 
  ---
 
- ### 19. **All Together Now** 
+### 19. **All Together Now** 
 ---
 *What we've learned about the psychology of your own money.*
 
@@ -355,7 +355,7 @@ Few short recommendations that can help you make better decisions with your mone
 
  ---
 
- ### 20. **Confessions** 
+### 20. **Confessions** 
 ---
 *The psychology of my own money.*
 
