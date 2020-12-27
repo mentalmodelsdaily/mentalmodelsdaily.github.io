@@ -37,5 +37,16 @@ A great compilation of Buffet and Munger's words of wisdom, and their approach t
 
 [Read my notes](https://amithash.com/2020-04-12-seekingWisdom/)
 
+## The Psychology of Money - by Morgan Housel
+##### Date read: 25-12-2020 
+##### How strongly I recommend it: 9/10
+
+<img style="float: right;" width="140" height="200" src="/img/bookImages/psyOfMoney/cover.jpg">
+
+Doing well with money is about how you behave, and behaviour is hard to teach. In this blog post turned book, The Psychology of Money comprises of 19 short stories exploring the strange ways people think about money and teaches you how to make better sense of one of life's most important topics. These are timeless lessons of wealth, greed and happiness. The original blog post can be found here. [Link](https://www.collaborativefund.com/blog/the-psychology-of-money/)
+
+[Read my notes](https://amithash.com/2020-12-25-PsyofMoney/)
+
+
 
 
