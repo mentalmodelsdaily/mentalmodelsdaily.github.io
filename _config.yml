@@ -33,9 +33,9 @@ title: "ami(w)rite"
 
 # List of links in the navigation bar
 navbar-links:
+  Gallery: "gallery"
   Book Notes: "books" 
-  Projects: "projects"
-# Projects: "https://github.com/kjamithash"
+ # Projects: "projects"
   Twitter: "https://twitter.com/kjamithash"
   LinkedIn: "https://www.linkedin.com/in/amithash/"
 #  Résumé: "https://github.com/kjamithash/LatexDocs/blob/master/Resume/Resume_Amithash.pdf" 
