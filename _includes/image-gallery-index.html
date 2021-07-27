@@ -1,0 +1,29 @@
+<style>
+    .image-gallery-index {
+        overflow: auto;
+        margin-left: 20% !important;
+    }
+
+    .image-gallery-index a {
+        float: inline-start;
+        display: block;
+        margin: 0 0 15% 15%;
+        width: 15%;
+        text-decoration: none !important;
+    }
+
+    .image-gallery-index a img {
+        width: 100%;
+        display: block;
+    }
+
+    .image-gallery-index a span {
+        display: block;
+        text-align: center;
+        padding: 10px 0;
+    }
+</style>
+
+<p class="image-gallery-index">{% for item in page.galleries %}<a href="{{ item.url }}" title="{{ item.title }}"><img
+            src="{{ item.image }}" /><span>{{
+            item.title }}</span></a>{% endfor %}</p>
