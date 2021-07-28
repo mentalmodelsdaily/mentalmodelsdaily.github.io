@@ -1,0 +1,30 @@
+<style>
+    .image-gallery-index {
+        object-fit: contain;
+        overflow: auto;
+        margin-left: 15%;
+    }
+
+    .image-gallery-index a {
+        float: left;
+        display: block;
+        margin: 5px 10% 10% 10%;
+        width: 25%;
+        text-decoration: none !important;
+    }
+
+    .image-gallery-index a img {
+        width: 70%;
+        height: 70%;
+        display: block;
+    }
+
+</style>
+
+<p class="image-gallery-index">
+    {% for item in page.galleries %}
+    <a href="{{ item.url }}">
+        <img src="{{ item.image }}" />
+    </a>
+    {% endfor %}
+</p>
