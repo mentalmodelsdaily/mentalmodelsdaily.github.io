@@ -1,7 +1,7 @@
 <style>
     .image-gallery {
         overflow: auto;
-        margin-left: -1% !important;
+        margin-left: 0 !important;
         margin-right: 1% !important;
     }
 
@@ -31,6 +31,13 @@
         display: block;
     }
 </style>
+
+<script type="text/javascript" src="/js/lightgallery.js"></script>
+  <!-- CSS
+  –––––––––––––––––––––––––––––––––––––––––––––––––– -->
+<link rel="stylesheet" href="/css/normalize.css">
+<link rel="stylesheet" href="/css/skeleton.css">
+<link rel="stylesheet" href="/css/lightgallery.css">
 
 <ul class="image-gallery">
     {% for file in site.static_files reversed %}
