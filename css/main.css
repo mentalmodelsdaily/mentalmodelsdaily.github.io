@@ -13,7 +13,7 @@ body {
   font-style: bold;
   color: #404040;
   */
-  font-family: 'Roboto', sans-serif;
+  font-family: 'Optima', sans-serif;
   font-size: 17px;
   font-style: regular;
   font-weight: 300;
@@ -34,18 +34,18 @@ p {
   margin: 30px 0;
 }
 h1 {
-  font-family: 'Playfair Display', serif;
+  font-family: 'Optima', serif;
   font-size: 36px;
   color: rgb(0, 0, 0)
 }
 h2 {
-  font-family: 'Playfair Display', serif;
+  font-family: 'Optima', serif;
   font-style: regular;
   font-size: 25px;
   color: rgb(0, 0, 0)
 }
 h3,h4,h5,h6 {
-  font-family: 'Roboto', sans-serif;
+  font-family: 'Optima', sans-serif;
   font-size: 16px;
   font-style: thin;
   color: rgb(0, 0, 0)
@@ -83,7 +83,7 @@ hr.small {
 }
 
 .main-explain-area {
-  font-family: 'Open Sans', 'Helvetica Neue', Helvetica, Arial, sans-serif;
+  font-family: 'Optima','Open Sans', 'Helvetica Neue', Helvetica, Arial, sans-serif;
   padding: 15px inherit;
 }
 
@@ -134,7 +134,7 @@ img {
 .navbar-custom {
   background-color: {{ site.navbar-col }};
   border-bottom: 1px solid #EAEAEA;
-  font-family: 'Open Sans', 'Helvetica Neue', Helvetica, Arial, sans-serif;
+  font-family: 'Avenir', 'Open Sans', 'Helvetica Neue', Helvetica, Arial, sans-serif;
   {% if site.navbar-img %}
   background-image: url({{ site.navbar-img | relative_url }});
   background-attachment: fixed;
@@ -311,7 +311,7 @@ footer .list-inline {
   padding: 0;
 }
 footer .copyright {
-  font-family: 'Open Sans', 'Helvetica Neue', Helvetica, Arial, sans-serif;
+  font-family: 'Optima', 'Open Sans', 'Helvetica Neue', Helvetica, Arial, sans-serif;
   text-align: center;
   margin-bottom: 0;
 }
@@ -378,7 +378,7 @@ footer .theme-by {
   margin: 0 0 10px;
 }
 .post-preview .post-entry {
-  font-family: 'Open Sans', 'Helvetica Neue', Helvetica, Arial, sans-serif;
+  font-family: 'Optima','Open Sans', 'Helvetica Neue', Helvetica, Arial, sans-serif;
 }
 .post-entry-container {
   display: inline-block;
@@ -404,7 +404,7 @@ footer .theme-by {
 }
 .post-preview .post-read-more {
   font-weight: 450;
-  font-family: 'Roboto', sans-serif;
+  font-family: 'Optima','Roboto', sans-serif;
   font-size: 16px;
   font-style: thin;
 }
@@ -418,7 +418,7 @@ footer .theme-by {
 /* --- Tags --- */
 
 .blog-tags {
-  font-family: 'Open Sans', 'Helvetica Neue', Helvetica, Arial, sans-serif;
+  font-family: 'Optima','Open Sans', 'Helvetica Neue', Helvetica, Arial, sans-serif;
   color: #999;
   font-size: 15px;
   margin-bottom: 30px;
@@ -511,7 +511,7 @@ footer .theme-by {
   font-size: 27px;
   line-height: 1.1;
   display: block;
-  font-family: 'Roboto', sans-serif;
+  font-family: 'Avenir', sans-serif; /* CHANGE THIS TO CHANGE Main Page sub-heading */
   font-weight: 100;
   font-style: light;
   color: rgb(0, 0, 0)
@@ -538,7 +538,7 @@ footer .theme-by {
   padding: 5px 10px;
   font-size: 11px;
   color: #EEE;
-  font-family: 'Open Sans', 'Helvetica Neue', Helvetica, Arial, sans-serif;
+  font-family: 'Optima','Open Sans', 'Helvetica Neue', Helvetica, Arial, sans-serif;
   right: 0;
   bottom: 0;
   display: none;
@@ -622,7 +622,7 @@ footer .theme-by {
 /* --- Pager --- */
 
 .pager li a {
-  font-family: 'Open Sans', 'Helvetica Neue', Helvetica, Arial, sans-serif;
+  font-family: 'Optima','Open Sans', 'Helvetica Neue', Helvetica, Arial, sans-serif;
   text-transform: uppercase;
   font-size: 14px;
   font-weight: 800;
@@ -802,7 +802,7 @@ pre {
 }
 
 #full-tags-list {
-  font-family: 'Open Sans', 'Helvetica Neue', Helvetica, Arial, sans-serif;
+  font-family: 'Optima','Open Sans', 'Helvetica Neue', Helvetica, Arial, sans-serif;
 }
 
 #full-tags-list .tag-entry {
