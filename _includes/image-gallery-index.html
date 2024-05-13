@@ -2,21 +2,27 @@
     .image-gallery-index {
         object-fit: contain;
         overflow: auto;
-        margin-left: 15%;
+        margin-left: 5%;
     }
 
     .image-gallery-index a {
         float: left;
         display: block;
-        margin: 5px 10% 10% 10%;
-        width: 25%;
+        margin: 5px 2% 5% 2%;
+        width: 20%;
         text-decoration: none !important;
+        text-align: center;
     }
 
     .image-gallery-index a img {
-        width: 70%;
-        height: 70%;
+        width: 100%;
+        height: auto;
         display: block;
+    }
+
+    .image-gallery-index a .image-caption {
+        font-size: 14px; /* Adjust the font size as needed */
+        margin-top: 5px; /* Adjust the margin between the image and text */
     }
 
 </style>
@@ -24,7 +30,8 @@
 <p class="image-gallery-index">
     {% for item in page.galleries %}
     <a href="{{ item.url }}">
-        <img src="{{ item.image }}" />
+        <img src="{{ item.image }}" /> <!-- Add title attribute for each image -->
+
     </a>
     {% endfor %}
 </p>
