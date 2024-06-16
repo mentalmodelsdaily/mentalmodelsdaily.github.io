@@ -117,7 +117,7 @@ share-links-active:
 #gtag: "UA-141122678-1"
 
 # Fill in your Google Analytics ID to track your website using GA
-google_analytics: "UA-141122678-1"
+google_analytics: "G-GVTH10ZQB2"
 
 #pagination
 plugins: [jekyll-paginate]
