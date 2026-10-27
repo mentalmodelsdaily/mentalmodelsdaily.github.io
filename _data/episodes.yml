@@ -1,0 +1,10 @@
+# One entry per episode. Only entries with `published: true` appear on the site.
+# - number: 1
+#   title: Cooperation
+#   category: Biology
+#   summary: Working together toward a shared goal so everyone ends up better off.
+#   thumbnail: /img/episodes/001.png
+#   spotify: https://open.spotify.com/episode/...
+#   youtube: https://www.youtube.com/watch?v=...
+#   published: true
+[]

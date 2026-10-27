@@ -1,16 +1,8 @@
 ---
 layout: page
-title: About me
-subtitle: Why you'd want to go on a date with me
+title: About
 ---
 
-My name is Inigo Montoya. I have the following qualities:
+Mental Models Daily is a podcast and newsletter that explains one mental model a day, drawn from physics, biology, psychology, economics and more, so you can think more clearly and make better decisions.
 
-- I rock a great mustache
-- I'm extremely loyal to my family
-
-What else do you need?
-
-### my history
-
-To be honest, I'm having some trouble remembering right now, so why don't you just watch [my movie](http://en.wikipedia.org/wiki/The_Princess_Bride_%28film%29) and it will answer **all** your questions.
+Follow along on [Instagram](https://www.instagram.com/mentalmodelsdaily) and [X](https://x.com/mindmodelsdaily), or write to [modelsmental@gmail.com](mailto:modelsmental@gmail.com).

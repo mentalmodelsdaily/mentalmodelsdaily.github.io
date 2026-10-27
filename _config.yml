@@ -33,6 +33,7 @@ baseurl: ""
 
 # List of links in the navigation bar
 navbar-links:
+  About: "aboutme"
 #  Gallery: "gallery"
 #  Book Notes: "books" 
 # Projects: "projects"
@@ -65,9 +66,6 @@ footer-link-col: "#E1A140"
 # Alternatively, the navbar, footer, and page background can be set to use background images
 # instead of colour
 
-# navbar-img: "/img/bgimage.png"
-# footer-img: "/img/bgimage.png"
-# page-img: "/img/bgimage.png"
 
 # --- Footer options --- #
 

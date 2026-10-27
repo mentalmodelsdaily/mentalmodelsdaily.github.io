@@ -838,3 +838,50 @@ pre {
   font-style: italic;
   font-size: 16px;
 }
+
+/* --- Episodes --- */
+
+.episode-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fill, minmax(220px, 1fr));
+  gap: 24px;
+  margin-top: 10px;
+}
+.episode-card {
+  background: #FFFFFF;
+  border: 1px solid #EADBC4;
+  border-radius: 6px;
+  overflow: hidden;
+}
+.episode-card img {
+  display: block;
+  width: 100%;
+  aspect-ratio: 1 / 1;
+  object-fit: cover;
+}
+.episode-body {
+  padding: 14px 16px 16px;
+}
+.episode-body h2 {
+  font-size: 24px;
+  margin: 0 0 6px;
+}
+.episode-body p {
+  margin: 0 0 10px;
+  font-size: 16px;
+  line-height: 1.45;
+}
+.episode-meta,
+.episode-links a {
+  font-family: 'Public Sans', 'Helvetica Neue', Arial, sans-serif;
+  font-size: 12px;
+  font-weight: 600;
+  text-transform: uppercase;
+  letter-spacing: 0.12em;
+}
+.episode-meta {
+  color: #7A5A3E;
+}
+.episode-links a {
+  margin-right: 14px;
+}
