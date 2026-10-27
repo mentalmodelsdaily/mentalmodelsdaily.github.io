@@ -4,15 +4,15 @@ title: Mental Models Daily
 subtitle: One mental model a day to sharpen how you think and decide
 ---
 
-{% assign episodes = site.data.episodes | where: "published", true | sort: "number" | reverse %}
+{% assign episodes = site.data.episodes | where: "published", true %}
 
 {% if episodes.size > 0 %}
 <div class="episode-grid">
   {% for ep in episodes %}
   <article class="episode-card">
-    {% if ep.thumbnail %}<img src="{{ ep.thumbnail | relative_url }}" alt="{{ ep.title }}" loading="lazy">{% endif %}
+    {% if ep.thumbnail %}<img src="{{ ep.thumbnail | relative_url }}" alt="{{ ep.title }}" loading="lazy">{% else %}<div class="episode-placeholder"><img src="{{ '/img/logo.png' | relative_url }}" alt="" loading="lazy"></div>{% endif %}
     <div class="episode-body">
-      <p class="episode-meta">No. {{ ep.number }}{% if ep.category %} · {{ ep.category }}{% endif %}</p>
+      <p class="episode-meta">{{ ep.date | date: "%b %-d, %Y" }}{% if ep.category %} · {{ ep.category }}{% endif %}</p>
       <h2>{{ ep.title }}</h2>
       {% if ep.summary %}<p>{{ ep.summary }}</p>{% endif %}
       <p class="episode-links">
