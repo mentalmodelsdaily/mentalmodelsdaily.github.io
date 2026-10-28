@@ -13,8 +13,8 @@ body {
   font-style: bold;
   color: #404040;
   */
-  font-family: 'Inter', 'Helvetica Neue', Arial, sans-serif;
-  font-size: 17px;
+  font-family: 'Sorts Mill Goudy', Georgia, serif;
+  font-size: 19px;
   font-style: normal;
   font-weight: 400;
   letter-spacing: normal;
@@ -34,20 +34,20 @@ p {
   margin: 30px 0;
 }
 h1 {
-  font-family: 'Playfair Display', Georgia, serif;
-  font-weight: 400;
-  font-size: 36px;
+  font-family: 'Cormorant Garamond', Georgia, serif;
+  font-weight: 600;
+  font-size: 40px;
   color: #532200
 }
 h2 {
-  font-family: 'Playfair Display', Georgia, serif;
-  font-weight: 400;
-  font-style: regular;
-  font-size: 25px;
+  font-family: 'Cormorant Garamond', Georgia, serif;
+  font-weight: 600;
+  font-style: normal;
+  font-size: 28px;
   color: #532200
 }
 h3,h4,h5,h6 {
-  font-family: 'Inter', 'Helvetica Neue', Arial, sans-serif;
+  font-family: 'Cormorant Garamond', Georgia, serif;
   font-weight: 600;
   font-size: 16px;
   font-style: thin;
@@ -86,7 +86,7 @@ hr.small {
 }
 
 .main-explain-area {
-  font-family: 'Inter', 'Helvetica Neue', Arial, sans-serif;
+  font-family: 'Sorts Mill Goudy', Georgia, serif;
   padding: 15px inherit;
 }
 
@@ -137,7 +137,7 @@ img {
 .navbar-custom {
   background-color: {{ site.navbar-col }};
   border-bottom: 1px solid #E1A140;
-  font-family: 'Public Sans', 'Helvetica Neue', Arial, sans-serif;
+  font-family: 'Montserrat', 'Helvetica Neue', Arial, sans-serif;
   {% if site.navbar-img %}
   background-image: url({{ site.navbar-img | relative_url }});
   background-attachment: fixed;
@@ -151,18 +151,18 @@ img {
 }
 
 .navbar-custom .navbar-brand {
-  font-family: 'Playfair Display', Georgia, serif;
-  font-size: 22px;
+  font-family: 'Cormorant Garamond', Georgia, serif;
+  font-size: 24px;
   letter-spacing: 0.02em;
 }
 
 .navbar-custom .navbar-brand {
-  font-weight: 400;
+  font-weight: 600;
   color: {{ site.navbar-text-col }};
 }
 
 .navbar-custom .nav li a {
-  font-weight: 600;
+  font-weight: 500;
   color: {{ site.navbar-text-col }};
 }
 
@@ -324,7 +324,7 @@ footer .list-inline {
   padding: 0;
 }
 footer .copyright {
-  font-family: 'Public Sans', 'Helvetica Neue', Arial, sans-serif;
+  font-family: 'Montserrat', 'Helvetica Neue', Arial, sans-serif;
   text-align: center;
   margin-bottom: 0;
 }
@@ -386,16 +386,16 @@ footer .theme-by {
 }
 .post-preview .post-meta,
 .post-heading .post-meta {
-  font-family: 'Public Sans', 'Helvetica Neue', Arial, sans-serif;
+  font-family: 'Montserrat', 'Helvetica Neue', Arial, sans-serif;
   color: #7A5A3E;
   font-size: 12px;
-  font-weight: 600;
+  font-weight: 500;
   text-transform: uppercase;
   letter-spacing: 0.12em;
   margin: 0 0 10px;
 }
 .post-preview .post-entry {
-  font-family: 'Inter', 'Helvetica Neue', Arial, sans-serif;
+  font-family: 'Sorts Mill Goudy', Georgia, serif;
 }
 .post-entry-container {
   display: inline-block;
@@ -420,8 +420,8 @@ footer .theme-by {
   width: 100px;
 }
 .post-preview .post-read-more {
-  font-weight: 600;
-  font-family: 'Public Sans', 'Helvetica Neue', Arial, sans-serif;
+  font-weight: 500;
+  font-family: 'Montserrat', 'Helvetica Neue', Arial, sans-serif;
   font-size: 16px;
   font-style: thin;
 }
@@ -435,10 +435,10 @@ footer .theme-by {
 /* --- Tags --- */
 
 .blog-tags {
-  font-family: 'Public Sans', 'Helvetica Neue', Arial, sans-serif;
+  font-family: 'Montserrat', 'Helvetica Neue', Arial, sans-serif;
   color: #7A5A3E;
   font-size: 12px;
-  font-weight: 600;
+  font-weight: 500;
   text-transform: uppercase;
   letter-spacing: 0.12em;
   margin-bottom: 30px;
@@ -520,18 +520,18 @@ footer .theme-by {
 }
 .intro-header .page-heading h1 {
   margin-top: 0;
-  font-size: 50px;
+  font-size: 58px;
 }
 .intro-header .post-heading h1 {
   margin-top: 0;
-  font-size: 35px;
+  font-size: 40px;
 }
 .intro-header .page-heading .page-subheading,
 .intro-header .post-heading .post-subheading {
-  font-size: 22px;
+  font-size: 24px;
   line-height: 1.35;
   display: block;
-  font-family: 'Inter', 'Helvetica Neue', Arial, sans-serif; /* CHANGE THIS TO CHANGE Main Page sub-heading */
+  font-family: 'Sorts Mill Goudy', Georgia, serif; /* CHANGE THIS TO CHANGE Main Page sub-heading */
   font-weight: 400;
   font-style: normal;
   color: #532200;
@@ -558,7 +558,7 @@ footer .theme-by {
   padding: 5px 10px;
   font-size: 11px;
   color: #EEE;
-  font-family: 'Public Sans', 'Helvetica Neue', Arial, sans-serif;
+  font-family: 'Montserrat', 'Helvetica Neue', Arial, sans-serif;
   right: 0;
   bottom: 0;
   display: none;
@@ -575,10 +575,10 @@ footer .theme-by {
     padding: 150px 0;
   }
   .intro-header .page-heading h1 {
-    font-size: 50px;
+    font-size: 60px;
   }
   .intro-header .post-heading h1 {
-    font-size: 50px;
+    font-size: 56px;
   }
   .intro-header.big-img .img-desc {
     font-size: 14px;
@@ -642,10 +642,10 @@ footer .theme-by {
 /* --- Pager --- */
 
 .pager li a {
-  font-family: 'Public Sans', 'Helvetica Neue', Arial, sans-serif;
+  font-family: 'Montserrat', 'Helvetica Neue', Arial, sans-serif;
   text-transform: uppercase;
   font-size: 14px;
-  font-weight: 600;
+  font-weight: 500;
   letter-spacing: 0.12em;
   padding: 10px 5px;
   background-color: #FFF;
@@ -822,7 +822,7 @@ pre {
 }
 
 #full-tags-list {
-  font-family: 'Public Sans', 'Helvetica Neue', Arial, sans-serif;
+  font-family: 'Montserrat', 'Helvetica Neue', Arial, sans-serif;
 }
 
 #full-tags-list .tag-entry {
@@ -874,7 +874,7 @@ pre {
   padding: 14px 16px 16px;
 }
 .episode-body h2 {
-  font-size: 24px;
+  font-size: 27px;
   margin: 0 0 6px;
 }
 .episode-body p {
@@ -884,9 +884,9 @@ pre {
 }
 .episode-meta,
 .episode-links a {
-  font-family: 'Public Sans', 'Helvetica Neue', Arial, sans-serif;
+  font-family: 'Montserrat', 'Helvetica Neue', Arial, sans-serif;
   font-size: 12px;
-  font-weight: 600;
+  font-weight: 500;
   text-transform: uppercase;
   letter-spacing: 0.12em;
 }
@@ -895,4 +895,11 @@ pre {
 }
 .episode-links a {
   margin-right: 14px;
+}
+
+/* On phones the wordmark fills the bar, so drop the overlapping round logo */
+@media only screen and (max-width: 767px) {
+  .navbar-custom .avatar-container {
+    display: none;
+  }
 }
