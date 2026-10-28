@@ -13,8 +13,8 @@ body {
   font-style: bold;
   color: #404040;
   */
-  font-family: 'Sorts Mill Goudy', Georgia, serif;
-  font-size: 19px;
+  font-family: 'Inter', 'Helvetica Neue', Arial, sans-serif;
+  font-size: 17px;
   font-style: normal;
   font-weight: 400;
   letter-spacing: normal;
@@ -34,21 +34,21 @@ p {
   margin: 30px 0;
 }
 h1 {
-  font-family: 'Junge', Georgia, serif;
+  font-family: 'Playfair Display', Georgia, serif;
   font-weight: 400;
   font-size: 36px;
   color: #532200
 }
 h2 {
-  font-family: 'Junge', Georgia, serif;
+  font-family: 'Playfair Display', Georgia, serif;
   font-weight: 400;
   font-style: regular;
   font-size: 25px;
   color: #532200
 }
 h3,h4,h5,h6 {
-  font-family: 'Junge', Georgia, serif;
-  font-weight: 400;
+  font-family: 'Inter', 'Helvetica Neue', Arial, sans-serif;
+  font-weight: 600;
   font-size: 16px;
   font-style: thin;
   color: #532200
@@ -86,7 +86,7 @@ hr.small {
 }
 
 .main-explain-area {
-  font-family: 'Sorts Mill Goudy', Georgia, serif;
+  font-family: 'Inter', 'Helvetica Neue', Arial, sans-serif;
   padding: 15px inherit;
 }
 
@@ -151,7 +151,7 @@ img {
 }
 
 .navbar-custom .navbar-brand {
-  font-family: 'Junge', Georgia, serif;
+  font-family: 'Playfair Display', Georgia, serif;
   font-size: 22px;
   letter-spacing: 0.02em;
 }
@@ -395,7 +395,7 @@ footer .theme-by {
   margin: 0 0 10px;
 }
 .post-preview .post-entry {
-  font-family: 'Sorts Mill Goudy', Georgia, serif;
+  font-family: 'Inter', 'Helvetica Neue', Arial, sans-serif;
 }
 .post-entry-container {
   display: inline-block;
@@ -528,10 +528,10 @@ footer .theme-by {
 }
 .intro-header .page-heading .page-subheading,
 .intro-header .post-heading .post-subheading {
-  font-size: 27px;
-  line-height: 1.1;
+  font-size: 22px;
+  line-height: 1.35;
   display: block;
-  font-family: 'Sorts Mill Goudy', Georgia, serif; /* CHANGE THIS TO CHANGE Main Page sub-heading */
+  font-family: 'Inter', 'Helvetica Neue', Arial, sans-serif; /* CHANGE THIS TO CHANGE Main Page sub-heading */
   font-weight: 400;
   font-style: normal;
   color: #532200;
