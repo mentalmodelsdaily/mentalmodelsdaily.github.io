@@ -1,0 +1,95 @@
+---
+// A part page: the situation, then each theme with its models in book order (SPEC.md §6.3).
+import Base from "../../layouts/Base.astro";
+import Drawing from "../../components/Drawing.astro";
+import ModelRow from "../../components/ModelRow.astro";
+import FieldChip from "../../components/FieldChip.astro";
+import Breadcrumbs from "../../components/Breadcrumbs.astro";
+import { getCatalogue, type Part } from "../../lib/catalogue";
+import { getChrome } from "../../lib/data";
+import { optionalAsset } from "../../lib/assets";
+
+export async function getStaticPaths() {
+  const { parts } = await getCatalogue();
+  return parts.map((part, i) => ({
+    params: { part: part.slug },
+    props: { part, prev: parts[(i - 1 + parts.length) % parts.length], next: parts[(i + 1) % parts.length] },
+  }));
+}
+
+interface Props { part: Part; prev: Part; next: Part }
+const { part, prev, next } = Astro.props;
+const { site, ui } = await getChrome();
+const { themesOf, model, field, fields } = await getCatalogue();
+
+const themes = themesOf(part.code).map((t) => ({ ...t, models: t.models.map(model) }));
+const all = themes.flatMap((t) => t.models);
+// Field chips, in fields.json order, for the fields this part uses; each anchors to its first model.
+const firstOfField = new Map<string, number>();
+for (const m of all) if (!firstOfField.has(m.field)) firstOfField.set(m.field, m.id);
+const chips = fields.filter((f) => firstOfField.has(f.slug));
+const drawing = optionalAsset(part.drawing);
+
+const jsonLd = {
+  "@context": "https://schema.org",
+  "@type": "BreadcrumbList",
+  itemListElement: [
+    { "@type": "ListItem", position: 1, name: ui("explore_title"), item: new URL("/explore/", site.url).href },
+    { "@type": "ListItem", position: 2, name: part.title, item: new URL(`/explore/${part.slug}/`, site.url).href },
+  ],
+};
+---
+<Base title={part.title} description={`${part.question} ${part.idea}`} part={part.code} jsonLd={jsonLd}>
+  <div class="wrap part-page" data-part={part.code}>
+    <Breadcrumbs label={ui("breadcrumbs")} items={[{ name: ui("explore_title"), href: "/explore/" }, { name: part.title, href: `/explore/${part.slug}/` }]} />
+
+    <header class="part-page__head">
+      {drawing && <Drawing src={drawing} alt="" size="md" part={part.code} draw vtName={`part-${part.code}`} class="part-page__drawing" />}
+      <div>
+        <p class="label part-page__numeral">{part.numeral} · {ui("model_count").replace("{n}", String(all.length))}</p>
+        <h1>{part.title}</h1>
+        <p class="part-page__question">{part.question}</p>
+        <p class="measure">{part.idea}</p>
+      </div>
+    </header>
+
+    <nav class="field-filter" aria-labelledby="field-filter-label" data-field-filter data-status={ui("field_shown")}>
+      <p class="label" id="field-filter-label">{ui("field_filter")}</p>
+      <ul class="chips">
+        <li><a class="chip label" href="#themes" data-field-chip="" hidden>{ui("all_fields")}</a></li>
+        {chips.map((f) => <li><FieldChip label={f.label} slug={f.slug} href={`#field-${f.slug}`} /></li>)}
+      </ul>
+      <p class="visually-hidden" aria-live="polite" data-field-status></p>
+    </nav>
+
+    <div id="themes">
+      {themes.map((t) => (
+        <section class="theme" aria-labelledby={`theme-${t.id}`}>
+          <h2 id={`theme-${t.id}`}>{t.title}</h2>
+          <p class="theme__idea measure">{t.idea}</p>
+          <ul class="model-list">
+            {t.models.map((m) => (
+              <ModelRow
+                no={m.no}
+                slug={m.slug}
+                name={m.name}
+                oneLiner={m.one_liner}
+                part={m.part}
+                field={field(m.field)}
+                drawing={optionalAsset(m.drawing)}
+                vtName={`model-${m.id}`}
+                id={firstOfField.get(m.field) === m.id ? `field-${m.field}` : undefined}
+              />
+            ))}
+          </ul>
+        </section>
+      ))}
+    </div>
+
+    <nav class="prev-next" aria-label={`${ui("previous")} / ${ui("next")}`}>
+      <a class="prev-next__prev" href={`/explore/${prev.slug}/`} rel="prev"><span class="label">← {prev.numeral}</span> <span>{prev.title}</span></a>
+      <a class="prev-next__next" href={`/explore/${next.slug}/`} rel="next"><span class="label">{next.numeral} →</span> <span>{next.title}</span></a>
+    </nav>
+  </div>
+  <script src="../../scripts/field-filter.ts"></script>
+</Base>

@@ -1,0 +1,32 @@
+---
+// A pencil drawing recoloured by CSS: the file is a mask over var(--draw) (SPEC.md §5, BRAND.md).
+// It sits in a fixed 4:3 box so nothing shifts while it loads.
+import type { ImageMetadata } from "astro";
+import { getImage } from "astro:assets";
+
+interface Props {
+  src: ImageMetadata;
+  /** "Drawing: <model name>", or "" when the drawing is decorative. */
+  alt: string;
+  size?: "sm" | "md" | "lg";
+  /** Part code: draws in that situation's colour. */
+  part?: string;
+  /** Plays the draw-in sweep (milestone 5). */
+  draw?: boolean;
+  vtName?: string;
+  class?: string;
+}
+const { src, alt, size = "md", part, draw = false, vtName, class: className } = Astro.props;
+
+const width = { sm: 240, md: 640, lg: 1200 }[size];
+const mask = await getImage({ src, width: Math.min(width, src.width), format: "webp", quality: 80 });
+const style = [`--mask: url("${mask.src}")`, vtName ? `view-transition-name: ${vtName}` : null].filter(Boolean).join("; ");
+---
+<div
+  class:list={["drawing", `drawing--${size}`, { "drawing--part": part, "drawing--draw": draw }, className]}
+  data-part={part}
+  role={alt ? "img" : undefined}
+  aria-label={alt || undefined}
+  aria-hidden={alt ? undefined : "true"}
+  style={style}
+></div>

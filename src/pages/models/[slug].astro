@@ -1,0 +1,126 @@
+---
+// The model page, one per model (SPEC.md §6.4).
+import Base from "../../layouts/Base.astro";
+import Drawing from "../../components/Drawing.astro";
+import ModelChip from "../../components/ModelChip.astro";
+import Breadcrumbs from "../../components/Breadcrumbs.astro";
+import { getCatalogue, getProducts, type Model } from "../../lib/catalogue";
+import { getChrome } from "../../lib/data";
+import { asset, ogImage } from "../../lib/assets";
+import { paragraphs } from "../../lib/text";
+
+export async function getStaticPaths() {
+  const { models } = await getCatalogue();
+  return models.map((model, i) => ({
+    params: { slug: model.slug },
+    // Book order, wrapping from 365 back to 1.
+    props: { model, prev: models[(i - 1 + models.length) % models.length], next: models[(i + 1) % models.length] },
+  }));
+}
+
+interface Props { model: Model; prev: Model; next: Model }
+const { model, prev, next } = Astro.props;
+const { site, ui } = await getChrome();
+const { part, field, model: byId } = await getCatalogue();
+const products = await getProducts();
+
+const p = part(model.part);
+const f = field(model.field);
+const drawing = model.drawing ? asset(model.drawing) : null;
+const related = model.related.map(byId);
+const pageUrl = new URL(`/models/${model.slug}/`, site.url).href;
+
+const jsonLd = [
+  {
+    "@context": "https://schema.org",
+    "@type": "DefinedTerm",
+    name: model.name,
+    description: model.one_liner,
+    url: pageUrl,
+    termCode: String(model.no),
+    inDefinedTermSet: { "@type": "DefinedTermSet", name: products.almanac.title, url: new URL("/almanac/", site.url).href },
+  },
+  {
+    "@context": "https://schema.org",
+    "@type": "BreadcrumbList",
+    itemListElement: [
+      { "@type": "ListItem", position: 1, name: ui("explore_title"), item: new URL("/explore/", site.url).href },
+      { "@type": "ListItem", position: 2, name: p.title, item: new URL(`/explore/${p.slug}/`, site.url).href },
+      { "@type": "ListItem", position: 3, name: model.name, item: pageUrl },
+    ],
+  },
+];
+---
+<Base title={model.name} description={model.one_liner} og={ogImage(model.slug)} part={model.part} jsonLd={jsonLd}>
+  <article class="model wrap" data-part={model.part}>
+    <Breadcrumbs
+      label={ui("breadcrumbs")}
+      items={[{ name: ui("explore_title"), href: "/explore/" }, { name: p.title, href: `/explore/${p.slug}/` }, { name: model.name, href: `/models/${model.slug}/` }]}
+    />
+
+    <header class="model__head">
+      <p class="model__kicker label">
+        <span>{ui("no")} {model.no}</span> · <a href={`/explore/${p.slug}/`}>{p.title}</a> · <span>{f.label}</span>
+      </p>
+      {drawing && <Drawing src={drawing} alt={`Drawing: ${model.name}`} size="lg" part={model.part} draw vtName={`model-${model.id}`} class="model__drawing" />}
+      <h1 class="model__name">{model.name}</h1>
+      <p class="model__line">{model.one_liner}</p>
+    </header>
+
+    <hr class="rule" />
+    <div class="model__teaser measure">
+      {paragraphs(model.teaser).map((para) => <p>{para}</p>)}
+    </div>
+    <hr class="rule" />
+
+    <section class="model__more measure" aria-label={ui("in_almanac")}>
+      <div class="model__offer">
+        <h2 class="label">{ui("in_almanac")}</h2>
+        <p class="model__stories">
+          {model.stories.map((s, i) => <>{i > 0 && " · "}<span>“{s.title}”, {s.year}</span></>)}
+        </p>
+        <p>{ui("almanac_more")}</p>
+        <a class="button" href="/almanac/">{ui("get_almanac")}</a>
+      </div>
+
+      {model.deck && (
+        <div class="model__offer">
+          <h2 class="label">{ui("in_deck")}</h2>
+          <p>{ui("card_ref").replace("{ref}", model.deck)}</p>
+          <a class="button" href="/deck/">{ui("see_deck")}</a>
+        </div>
+      )}
+
+      {model.workbook && (
+        <div class="model__offer">
+          <h2 class="label">{ui("practise")}</h2>
+          <p>{ui("workbook_ref").replace("{ref}", model.workbook)}</p>
+          <a class="button" href="/workbook/">{ui("see_workbook")}</a>
+        </div>
+      )}
+
+      {model.episode && (
+        <div class="model__offer" id="listen">
+          <h2 class="label">{ui("listen_watch")}</h2>
+          <p><a href={model.episode.url} rel="noopener">{ui("listen")}: {model.episode.title}</a></p>
+        </div>
+      )}
+    </section>
+
+    <section class="model__related" aria-labelledby="related">
+      <h2 class="label" id="related">{ui("related")}</h2>
+      <ul class="chips">
+        {related.map((r) => <li><ModelChip no={r.no} slug={r.slug} name={r.name} part={r.part} /></li>)}
+      </ul>
+    </section>
+
+    <nav class="prev-next" aria-label={`${ui("previous")} / ${ui("next")}`}>
+      <a class="prev-next__prev" href={`/models/${prev.slug}/`} rel="prev">
+        <span class="label">← {ui("no")} {prev.no}</span> <span>{prev.name}</span>
+      </a>
+      <a class="prev-next__next" href={`/models/${next.slug}/`} rel="next">
+        <span class="label">{ui("no")} {next.no} →</span> <span>{next.name}</span>
+      </a>
+    </nav>
+  </article>
+</Base>

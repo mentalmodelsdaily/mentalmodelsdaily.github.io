@@ -164,6 +164,16 @@ const parts = count(/^\/explore\/[^/]+\/index\.html$/);
 if (existsSync(join(DIST, "models"))) {
   if (models !== 365) fail(`${models} model pages (expected 365)`);
   if (parts !== 8) fail(`${parts} part pages (expected 8)`);
+  // Every link to a model or part page (related, previous/next, the wall, rows, chips) must resolve.
+  const broken = new Map();
+  for (const file of htmlFiles) {
+    const html = readFileSync(file, "utf8");
+    for (const m of html.matchAll(/href="(\/(?:models|explore)\/[^"#?]*)/g)) {
+      const target = join(DIST, m[1], m[1].endsWith("/") ? "index.html" : "");
+      if (!existsSync(target)) broken.set(m[1], rel(file));
+    }
+  }
+  for (const [href, page] of broken) fail(`${page}: links to ${href}, which does not exist`);
 } else {
   notes.push("no /models/ yet: route counts skipped");
 }
