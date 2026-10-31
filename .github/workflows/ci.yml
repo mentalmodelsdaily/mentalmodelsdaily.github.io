@@ -1,0 +1,30 @@
+# Build and check every pull request and branch push (SPEC.md §13).
+name: CI
+
+on:
+  pull_request:
+  push:
+    branches-ignore: [master]
+
+permissions:
+  contents: read
+
+jobs:
+  build:
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v4
+      - uses: actions/setup-node@v4
+        with:
+          node-version-file: .nvmrc
+          cache: npm
+      - run: npm ci
+      - run: npm run build
+      # Dev-only tools for `astro check`, kept out of package.json (SPEC.md §0.3).
+      - run: npm install --no-save @astrojs/check@0.9.12 typescript@5
+      - run: npm run check
+      - name: Internal links
+        run: npx --yes linkinator@6 dist --recurse --skip "^https?://(?!mentalmodelsdaily)"
+      - name: Lighthouse
+        # Runs against the built files until Cloudflare preview URLs are connected.
+        run: npx --yes @lhci/cli@0.15 autorun
