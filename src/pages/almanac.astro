@@ -1,0 +1,106 @@
+---
+// The Almanac's room: cream on terracotta, with the wall of 365 names (SPEC.md §6.7).
+import Base from "../layouts/Base.astro";
+import RoomHero from "../components/RoomHero.astro";
+import Film from "../components/Film.astro";
+import BuyButton from "../components/BuyButton.astro";
+import EmailForm from "../components/EmailForm.astro";
+import Zoom from "../components/Zoom.astro";
+import Pair from "../components/Pair.astro";
+import ProductCover from "../components/ProductCover.astro";
+import { getShop } from "../lib/rooms";
+import { getCatalogue } from "../lib/catalogue";
+import { asset, ogImage } from "../lib/assets";
+import { formatPrice } from "../lib/buy";
+
+const { products, ui, groups, state, priceNote, pairBooks, formAction, site } = await getShop();
+const { model } = await getCatalogue();
+const al = products.almanac;
+const lit = new Set(al.wall_lit);
+const wall = al.wall.map((id) => ({ ...model(id), lit: lit.has(id) }));
+const samples = ["sample", "contents", "overview", "a-z", "index", "toolkit"].map((n) => ({ n, src: asset(`look-inside/almanac-${n}.png`) }));
+const [lede, ...description] = al.description;
+
+const jsonLd = {
+  "@context": "https://schema.org",
+  "@type": "Book",
+  name: al.title,
+  description: al.tagline,
+  author: { "@type": "Organization", name: site.name },
+  numberOfPages: al.pages,
+  inLanguage: "en-GB",
+  url: new URL("/almanac/", site.url).href,
+  ...(al.amazon.paperback || al.amazon.kindle
+    ? {
+        workExample: [
+          al.amazon.paperback && { "@type": "Book", bookFormat: "https://schema.org/Paperback", url: new URL("/buy/almanac/", site.url).href },
+          al.amazon.kindle && { "@type": "Book", bookFormat: "https://schema.org/EBook", url: new URL("/buy/kindle-almanac/", site.url).href },
+        ].filter(Boolean),
+      }
+    : {}),
+};
+---
+<Base title={ui("product_almanac")} description={al.tagline} og={ogImage("almanac")} room="almanac" jsonLd={jsonLd}>
+  <RoomHero
+    product={ui("product_almanac")}
+    cover={asset("products/almanac-front.png")}
+    coverAlt={al.title}
+    title={al.title}
+    lines={[al.tagline, al.features]}
+    price={formatPrice(al.price)}
+    priceNote={priceNote}
+    vtName="product-almanac"
+  >
+    <BuyButton buyKey="almanac" state={state("almanac")} label={ui("buy_amazon")} notifyLabel={ui("notify")} comingLabel={ui("coming")} primary />
+    {state("kindle-almanac") === "buy" && <BuyButton buyKey="kindle-almanac" state="buy" label={ui("kindle")} notifyLabel={ui("notify")} comingLabel={ui("coming")} />}
+  </RoomHero>
+
+  <div class="wrap room">
+    <Film name="almanac" label={ui("film_almanac")} playLabel={ui("play")} pauseLabel={ui("pause")} />
+
+    <section class="room__section" aria-labelledby="the-wall">
+      <h2 id="the-wall" class="label">{ui("the_wall")}</h2>
+      <p class="wall">
+        {wall.map((m, i) => <>{i > 0 && " "}<a href={`/models/${m.slug}/`} class:list={{ "wall--lit": m.lit }}>{m.name}</a></>)}
+      </p>
+    </section>
+
+    <section class="room__section room__columns" aria-labelledby="about-almanac">
+      <div>
+        <h2 id="about-almanac">{ui("how_it_works")}</h2>
+        {lede && <p class="room__lede">{lede}</p>}
+        {description.map((p) => <p>{p}</p>)}
+      </div>
+      {al.inside && (
+        <div>
+          <h2 class="label">{ui("inside")}</h2>
+          <ul class="room__list">{al.inside.map((i) => <li>{i}</li>)}</ul>
+        </div>
+      )}
+    </section>
+
+    <section class="room__section" aria-labelledby="look-inside">
+      <h2 id="look-inside">{ui("look_inside")}</h2>
+      <div class="zoom-grid">
+        {samples.map((s) => <Zoom src={s.src} alt={`${al.title}: ${ui(`almanac_page_${s.n}`)}`} enlargeLabel={ui("enlarge")} closeLabel={ui("close")} />)}
+      </div>
+    </section>
+
+    {state("almanac") === "notify" && (
+      <section class="room__section notify" aria-label={ui("notify_heading")}>
+        <EmailForm id="notify" action={formAction} group={groups.notify_almanac ?? null} heading={ui("notify_heading")} ui={ui} buttonLabel={ui("notify")} />
+      </section>
+    )}
+
+    <Pair heading={ui("pair_heading")} books={pairBooks} priceNote={priceNote} ui={ui} />
+
+    <section class="room__section room__also" aria-labelledby="also-deck">
+      <a href="/deck/" class="room__also-link">
+        <ProductCover src={asset("products/deck-front.png")} alt={products.deck.title} sizes="12rem" />
+        <span><span class="label" id="also-deck">{ui("also_deck")}</span><span class="room__also-title">{products.deck.line}</span></span>
+      </a>
+    </section>
+  </div>
+  <script src="../scripts/zoom.ts"></script>
+  <script src="../scripts/film.ts"></script>
+</Base>

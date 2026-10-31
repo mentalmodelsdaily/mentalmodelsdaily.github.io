@@ -1,0 +1,83 @@
+---
+// The Workbook's room: terracotta on cream (SPEC.md §6.6).
+import Base from "../layouts/Base.astro";
+import RoomHero from "../components/RoomHero.astro";
+import Film from "../components/Film.astro";
+import BuyButton from "../components/BuyButton.astro";
+import Zoom from "../components/Zoom.astro";
+import Pair from "../components/Pair.astro";
+import ProductCover from "../components/ProductCover.astro";
+import { getShop } from "../lib/rooms";
+import { asset, ogImage } from "../lib/assets";
+import { formatPrice } from "../lib/buy";
+
+const { products, ui, state, priceNote, pairBooks, site } = await getShop();
+const wb = products.workbook;
+const pages = [1, 2, 3, 4].map((n) => asset(`look-inside/workbook-${n}.png`));
+const [lede, ...description] = wb.description;
+
+const jsonLd = wb.amazon.paperback || wb.amazon.kindle
+  ? {
+      "@context": "https://schema.org",
+      "@type": "Book",
+      name: wb.title,
+      author: { "@type": "Organization", name: site.name },
+      numberOfPages: wb.pages,
+      workExample: [
+        wb.amazon.paperback && { "@type": "Book", bookFormat: "https://schema.org/Paperback", url: new URL("/buy/workbook/", site.url).href },
+        wb.amazon.kindle && { "@type": "Book", bookFormat: "https://schema.org/EBook", url: new URL("/buy/kindle-workbook/", site.url).href },
+      ].filter(Boolean),
+    }
+  : undefined;
+---
+<Base title={ui("product_workbook")} description={wb.tagline} og={ogImage("workbook")} room="workbook" jsonLd={jsonLd}>
+  <RoomHero
+    product={ui("product_workbook")}
+    cover={asset("products/workbook-front.png")}
+    coverAlt={wb.title}
+    title={wb.title}
+    lines={[wb.tagline, wb.features]}
+    price={formatPrice(wb.price)}
+    priceNote={priceNote}
+    vtName="product-workbook"
+  >
+    <BuyButton buyKey="workbook" state={state("workbook")} label={ui("buy_amazon")} notifyLabel={ui("notify")} comingLabel={ui("coming")} primary />
+    {state("kindle-workbook") === "buy" && <BuyButton buyKey="kindle-workbook" state="buy" label={ui("kindle")} notifyLabel={ui("notify")} comingLabel={ui("coming")} />}
+  </RoomHero>
+
+  <div class="wrap room">
+    <Film name="workbook" label={ui("film_workbook")} playLabel={ui("play")} pauseLabel={ui("pause")} />
+
+    <section class="room__section" aria-labelledby="look-inside">
+      <h2 id="look-inside">{ui("look_inside")}</h2>
+      <div class="zoom-grid">
+        {pages.map((p, i) => <Zoom src={p} alt={`${wb.title}, page ${i + 1} of ${pages.length}`} enlargeLabel={ui("enlarge")} closeLabel={ui("close")} />)}
+      </div>
+    </section>
+
+    <section class="room__section room__columns" aria-labelledby="how-it-works">
+      <div>
+        <h2 id="how-it-works">{ui("how_it_works")}</h2>
+        {lede && <p class="room__lede">{lede}</p>}
+        {description.map((p) => <p>{p}</p>)}
+      </div>
+      {wb.inside && (
+        <div>
+          <h2 class="label">{ui("inside")}</h2>
+          <ul class="room__list">{wb.inside.map((i) => <li>{i}</li>)}</ul>
+        </div>
+      )}
+    </section>
+
+    <Pair heading={ui("pair_heading")} books={pairBooks} priceNote={priceNote} ui={ui} />
+
+    <section class="room__section room__also" aria-labelledby="also-deck">
+      <a href="/deck/" class="room__also-link">
+        <ProductCover src={asset("products/deck-front.png")} alt={products.deck.title} sizes="12rem" />
+        <span><span class="label" id="also-deck">{ui("also_deck")}</span><span class="room__also-title">{products.deck.line}</span></span>
+      </a>
+    </section>
+  </div>
+  <script src="../scripts/zoom.ts"></script>
+  <script src="../scripts/film.ts"></script>
+</Base>

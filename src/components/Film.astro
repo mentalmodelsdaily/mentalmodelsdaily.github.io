@@ -1,0 +1,22 @@
+---
+// A short, silent product loop (SPEC.md §8.4). preload="none": nothing downloads until it plays.
+// Without JavaScript the browser's own controls show; with it, one play/pause button (and, from
+// milestone 5, autoplay while in view unless the visitor saves data or prefers reduced motion).
+interface Props {
+  name: "deck" | "workbook" | "almanac";
+  label: string;
+  playLabel: string;
+  pauseLabel: string;
+}
+const { name, label, playLabel, pauseLabel } = Astro.props;
+const src = (size: number, ext: string) => `/films/${name}-${size}.${ext}`;
+---
+<figure class="film" data-film data-play={playLabel} data-pause={pauseLabel}>
+  <video muted loop playsinline controls preload="none" poster={`/films/${name}-poster.avif`} width="1920" height="1080" aria-label={label}>
+    <source src={src(1080, "webm")} type="video/webm" media="(min-width: 64rem)" />
+    <source src={src(1080, "mp4")} type="video/mp4" media="(min-width: 64rem)" />
+    <source src={src(720, "webm")} type="video/webm" />
+    <source src={src(720, "mp4")} type="video/mp4" />
+  </video>
+  <button class="film__toggle button" type="button" aria-pressed="false" hidden>{playLabel}</button>
+</figure>

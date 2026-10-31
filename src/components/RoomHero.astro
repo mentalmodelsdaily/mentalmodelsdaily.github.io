@@ -1,0 +1,29 @@
+---
+// The top of a product room: the cover, title, lines, price and the buy buttons.
+import type { ImageMetadata } from "astro";
+import ProductCover from "./ProductCover.astro";
+
+interface Props {
+  product: string;
+  cover: ImageMetadata;
+  coverAlt: string;
+  title: string;
+  lines: string[];
+  price: string | null;
+  priceNote: string | null;
+  vtName: string;
+}
+const { product, cover, coverAlt, title, lines, price, priceNote, vtName } = Astro.props;
+---
+<header class="room-hero wrap">
+  <div class="room-hero__cover">
+    <ProductCover src={cover} alt={coverAlt} sizes="(min-width: 48rem) 28rem, 80vw" eager vtName={vtName} />
+  </div>
+  <div class="room-hero__text">
+    <p class="label room-hero__product">{product}</p>
+    <h1>{title}</h1>
+    {lines.map((line, i) => <p class:list={["room-hero__line", { label: i > 0 }]}>{line}</p>)}
+    {price && <p class="room-hero__price"><span class="room-hero__amount">{price}</span>{priceNote && <span class="label"> · {priceNote}</span>}</p>}
+    <div class="room-hero__buttons"><slot /></div>
+  </div>
+</header>

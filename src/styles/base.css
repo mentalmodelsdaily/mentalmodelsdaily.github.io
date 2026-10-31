@@ -416,3 +416,138 @@ a.chip[aria-pressed="true"] { background: var(--text); color: var(--paper); bord
 .a-z__list li { break-inside: avoid; display: grid; padding-block: .35rem; border-left: 3px solid var(--part-bg); padding-left: var(--s2); margin-bottom: var(--s1); }
 .a-z__list a { font-size: var(--step-0); }
 .a-z__list .label { color: var(--muted); font-size: .78rem; letter-spacing: .1em; }
+
+/* --- Product rooms ------------------------------------------------------------------- */
+
+.button--primary { background: var(--text); color: var(--paper); border-color: var(--text); }
+.button--primary:hover { background: transparent; color: var(--text); }
+
+.room-hero {
+  display: grid;
+  gap: var(--s5);
+  align-items: center;
+  padding-block: var(--s5) var(--s6);
+}
+@media (min-width: 48rem) { .room-hero { grid-template-columns: minmax(0, 5fr) minmax(0, 6fr); } }
+.room-hero__cover img { width: 100%; max-width: 28rem; margin-inline: auto; }
+[data-room="deck"] .room-hero__cover { background: var(--box-backdrop); padding: var(--s3); }
+.room-hero__product { color: var(--accent); margin-bottom: var(--s2); }
+.room-hero h1 { font-size: var(--step-3); }
+.room-hero__line { font-size: var(--step-1); font-style: italic; }
+.room-hero__line.label { font-size: var(--step--1); font-style: normal; color: var(--muted); }
+.room-hero__price { margin-top: var(--s4); }
+.room-hero__amount { font-family: var(--display); font-size: var(--step-2); }
+.room-hero__buttons { display: flex; flex-wrap: wrap; gap: var(--s3); margin-top: var(--s3); }
+
+.room__section { padding-top: var(--s6); }
+.room__columns { display: grid; gap: var(--s5); }
+@media (min-width: 48rem) { .room__columns { grid-template-columns: minmax(0, 3fr) minmax(0, 2fr); } }
+.room__columns > div { max-width: var(--measure); }
+.room__lede { font-size: var(--step-1); font-style: italic; }
+.room__list { padding-left: 1.1em; margin: 0 0 var(--s4); }
+.room__list li { margin-bottom: var(--s2); }
+.room__list li::marker { color: var(--accent); }
+.room__closing { color: var(--muted); font-style: italic; }
+.room__image { margin-top: var(--s4); }
+[data-room="deck"] .room__image { background: var(--box-backdrop); }
+.room h2.label { color: var(--accent); margin: var(--s4) 0 var(--s2); }
+
+.specs { width: 100%; border-collapse: collapse; margin-bottom: var(--s4); }
+.specs th, .specs td { text-align: left; vertical-align: top; padding: var(--s2) var(--s2) var(--s2) 0; border-bottom: 1px solid var(--rule); }
+.specs th { font-family: var(--label); font-weight: 400; font-size: var(--step--1); text-transform: uppercase; letter-spacing: .12em; width: 30%; }
+
+.room__also-link { display: flex; align-items: center; gap: var(--s4); max-width: 36rem; text-decoration: none; }
+.room__also-link img { width: 8rem; flex: none; }
+.room__also-link > span { display: grid; gap: var(--s1); }
+.room__also-title { font-family: var(--display); font-size: var(--step-1); line-height: 1.2; }
+.room__also-link:hover .room__also-title { text-decoration: underline; text-decoration-thickness: 1px; }
+
+/* Films */
+.film { margin: 0; position: relative; }
+.film video { width: 100%; height: auto; aspect-ratio: 16 / 9; background: var(--rule); }
+.film__toggle { position: absolute; right: var(--s3); bottom: var(--s3); background: var(--paper); }
+
+/* Cards */
+.card-grid { display: grid; gap: var(--s4); grid-template-columns: repeat(auto-fill, minmax(min(100%, 13rem), 1fr)); }
+.flip-card { position: relative; }
+.flip-card__inner { display: grid; grid-template-columns: 1fr 1fr; gap: var(--s2); }
+.flip-card__face { margin: 0; }
+.flip-card__face img { width: 100%; border-radius: 4.5% / 2.6%; }
+/* With the script: one card that turns over. */
+.flip-card.is-flippable .flip-card__inner { grid-template-columns: 1fr; }
+.flip-card.is-flippable .flip-card__face { grid-area: 1 / 1; }
+.flip-card.is-flippable .flip-card__face--back { visibility: hidden; }
+.flip-card.is-flippable:has([aria-pressed="true"]) .flip-card__face--front { visibility: hidden; }
+.flip-card.is-flippable:has([aria-pressed="true"]) .flip-card__face--back { visibility: visible; }
+.flip-card__button { position: absolute; inset: 0; z-index: 1; width: 100%; padding: 0; border: 0; background: transparent; cursor: pointer; border-radius: 4.5% / 2.6%; }
+
+/* "54 more in the box": face-down backs, a CSS pattern rather than real cards */
+.card-backs { display: flex; margin-top: var(--s5); padding-left: var(--s4); }
+.card-backs__card {
+  width: clamp(3rem, 9vw, 5.5rem);
+  aspect-ratio: 70 / 121;
+  margin-left: calc(var(--s4) * -1);
+  border: 2px solid var(--gold);
+  border-radius: 6px;
+  background:
+    repeating-linear-gradient(45deg, transparent 0 6px, rgba(225,161,64,.18) 6px 7px),
+    var(--chocolate);
+  box-shadow: 0 2px 6px rgba(0,0,0,.35);
+}
+.card-backs__label { margin-top: var(--s3); color: var(--accent); }
+
+/* Look inside */
+.zoom-grid { display: grid; gap: var(--s4); grid-template-columns: repeat(auto-fill, minmax(min(100%, 14rem), 1fr)); }
+.zoom { margin: 0; }
+.zoom__link { display: grid; gap: var(--s2); text-decoration: none; }
+.zoom__link img { width: 100%; box-shadow: 0 1px 4px rgba(0,0,0,.18); }
+.zoom__hint { color: var(--muted); }
+.zoom-dialog { max-width: min(56rem, 94vw); max-height: 94vh; padding: var(--s3); border: 0; background: var(--paper); color: var(--text); }
+.zoom-dialog::backdrop { background: rgba(17,17,17,.7); }
+.zoom-dialog img { width: 100%; height: auto; }
+.zoom-dialog__close { margin-bottom: var(--s3); }
+
+/* The wall: all 365 names as one justified block of display type */
+.wall {
+  font-family: var(--display);
+  font-size: clamp(1rem, .9rem + .55vw, 1.45rem);
+  line-height: 1.35;
+  text-align: justify;
+  hyphens: none;
+  margin: 0;
+}
+/* Every name keeps AA contrast (cream on terracotta is 5.0:1, so it cannot be dimmed); the five drawn
+   ones are lit like a marker: chocolate on gold, 5.9:1. Each name is a 24 px target. */
+.wall a { display: inline-block; padding: .12em .08em; text-decoration: none; }
+.wall a:hover, .wall a:focus-visible { text-decoration: underline; text-decoration-thickness: 1px; }
+.wall a.wall--lit { padding-inline: .25em; background: var(--gold); color: var(--chocolate); }
+
+/* The pair */
+.pair { padding-top: var(--s6); }
+.pair__heading { color: var(--accent); }
+.pair__books { display: grid; gap: var(--s4); grid-template-columns: repeat(auto-fit, minmax(min(100%, 16rem), 1fr)); }
+.pair__book { padding: var(--s4); background: var(--paper); color: var(--text); }
+.pair__cover img { width: 100%; max-width: 16rem; margin-inline: auto; }
+.pair__line { font-family: var(--display); font-size: var(--step-1); line-height: 1.2; margin-top: var(--s3); }
+.pair__price { color: var(--muted); }
+.pair__buttons { display: flex; flex-wrap: wrap; gap: var(--s2); }
+
+/* Email forms */
+.email-form { max-width: 36rem; }
+.email-form__heading { font-size: var(--step-2); }
+.email-form__row { display: flex; flex-wrap: wrap; gap: var(--s2); }
+.email-form input[type="email"] {
+  flex: 1 1 14rem;
+  min-height: 44px;
+  padding: .55rem .8rem;
+  border: 1px solid var(--text);
+  border-radius: 2px;
+  background: transparent;
+  color: var(--text);
+  font: inherit;
+}
+.email-form input[type="email"]::placeholder { color: var(--muted); opacity: 1; }
+.email-form input:disabled { opacity: .55; }
+.email-form__consent { margin-top: var(--s2); font-size: var(--step--1); color: var(--muted); }
+.email-form__trap { position: absolute; left: -10000px; width: 1px; height: 1px; overflow: hidden; }
+.notify { scroll-margin-top: var(--s4); }

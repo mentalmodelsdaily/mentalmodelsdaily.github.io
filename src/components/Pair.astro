@@ -1,0 +1,39 @@
+---
+// The Workbook and the Almanac side by side, then the deck (BLUEPRINT.md: "The pair").
+import type { ImageMetadata } from "astro";
+import ProductCover from "./ProductCover.astro";
+import BuyButton from "./BuyButton.astro";
+
+interface Book {
+  key: "workbook" | "almanac";
+  title: string;
+  line: string;
+  cover: ImageMetadata;
+  price: string | null;
+  paperback: "buy" | "notify" | "coming";
+  kindle: "buy" | "notify" | "coming";
+}
+interface Props {
+  heading: string;
+  books: Book[];
+  priceNote: string | null;
+  ui: (key: string) => string;
+}
+const { heading, books, priceNote, ui } = Astro.props;
+---
+<section class="pair" aria-labelledby="pair-heading">
+  <h2 id="pair-heading" class="label pair__heading">{heading}</h2>
+  <div class="pair__books">
+    {books.map((b) => (
+      <article class="pair__book" data-room={b.key}>
+        <a href={`/${b.key}/`} class="pair__cover"><ProductCover src={b.cover} alt={b.title} sizes="(min-width: 48rem) 22rem, 70vw" /></a>
+        <p class="pair__line">{b.line}</p>
+        {b.price && <p class="label pair__price">{b.price}{priceNote && <> · {priceNote}</>}</p>}
+        <p class="pair__buttons">
+          <BuyButton buyKey={b.key} state={b.paperback} label={ui("buy_amazon")} notifyLabel={ui("notify")} comingLabel={ui("coming")} notifyHref={`/${b.key}/#notify`} />
+          {b.kindle === "buy" && <BuyButton buyKey={`kindle-${b.key}`} state="buy" label={ui("kindle")} notifyLabel={ui("notify")} comingLabel={ui("coming")} />}
+        </p>
+      </article>
+    ))}
+  </div>
+</section>
