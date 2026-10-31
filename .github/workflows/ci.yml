@@ -13,8 +13,8 @@ jobs:
   build:
     runs-on: ubuntu-latest
     steps:
-      - uses: actions/checkout@v4
-      - uses: actions/setup-node@v4
+      - uses: actions/checkout@v5
+      - uses: actions/setup-node@v5
         with:
           node-version-file: .nvmrc
           cache: npm
@@ -27,5 +27,6 @@ jobs:
         # linkinator serves dist/ on localhost; skip every other host.
         run: npx --yes linkinator@6 dist --recurse --skip "^(?!http://localhost)"
       - name: Lighthouse
-        # Runs against the built files until Cloudflare preview URLs are connected.
-        run: npx --yes @lhci/cli@0.15 autorun
+        # Against the built files, so the "build" check never waits on Cloudflare. The median of three runs
+        # keeps one slow run on a shared runner from failing the check. Cloudflare previews each branch too.
+        run: npx --yes @lhci/cli@0.15 autorun --collect.numberOfRuns=3
