@@ -473,12 +473,12 @@ a.chip[aria-pressed="true"] { background: var(--text); color: var(--paper); bord
 .flip-card__inner { display: grid; grid-template-columns: 1fr 1fr; gap: var(--s2); }
 .flip-card__face { margin: 0; }
 .flip-card__face img { width: 100%; border-radius: 4.5% / 2.6%; }
-/* With the script: one card that turns over. */
+/* With the script: one card that turns over (the turn itself is in motion.css). */
 .flip-card.is-flippable .flip-card__inner { grid-template-columns: 1fr; }
 .flip-card.is-flippable .flip-card__face { grid-area: 1 / 1; }
-.flip-card.is-flippable .flip-card__face--back { visibility: hidden; }
-.flip-card.is-flippable:has([aria-pressed="true"]) .flip-card__face--front { visibility: hidden; }
-.flip-card.is-flippable:has([aria-pressed="true"]) .flip-card__face--back { visibility: visible; }
+.flip-card.is-flippable .flip-card__face--back { opacity: 0; }
+.flip-card.is-flippable:has([aria-pressed="true"]) .flip-card__face--front { opacity: 0; }
+.flip-card.is-flippable:has([aria-pressed="true"]) .flip-card__face--back { opacity: 1; }
 .flip-card__button { position: absolute; inset: 0; z-index: 1; width: 100%; padding: 0; border: 0; background: transparent; cursor: pointer; border-radius: 4.5% / 2.6%; }
 
 /* "54 more in the box": face-down backs, a CSS pattern rather than real cards */

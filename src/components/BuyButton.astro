@@ -10,9 +10,11 @@ interface Props {
   /** The product page holding the Notify me form, when it is not this page. */
   notifyHref?: string;
   primary?: boolean;
+  /** Where the button sits, for the Associates tag in the generated redirect: home, model or product. */
+  placement?: "home" | "model" | "product";
 }
-const { buyKey, state, label, notifyLabel, comingLabel, notifyHref = "#notify", primary = false } = Astro.props;
+const { buyKey, state, label, notifyLabel, comingLabel, notifyHref = "#notify", primary = false, placement = "product" } = Astro.props;
 ---
-{state === "buy" && <a class:list={["button", { "button--primary": primary }]} href={`/buy/${buyKey}`}>{label}</a>}
+{state === "buy" && <a class:list={["button", { "button--primary": primary }]} href={`/buy/${buyKey}/${placement}/`}>{label}</a>}
 {state === "notify" && <a class:list={["button", { "button--primary": primary }]} href={notifyHref}>{notifyLabel}</a>}
 {state === "coming" && <span class="button" aria-disabled="true">{comingLabel}</span>}

@@ -26,5 +26,5 @@ const { key, name, role, image, alt, price, priceNote, state, buyLabel, notifyLa
   <p class="label product-card__role">{role}</p>
   <h3 class="product-card__name"><a href={`/${key}/`}>{name}</a></h3>
   <p class="product-card__price">{price ? <>{price}{priceNote && <span class="label"> · {priceNote}</span>}</> : <span class="label">{comingLabel}</span>}</p>
-  <BuyButton buyKey={key} state={state} label={buyLabel} notifyLabel={notifyLabel} comingLabel={comingLabel} notifyHref={`/${key}/#notify`} />
+  <BuyButton buyKey={key} state={state} label={buyLabel} notifyLabel={notifyLabel} comingLabel={comingLabel} notifyHref={`/${key}/#notify`} placement="home" />
 </article>

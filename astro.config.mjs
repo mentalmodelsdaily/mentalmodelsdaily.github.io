@@ -6,7 +6,12 @@ export default defineConfig({
   site: "https://mentalmodelsdaily.com",
   output: "static",
   trailingSlash: "always",
-  integrations: [sitemap()],
+  integrations: [
+    sitemap({
+      // Pages that are noindex stay out of the sitemap.
+      filter: (page) => !/\/(today|thanks)\/$/.test(page),
+    }),
+  ],
   build: {
     // The CSP forbids inline <style>, so every stylesheet ships as a file.
     inlineStylesheets: "never",
