@@ -1,0 +1,68 @@
+---
+// Listen and watch (SPEC.md §6.8).
+import Base from "../layouts/Base.astro";
+import PodcastFacade from "../components/PodcastFacade.astro";
+import YouTubeFacade from "../components/YouTubeFacade.astro";
+import { getCollection } from "astro:content";
+import { getChrome } from "../lib/data";
+import { getCatalogue } from "../lib/catalogue";
+
+const { site, ui, socials } = await getChrome();
+const { model } = await getCatalogue();
+const episodes = (await getCollection("episodes")).map((e) => e.data).sort((a, b) => a.sort - b.sort);
+const spotify = socials.find((s) => s.name === "Spotify");
+const youtube = socials.find((s) => s.name === "YouTube");
+const video = episodes.find((e) => e.youtube_id);
+const date = (iso: string) => new Date(`${iso}T12:00:00Z`).toLocaleDateString("en-GB", { day: "numeric", month: "long", year: "numeric" });
+
+const jsonLd = {
+  "@context": "https://schema.org",
+  "@type": "PodcastSeries",
+  name: site.name,
+  description: site.hero_line,
+  url: new URL("/podcast/", site.url).href,
+  inLanguage: "en-GB",
+  ...(spotify ? { sameAs: socials.filter((s) => ["Spotify", "Apple Podcasts", "YouTube"].includes(s.name)).map((s) => s.url) } : {}),
+};
+---
+<Base title={ui("podcast_title")} description={ui("podcast_intro")} jsonLd={jsonLd}>
+  <div class="wrap">
+    <header class="page-head">
+      <h1>{ui("podcast_title")}</h1>
+      <p class="measure">{ui("podcast_intro")}</p>
+    </header>
+
+    <div class="media-grid">
+      {spotify && <PodcastFacade title={site.name} url={spotify.url} playLabel={ui("play_episode")} meta={spotify.name} />}
+      <div id="watch" class="watch">
+        {video?.youtube_id
+          ? <YouTubeFacade youtubeId={video.youtube_id} title={video.title} playLabel={ui("play_video")} />
+          : youtube && <div class="facade facade--video"><span class="facade__mark" aria-hidden="true"></span><p class="facade__title">{ui("watch")}</p><a class="button button--primary" href={youtube.url} rel="noopener">{ui("youtube_channel")}</a></div>}
+      </div>
+    </div>
+
+    <section class="home__section" aria-labelledby="latest">
+      <h2 id="latest" class="home__title">{ui("latest")}</h2>
+      <ol class="episodes">
+        {episodes.map((e) => {
+          const m = e.model ? model(e.model) : null;
+          return (
+            <li class="episodes__item" data-part={m?.part}>
+              <p class="label"><time datetime={e.date}>{date(e.date)}</time>{m && <> · {ui("no")} {m.no}</>}</p>
+              <h3 class="episodes__title">{m ? <a href={`/models/${m.slug}/`}>{e.title}</a> : e.title}</h3>
+              {m && <p>{m.one_liner}</p>}
+              <p><a href={e.url} rel="noopener">{ui("listen")}</a>{e.youtube_id && <> · <a href={`https://www.youtube.com/watch?v=${e.youtube_id}`} rel="noopener">{ui("youtube_channel")}</a></>}</p>
+            </li>
+          );
+        })}
+      </ol>
+    </section>
+
+    <section class="home__section" aria-labelledby="subscribe">
+      <h2 id="subscribe" class="home__title">{ui("subscribe")}</h2>
+      <ul class="chips">
+        {socials.map((s) => <li><a class="chip label" href={s.url} rel="me noopener">{s.name}</a></li>)}
+      </ul>
+    </section>
+  </div>
+</Base>

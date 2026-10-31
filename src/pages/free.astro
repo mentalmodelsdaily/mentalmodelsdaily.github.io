@@ -1,0 +1,17 @@
+---
+// The free printable, for an email address (SPEC.md §6.9). The PDF is emailed, never linked.
+import Base from "../layouts/Base.astro";
+import EmailForm from "../components/EmailForm.astro";
+import { getShop } from "../lib/rooms";
+
+const { ui, groups, formAction } = await getShop();
+---
+<Base title={ui("free_title")} description={ui("free_heading")}>
+  <div class="wrap">
+    <header class="page-head">
+      <p class="label">{ui("free_title")}</p>
+      <h1>{ui("free_heading")}</h1>
+    </header>
+    <EmailForm id="printable" action={formAction} group={groups.printable ?? null} ui={ui} />
+  </div>
+</Base>

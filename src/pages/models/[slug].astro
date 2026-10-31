@@ -4,6 +4,8 @@ import Base from "../../layouts/Base.astro";
 import Drawing from "../../components/Drawing.astro";
 import ModelChip from "../../components/ModelChip.astro";
 import Breadcrumbs from "../../components/Breadcrumbs.astro";
+import PodcastFacade from "../../components/PodcastFacade.astro";
+import YouTubeFacade from "../../components/YouTubeFacade.astro";
 import { getCatalogue, getProducts, type Model } from "../../lib/catalogue";
 import { getChrome } from "../../lib/data";
 import { asset, ogImage } from "../../lib/assets";
@@ -99,10 +101,13 @@ const jsonLd = [
         </div>
       )}
 
-      {model.episode && (
+      {(model.episode || model.video?.youtube_id) && (
         <div class="model__offer" id="listen">
           <h2 class="label">{ui("listen_watch")}</h2>
-          <p><a href={model.episode.url} rel="noopener">{ui("listen")}: {model.episode.title}</a></p>
+          <div class="media-grid">
+            {model.episode && <PodcastFacade title={model.episode.title} url={model.episode.url} playLabel={ui("play_episode")} />}
+            {model.video?.youtube_id && <YouTubeFacade youtubeId={model.video.youtube_id} title={model.name} playLabel={ui("play_video")} />}
+          </div>
         </div>
       )}
     </section>

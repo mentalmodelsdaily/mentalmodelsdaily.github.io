@@ -1,0 +1,15 @@
+---
+// The site's only consent: for the media players (SPEC.md §9.4). Equal Accept and Reject.
+interface Props { ui: (key: string) => string }
+const { ui } = Astro.props;
+---
+<dialog class="consent" id="consent" aria-labelledby="consent-title" aria-describedby="consent-text" data-title={ui("consent_title")} data-text={ui("consent_text")} data-providers={ui("consent_providers")}>
+  <form method="dialog" class="consent__form">
+    <h2 id="consent-title" class="consent__title"></h2>
+    <p id="consent-text"></p>
+    <p class="consent__buttons">
+      <button class="button" type="submit" value="accept">{ui("accept")}</button>
+      <button class="button" type="submit" value="reject">{ui("reject")}</button>
+    </p>
+  </form>
+</dialog>

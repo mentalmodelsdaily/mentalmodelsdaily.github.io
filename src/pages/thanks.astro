@@ -1,0 +1,13 @@
+---
+// Where MailerLite sends people after the form. Not indexed.
+import Base from "../layouts/Base.astro";
+import { getChrome } from "../lib/data";
+const { ui } = await getChrome();
+---
+<Base title={ui("thanks_title")} description={ui("thanks_text")} noindex>
+  <div class="wrap page-head measure">
+    <h1>{ui("thanks_title")}</h1>
+    <p>{ui("thanks_text")}</p>
+    <p><a class="button" href="/">{ui("back_home")}</a></p>
+  </div>
+</Base>

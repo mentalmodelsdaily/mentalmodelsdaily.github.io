@@ -1,0 +1,30 @@
+---
+// A product on Home: the object in its room's colours, its role, price and one button.
+import type { ImageMetadata } from "astro";
+import ProductCover from "./ProductCover.astro";
+import BuyButton from "./BuyButton.astro";
+
+interface Props {
+  key: "deck" | "workbook" | "almanac";
+  name: string;
+  role: string;
+  image: ImageMetadata;
+  alt: string;
+  price: string | null;
+  priceNote: string | null;
+  state: "buy" | "notify" | "coming";
+  buyLabel: string;
+  notifyLabel: string;
+  comingLabel: string;
+}
+const { key, name, role, image, alt, price, priceNote, state, buyLabel, notifyLabel, comingLabel } = Astro.props;
+---
+<article class="product-card" data-room={key}>
+  <a class="product-card__object" href={`/${key}/`} aria-label={name}>
+    <ProductCover src={image} alt={alt} sizes="(min-width: 48rem) 20rem, 70vw" vtName={`product-${key}`} />
+  </a>
+  <p class="label product-card__role">{role}</p>
+  <h3 class="product-card__name"><a href={`/${key}/`}>{name}</a></h3>
+  <p class="product-card__price">{price ? <>{price}{priceNote && <span class="label"> · {priceNote}</span>}</> : <span class="label">{comingLabel}</span>}</p>
+  <BuyButton buyKey={key} state={state} label={buyLabel} notifyLabel={notifyLabel} comingLabel={comingLabel} notifyHref={`/${key}/#notify`} />
+</article>

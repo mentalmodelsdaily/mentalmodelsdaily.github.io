@@ -1,0 +1,16 @@
+---
+// A YouTube video that loads nothing from YouTube until the visitor presses play and accepts (SPEC.md §9.4).
+interface Props {
+  youtubeId: string;
+  title: string;
+  playLabel: string;
+  id?: string;
+}
+const { youtubeId, title, playLabel, id } = Astro.props;
+const watchUrl = `https://www.youtube.com/watch?v=${encodeURIComponent(youtubeId)}`;
+---
+<div class="facade facade--video" id={id} data-facade="youtube" data-provider="YouTube" data-embed={`https://www.youtube-nocookie.com/embed/${encodeURIComponent(youtubeId)}?autoplay=1`} data-title={title}>
+  <span class="facade__mark" aria-hidden="true"></span>
+  <p class="facade__title">{title}</p>
+  <a class="button button--primary facade__play" href={watchUrl} rel="noopener">{playLabel}</a>
+</div>

@@ -1,0 +1,26 @@
+---
+// Searches the 365 by name, then one-liner, then field (SPEC.md §9.1).
+// Without JavaScript it is a GET form to /explore/, whose A to Z is the fallback.
+interface Props {
+  ui: (key: string) => string;
+  id?: string;
+}
+const { ui, id = "search" } = Astro.props;
+---
+<form class="search" role="search" action="/explore/" method="get" data-search data-count={ui("search_count")} data-count-one={ui("search_count_one")} data-none={ui("search_none")} data-no={ui("no")}>
+  <label class="visually-hidden" for={`${id}-q`}>{ui("search_placeholder")}</label>
+  <input
+    id={`${id}-q`}
+    class="search__input"
+    type="search"
+    name="q"
+    placeholder={ui("search_placeholder")}
+    autocomplete="off"
+    spellcheck="false"
+    aria-controls={`${id}-results`}
+    aria-describedby={`${id}-status`}
+  />
+  <button class="button" type="submit">{ui("search_button")}</button>
+  <p class="search__status label" id={`${id}-status`} aria-live="polite"></p>
+  <ol class="search__results" id={`${id}-results`} hidden></ol>
+</form>
