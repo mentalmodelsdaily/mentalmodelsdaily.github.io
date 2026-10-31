@@ -18,6 +18,7 @@ const ALLOWED_HOSTS = [
 ];
 const BANNED_HOSTS = ["fonts.googleapis.com", "fonts.gstatic.com"];
 const JS_BUDGET = 10 * 1024;
+const CSS_BUDGET = 30 * 1024;
 
 const failures = [];
 const notes = [];
@@ -133,6 +134,13 @@ for (const file of htmlFiles) {
   const scripts = [...html.matchAll(/<script\b[^>]*\bsrc="(\/[^"]+)"/gi)].map((m) => m[1]);
   const js = scripts.reduce((n, src) => n + sizeOf(src), 0);
   if (js > JS_BUDGET) fail(`${page}: ${(js / 1024).toFixed(1)} KB of JS (budget 10 KB)`);
+
+  // Our CSS per page, and the fonts it preloads (at most 4 font files on any page, SPEC.md §12).
+  const sheets = [...html.matchAll(/<link rel="stylesheet" href="(\/[^"]+)"/gi)].map((m) => m[1]);
+  const css = sheets.reduce((n, href) => n + sizeOf(href), 0);
+  if (css > CSS_BUDGET) fail(`${page}: ${(css / 1024).toFixed(1)} KB of CSS (budget 30 KB)`);
+  const preloadedFonts = (html.match(/<link rel="preload"[^>]*as="font"/gi) || []).length;
+  if (preloadedFonts > 4) fail(`${page}: preloads ${preloadedFonts} fonts (max 4)`);
 
   // Page basics.
   const h1s = (html.match(/<h1\b/gi) || []).length;

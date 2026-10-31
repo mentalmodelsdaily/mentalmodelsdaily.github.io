@@ -274,13 +274,22 @@ p { margin: 0 0 var(--s3); }
 /* --- Drawings ------------------------------------------------------------------ */
 
 .drawing {
+  --m: var(--mask);
   aspect-ratio: 4 / 3;
   width: 100%;
   background: var(--draw);
-  -webkit-mask: var(--mask) center / contain no-repeat;
-  mask: var(--mask) center / contain no-repeat;
+  -webkit-mask: var(--m) center / contain no-repeat;
+  mask: var(--m) center / contain no-repeat;
   print-color-adjust: exact;
   -webkit-print-color-adjust: exact;
+  /* In Windows high-contrast mode keep the drawing, in the system's text colour. */
+  forced-color-adjust: none;
+}
+@media (forced-colors: active) {
+  .drawing { background: CanvasText; }
+}
+@supports (mask-image: image-set(url("x.avif") type("image/avif"))) {
+  .drawing { --m: var(--mask-set); }
 }
 .drawing--part { background: var(--part-ink, var(--draw)); }
 [data-room]:not([data-room="paper"]) .drawing--part { background: var(--draw); }
@@ -297,7 +306,6 @@ p { margin: 0 0 var(--s3); }
   border-radius: 99px;
   color: var(--text);
   text-decoration: none;
-  white-space: nowrap;
 }
 a.chip { min-height: 44px; }
 a.chip:hover { border-color: currentColor; }
@@ -397,6 +405,8 @@ a.chip[aria-pressed="true"] { background: var(--text); color: var(--paper); bord
 }
 @media (min-width: 48rem) { .model-row { grid-template-columns: 8rem minmax(0, 1fr); } }
 .model-row__drawing { aspect-ratio: 4 / 3; }
+/* Rows far below the fold are not rendered, so their drawings are not fetched, until they come near. */
+.model-row { content-visibility: auto; contain-intrinsic-size: auto 7.5rem; }
 .model-row__meta { display: flex; flex-wrap: wrap; align-items: center; gap: var(--s2); color: var(--muted); margin-bottom: var(--s1); }
 .model-row__meta .chip { min-height: 0; padding: 0 .5rem; }
 .model-row__name { font-size: var(--step-1); margin: 0 0 var(--s1); }
@@ -579,7 +589,7 @@ a.chip[aria-pressed="true"] { background: var(--text); color: var(--paper); bord
 .hero__model-line { font-style: italic; max-width: 40ch; }
 .hero__today:hover .hero__model { text-decoration: underline; text-decoration-thickness: 1px; }
 
-.home__section { padding-top: var(--s6); }
+.home__section, .page__section { padding-top: var(--s6); }
 .home__heading { color: var(--muted); }
 .home__title { font-size: var(--step-2); }
 .home__title a { text-decoration: none; }

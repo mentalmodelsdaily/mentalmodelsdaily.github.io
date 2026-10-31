@@ -14,11 +14,11 @@
   /* 2. A drawing draws itself in, once, left to right: a second mask layer sweeps across. */
   .drawing--draw {
     -webkit-mask:
-      var(--mask) center / contain no-repeat,
+      var(--m) center / contain no-repeat,
       linear-gradient(to right, #000 40%, transparent 60%) 100% 0 / 260% 100% no-repeat;
     -webkit-mask-composite: source-in;
     mask:
-      var(--mask) center / contain no-repeat,
+      var(--m) center / contain no-repeat,
       linear-gradient(to right, #000 40%, transparent 60%) 100% 0 / 260% 100% no-repeat;
     mask-composite: intersect;
     animation: draw-in var(--t-slow) var(--ease) 120ms both;

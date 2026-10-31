@@ -27,9 +27,11 @@ interface Props {
   /** Canonical path, when it is not this page's own (e.g. /today/ points at the model). */
   canonical?: string;
   jsonLd?: object | object[];
+  /** The above-the-fold drawing's AVIF mask, preloaded because it is the page's largest image. */
+  preloadMask?: string;
 }
 
-const { title, description, og = ogFallback.src, room = "paper", part, noindex = false, canonical, jsonLd } = Astro.props;
+const { title, description, og = ogFallback.src, room = "paper", part, noindex = false, canonical, jsonLd, preloadMask } = Astro.props;
 const { site, socials, smallPrint, ui } = await getChrome();
 
 const fullTitle = title ? `${title} · ${site.name}` : site.name;
@@ -53,6 +55,7 @@ const ld = jsonLd ? JSON.stringify(jsonLd).replace(/</g, "\\u003c") : null;
 
     <link rel="preload" href="/fonts/goudy-normal-400-latin.woff2" as="font" type="font/woff2" crossorigin />
     <link rel="preload" href="/fonts/plex-normal-400-latin.woff2" as="font" type="font/woff2" crossorigin />
+    {preloadMask && <link rel="preload" href={preloadMask} as="image" type="image/avif" fetchpriority="high" />}
     {hasDisplayFont && <link rel="stylesheet" href="/fonts/display.css" />}
 
     <link rel="icon" href="/favicon.svg" type="image/svg+xml" />
