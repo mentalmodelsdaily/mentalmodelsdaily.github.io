@@ -1,0 +1,51 @@
+---
+interface Social { name: string; handle: string; url: string }
+interface Props {
+  name: string;
+  aiNote: string;
+  socials: Social[];
+  smallPrint: { href: string; title: string }[];
+  ui: (key: string) => string;
+}
+const { name, aiNote, socials, smallPrint, ui } = Astro.props;
+const year = new Date().getFullYear();
+const products = [
+  { href: "/deck/", key: "product_deck" },
+  { href: "/workbook/", key: "product_workbook" },
+  { href: "/almanac/", key: "product_almanac" },
+];
+---
+<footer class="site-footer">
+  <div class="wrap">
+    <div class="site-footer__grid">
+      {socials.length > 0 && (
+        <section aria-labelledby="footer-follow">
+          <h2 id="footer-follow">{ui("footer_follow")}</h2>
+          <ul>
+            {socials.map((s) => (
+              <li><a href={s.url} rel="me noopener">{s.name}<span class="visually-hidden"> {s.handle}</span></a></li>
+            ))}
+          </ul>
+        </section>
+      )}
+      <section aria-labelledby="footer-products">
+        <h2 id="footer-products">{ui("footer_products")}</h2>
+        <ul>
+          {products.map((p) => <li><a href={p.href}>{ui(p.key)}</a></li>)}
+        </ul>
+      </section>
+      <section aria-labelledby="footer-small-print">
+        <h2 id="footer-small-print">{ui("footer_small_print")}</h2>
+        <ul>
+          <li><a href="/about/">{ui("nav_about")}</a></li>
+          {smallPrint.map((p) => <li><a href={p.href}>{p.title}</a></li>)}
+          <li><a class="linkish" href="/cookies/#settings" data-cookie-settings>{ui("cookie_settings")}</a></li>
+        </ul>
+      </section>
+    </div>
+    <div class="site-footer__base">
+      <p>© {year} {name}</p>
+      <p>{aiNote}</p>
+    </div>
+  </div>
+</footer>

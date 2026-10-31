@@ -1,0 +1,17 @@
+---
+// The brain mark, "THE" over "Mental Models Daily", and the product word where there is one (BRAND.md).
+interface Props {
+  name: string;
+  product?: string;
+  href?: string;
+}
+const { name, product, href = "/" } = Astro.props;
+---
+<a class="wordmark" href={href}>
+  <span class="wordmark__mark" aria-hidden="true"></span>
+  <span class="wordmark__words">
+    <span class="wordmark__the label" aria-hidden="true">The</span>
+    <span class="wordmark__name">{name}</span>
+    {product && <span class="wordmark__the label">{product}</span>}
+  </span>
+</a>

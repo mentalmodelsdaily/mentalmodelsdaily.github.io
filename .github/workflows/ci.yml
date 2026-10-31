@@ -24,7 +24,8 @@ jobs:
       - run: npm install --no-save @astrojs/check@0.9.12 typescript@5
       - run: npm run check
       - name: Internal links
-        run: npx --yes linkinator@6 dist --recurse --skip "^https?://(?!mentalmodelsdaily)"
+        # linkinator serves dist/ on localhost; skip every other host.
+        run: npx --yes linkinator@6 dist --recurse --skip "^(?!http://localhost)"
       - name: Lighthouse
         # Runs against the built files until Cloudflare preview URLs are connected.
         run: npx --yes @lhci/cli@0.15 autorun

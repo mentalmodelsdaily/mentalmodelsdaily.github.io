@@ -1,0 +1,80 @@
+---
+// Every page: <head>, skip link, header, footer (SPEC.md §2, §6).
+import "../styles/tokens.css";
+import "../styles/rooms.css";
+import "../styles/base.css";
+import { existsSync } from "node:fs";
+import { join } from "node:path";
+import Header from "../components/Header.astro";
+import Footer from "../components/Footer.astro";
+import { getChrome } from "../lib/data";
+import ogFallback from "../assets/og/home.jpg";
+
+interface Props {
+  /** Page title without the site name; omit on Home. */
+  title?: string;
+  description: string;
+  /** Open Graph image URL (an imported asset's src). Defaults to og/home.jpg. */
+  og?: string;
+  room?: "paper" | "workbook" | "almanac" | "deck";
+  part?: string;
+  noindex?: boolean;
+  /** Canonical path, when it is not this page's own (e.g. /today/ points at the model). */
+  canonical?: string;
+  jsonLd?: object | object[];
+}
+
+const { title, description, og = ogFallback.src, room = "paper", part, noindex = false, canonical, jsonLd } = Astro.props;
+const { site, socials, smallPrint, ui } = await getChrome();
+
+const fullTitle = title ? `${title} · ${site.name}` : site.name;
+const canonicalUrl = new URL(canonical ?? Astro.url.pathname, site.url).href;
+const ogUrl = new URL(og, site.url).href;
+// Roxborough CF is used only once its web licence is bought and the file is in public/fonts/.
+const hasDisplayFont = existsSync(join(process.cwd(), "public/fonts/roxborough-cf.woff2"));
+const xHandle = socials.find((s) => s.name === "X")?.handle;
+const ld = jsonLd ? JSON.stringify(jsonLd).replace(/</g, "\\u003c") : null;
+---
+<!doctype html>
+<html lang="en-GB">
+  <head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <title>{fullTitle}</title>
+    <meta name="description" content={description} />
+    {noindex && <meta name="robots" content="noindex" />}
+    <link rel="canonical" href={canonicalUrl} />
+    <meta name="theme-color" content="#FFFAE5" />
+
+    <link rel="preload" href="/fonts/goudy-normal-400-latin.woff2" as="font" type="font/woff2" crossorigin />
+    <link rel="preload" href="/fonts/plex-normal-400-latin.woff2" as="font" type="font/woff2" crossorigin />
+    <link rel="stylesheet" href="/fonts/fonts.css" />
+    {hasDisplayFont && <link rel="stylesheet" href="/fonts/display.css" />}
+
+    <link rel="icon" href="/favicon.svg" type="image/svg+xml" />
+    <link rel="icon" href="/favicon.ico" sizes="32x32" />
+    <link rel="apple-touch-icon" href="/apple-touch-icon.png" />
+    <link rel="manifest" href="/site.webmanifest" />
+
+    <meta property="og:site_name" content={site.name} />
+    <meta property="og:type" content="website" />
+    <meta property="og:title" content={title ?? site.name} />
+    <meta property="og:description" content={description} />
+    <meta property="og:url" content={canonicalUrl} />
+    <meta property="og:image" content={ogUrl} />
+    <meta property="og:image:width" content="1200" />
+    <meta property="og:image:height" content="630" />
+    <meta property="og:locale" content="en_GB" />
+    <meta name="twitter:card" content="summary_large_image" />
+    {xHandle && <meta name="twitter:site" content={xHandle} />}
+    {ld && <script type="application/ld+json" set:html={ld} />}
+  </head>
+  <body data-room={room} data-part={part}>
+    <a class="skip" href="#main">{ui("skip")}</a>
+    <Header name={site.name} current={Astro.url.pathname} ui={ui} />
+    <main id="main" tabindex="-1">
+      <slot />
+    </main>
+    <Footer name={site.name} aiNote={site.ai_note} socials={socials} smallPrint={smallPrint} ui={ui} />
+  </body>
+</html>

@@ -1,0 +1,35 @@
+---
+import Wordmark from "./Wordmark.astro";
+
+interface Props {
+  name: string;
+  current: string;
+  ui: (key: string) => string;
+}
+const { name, current, ui } = Astro.props;
+
+const links = [
+  { href: "/explore/", key: "nav_explore" },
+  { href: "/deck/", key: "nav_deck" },
+  { href: "/workbook/", key: "nav_workbook" },
+  { href: "/almanac/", key: "nav_almanac" },
+  { href: "/podcast/", key: "nav_podcast" },
+  { href: "/free/", key: "nav_free" },
+];
+const isCurrent = (href: string) => current === href || current.startsWith(href);
+---
+<header class="site-header">
+  <div class="wrap site-header__inner">
+    <Wordmark name={name} />
+    <details class="nav-menu">
+      <summary class="label">{ui("menu")}</summary>
+      <nav class="nav" aria-label={ui("nav_label")}>
+        <ul class="nav__list label">
+          {links.map((l) => (
+            <li><a href={l.href} aria-current={isCurrent(l.href) ? "page" : undefined}>{ui(l.key)}</a></li>
+          ))}
+        </ul>
+      </nav>
+    </details>
+  </div>
+</header>
