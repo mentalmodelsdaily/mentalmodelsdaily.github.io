@@ -25,9 +25,9 @@ jobs:
       - run: npm run check
       - name: Internal links
         # linkinator serves dist/ on localhost; skip every other host. Until the later milestones land, the
-        # menu and button links to pages they build (the rooms, Podcast, Free) are skipped too; milestone 4
+        # menu links to pages they build (Podcast, Free) are skipped too; milestone 4
         # removes this second skip once every page exists.
-        run: npx --yes linkinator@6 dist --recurse --skip "^(?!http://localhost)" --skip "/(deck|workbook|almanac|podcast|free)/$"
+        run: npx --yes linkinator@6 dist --recurse --skip "^(?!http://localhost)" --skip "/(podcast|free)/$"
       - name: Lighthouse
         # Against the built files, so the "build" check never waits on Cloudflare. The median of three runs
         # keeps one slow run on a shared runner from failing the check. Cloudflare previews each branch too.
