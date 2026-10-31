@@ -1,0 +1,745 @@
+[
+ {
+  "id": "D1",
+  "part": "D",
+  "sort": 1,
+  "title": "Weighing the options",
+  "idea": "Lay the choices side by side and compare what each really costs and gives.",
+  "models": [
+   123,
+   327,
+   243,
+   129,
+   259,
+   276,
+   145,
+   326,
+   43,
+   296,
+   149
+  ]
+ },
+ {
+  "id": "D2",
+  "part": "D",
+  "sort": 2,
+  "title": "Valuing time and money",
+  "idea": "Put a price on the future: what waiting, switching or leaving is worth.",
+  "models": [
+   248,
+   256,
+   273,
+   291
+  ]
+ },
+ {
+  "id": "D3",
+  "part": "D",
+  "sort": 3,
+  "title": "Thinking ahead",
+  "idea": "See the consequences before you act, and plan for what comes next.",
+  "models": [
+   5,
+   252,
+   25,
+   33,
+   40
+  ]
+ },
+ {
+  "id": "D4",
+  "part": "D",
+  "sort": 4,
+  "title": "When choosing gets hard",
+  "idea": "Too many options, too much information, or a choice that seems to have only two sides.",
+  "models": [
+   180,
+   364,
+   12,
+   208,
+   213,
+   221,
+   308,
+   232
+  ]
+ },
+ {
+  "id": "D5",
+  "part": "D",
+  "sort": 5,
+  "title": "Committing, and when not to",
+  "idea": "Going all in, cutting your losses, and checking you are on firm ground.",
+  "models": [
+   156,
+   4,
+   68,
+   167,
+   169,
+   64,
+   298
+  ]
+ },
+ {
+  "id": "R1",
+  "part": "R",
+  "sort": 1,
+  "title": "Thinking in odds",
+  "idea": "Treat the future as a range of chances, not one forecast.",
+  "models": [
+   101,
+   104,
+   9,
+   107,
+   19,
+   110,
+   280,
+   29,
+   117,
+   121
+  ]
+ },
+ {
+  "id": "R2",
+  "part": "R",
+  "sort": 2,
+  "title": "Misreading chance",
+  "idea": "The ways our instincts get probability wrong.",
+  "models": [
+   183,
+   55,
+   254,
+   58,
+   59,
+   271,
+   282
+  ]
+ },
+ {
+  "id": "R3",
+  "part": "R",
+  "sort": 3,
+  "title": "The unexpected",
+  "idea": "Surprises, slow drifts and tiny causes with large effects.",
+  "models": [
+   91,
+   3,
+   332,
+   335,
+   24,
+   343,
+   42
+  ]
+ },
+ {
+  "id": "R4",
+  "part": "R",
+  "sort": 4,
+  "title": "Protecting yourself",
+  "idea": "Buffers, options and recovery, so a bad day is never the last one.",
+  "models": [
+   89,
+   247,
+   140,
+   270,
+   223,
+   225,
+   32,
+   172
+  ]
+ },
+ {
+  "id": "P1",
+  "part": "P",
+  "sort": 1,
+  "title": "Understanding people",
+  "idea": "What drives people, and how to read them fairly.",
+  "models": [
+   338,
+   74,
+   76,
+   77,
+   365,
+   22,
+   312,
+   309
+  ]
+ },
+ {
+  "id": "P2",
+  "part": "P",
+  "sort": 2,
+  "title": "How we judge others",
+  "idea": "The shortcuts that colour what we think of people.",
+  "models": [
+   303,
+   73,
+   206,
+   207,
+   210,
+   75,
+   216,
+   79,
+   230
+  ]
+ },
+ {
+  "id": "P3",
+  "part": "P",
+  "sort": 3,
+  "title": "Persuading and influencing",
+  "idea": "How minds are changed, honestly and otherwise.",
+  "models": [
+   181,
+   184,
+   185,
+   128,
+   10,
+   218,
+   345,
+   227,
+   85,
+   177
+  ]
+ },
+ {
+  "id": "P4",
+  "part": "P",
+  "sort": 4,
+  "title": "Negotiating and conflict",
+  "idea": "Bargaining, threats, bluffs and standing your ground.",
+  "models": [
+   150,
+   1,
+   319,
+   161,
+   166,
+   351,
+   171,
+   226,
+   63,
+   173,
+   179
+  ]
+ },
+ {
+  "id": "P5",
+  "part": "P",
+  "sort": 5,
+  "title": "Cooperation and trust",
+  "idea": "Why people work together, and why they sometimes don’t.",
+  "models": [
+   352,
+   72,
+   106,
+   81,
+   321,
+   84,
+   46,
+   294,
+   86
+  ]
+ },
+ {
+  "id": "P6",
+  "part": "P",
+  "sort": 6,
+  "title": "Leading people",
+  "idea": "Expectations, rewards and fairness when others depend on you.",
+  "models": [
+   238,
+   131,
+   203,
+   266,
+   28,
+   144,
+   224
+  ]
+ },
+ {
+  "id": "P7",
+  "part": "P",
+  "sort": 7,
+  "title": "How groups behave",
+  "idea": "Hierarchies, crowds and the pressure to fit in.",
+  "models": [
+   190,
+   239,
+   69,
+   205,
+   136,
+   168
+  ]
+ },
+ {
+  "id": "W1",
+  "part": "W",
+  "sort": 1,
+  "title": "Getting started and keeping going",
+  "idea": "The first push, and the habits that carry you after it.",
+  "models": [
+   349,
+   333,
+   322,
+   194,
+   302,
+   105,
+   340,
+   342
+  ]
+ },
+ {
+  "id": "W2",
+  "part": "W",
+  "sort": 2,
+  "title": "Focus and priorities",
+  "idea": "Spend effort where it counts, and say no to the rest.",
+  "models": [
+   318,
+   139,
+   261,
+   21,
+   277,
+   41,
+   174,
+   295,
+   348
+  ]
+ },
+ {
+  "id": "W3",
+  "part": "W",
+  "sort": 3,
+  "title": "Finishing, not polishing",
+  "idea": "Ship, learn and avoid the traps that make work late.",
+  "models": [
+   209,
+   268,
+   272,
+   27,
+   143,
+   175
+  ]
+ },
+ {
+  "id": "W4",
+  "part": "W",
+  "sort": 4,
+  "title": "Organising the work",
+  "idea": "Owners, systems and records that let work run without you.",
+  "models": [
+   124,
+   155,
+   191,
+   158,
+   127,
+   130,
+   162,
+   250,
+   337,
+   15,
+   141,
+   360
+  ]
+ },
+ {
+  "id": "W5",
+  "part": "W",
+  "sort": 5,
+  "title": "Building skill",
+  "idea": "How expertise grows, and where yours is worth most.",
+  "models": [
+   242,
+   195,
+   6,
+   201,
+   344,
+   347,
+   36,
+   287
+  ]
+ },
+ {
+  "id": "S1",
+  "part": "S",
+  "sort": 1,
+  "title": "Finding your advantage",
+  "idea": "What makes you hard to copy, and how to protect it.",
+  "models": [
+   236,
+   334,
+   251,
+   269,
+   357,
+   82,
+   83,
+   285,
+   290,
+   293
+  ]
+ },
+ {
+  "id": "S2",
+  "part": "S",
+  "sort": 2,
+  "title": "Winning customers",
+  "idea": "What people really want, and what keeps them.",
+  "models": [
+   233,
+   234,
+   240,
+   246,
+   258,
+   262,
+   264,
+   265,
+   80,
+   278,
+   281
+  ]
+ },
+ {
+  "id": "S3",
+  "part": "S",
+  "sort": 3,
+  "title": "How markets grow and tip",
+  "idea": "Networks, curves and the moments a market picks a winner.",
+  "models": [
+   245,
+   253,
+   133,
+   263,
+   23,
+   363,
+   114,
+   325,
+   289,
+   148,
+   297
+  ]
+ },
+ {
+  "id": "S4",
+  "part": "S",
+  "sort": 4,
+  "title": "Staying ahead of change",
+  "idea": "Adapt before the world forces you to.",
+  "models": [
+   244,
+   67,
+   249,
+   202,
+   356,
+   274,
+   26,
+   359,
+   362
+  ]
+ },
+ {
+  "id": "S5",
+  "part": "S",
+  "sort": 5,
+  "title": "Finding opportunities",
+  "idea": "Where good ideas and lucky breaks tend to come from.",
+  "models": [
+   235,
+   14,
+   16,
+   324,
+   20,
+   35
+  ]
+ },
+ {
+  "id": "S6",
+  "part": "S",
+  "sort": 6,
+  "title": "Competing with rivals",
+  "idea": "Moves and counter-moves when someone is trying to beat you.",
+  "models": [
+   151,
+   152,
+   153,
+   160,
+   164,
+   165,
+   320,
+   37,
+   176
+  ]
+ },
+ {
+  "id": "E1",
+  "part": "E",
+  "sort": 1,
+  "title": "Reading the numbers",
+  "idea": "Averages, spreads and odds: what the figures actually say.",
+  "models": [
+   51,
+   90,
+   92,
+   94,
+   95,
+   99,
+   100,
+   328,
+   108,
+   111,
+   115,
+   118,
+   119,
+   122
+  ]
+ },
+ {
+  "id": "E2",
+  "part": "E",
+  "sort": 2,
+  "title": "Testing a claim",
+  "idea": "How to check whether something is really true.",
+  "models": [
+   102,
+   103,
+   198,
+   329,
+   306,
+   109,
+   112,
+   219,
+   113,
+   222,
+   116,
+   331,
+   120,
+   147
+  ]
+ },
+ {
+  "id": "E3",
+  "part": "E",
+  "sort": 3,
+  "title": "Cause or coincidence?",
+  "idea": "Telling a real cause from a pattern that only looks like one.",
+  "models": [
+   53,
+   93,
+   96,
+   97,
+   31,
+   65
+  ]
+ },
+ {
+  "id": "E4",
+  "part": "E",
+  "sort": 4,
+  "title": "When research goes wrong",
+  "idea": "The ways good-looking evidence can mislead.",
+  "models": [
+   182,
+   98,
+   57,
+   310,
+   220,
+   313,
+   307,
+   314,
+   315,
+   317
+  ]
+ },
+ {
+  "id": "E5",
+  "part": "E",
+  "sort": 5,
+  "title": "Spotting a bad argument",
+  "idea": "Tricks of reasoning that sound convincing but prove nothing.",
+  "models": [
+   44,
+   45,
+   47,
+   48,
+   49,
+   50,
+   52,
+   54,
+   56,
+   60,
+   61,
+   62,
+   66
+  ]
+ },
+ {
+  "id": "E6",
+  "part": "E",
+  "sort": 6,
+  "title": "Where information comes from",
+  "idea": "Sources, filters and measures, and how each bends the picture.",
+  "models": [
+   187,
+   70,
+   71,
+   134,
+   339,
+   217,
+   78,
+   279,
+   146,
+   39,
+   88
+  ]
+ },
+ {
+  "id": "M1",
+  "part": "M",
+  "sort": 1,
+  "title": "Seeing what you want to see",
+  "idea": "How the mind protects what it already believes.",
+  "models": [
+   188,
+   299,
+   193,
+   300,
+   196,
+   200,
+   305,
+   311,
+   34,
+   231
+  ]
+ },
+ {
+  "id": "M2",
+  "part": "M",
+  "sort": 2,
+  "title": "Judging yourself, and your luck",
+  "idea": "Confidence, doubt, and how we explain success, failure and fortune.",
+  "models": [
+   2,
+   197,
+   8,
+   211,
+   17,
+   275,
+   316,
+   87
+  ]
+ },
+ {
+  "id": "M3",
+  "part": "M",
+  "sort": 3,
+  "title": "Feelings that steer you",
+  "idea": "Fear, loss, stress and envy, and what they do to judgement.",
+  "models": [
+   301,
+   199,
+   304,
+   212,
+   214,
+   284,
+   361,
+   228,
+   229
+  ]
+ },
+ {
+  "id": "M4",
+  "part": "M",
+  "sort": 4,
+  "title": "Comparing, following and drifting",
+  "idea": "Measuring yourself against others, following the crowd, and small steps that take you further than you meant.",
+  "models": [
+   186,
+   11,
+   204,
+   346
+  ]
+ },
+ {
+  "id": "X1",
+  "part": "X",
+  "sort": 1,
+  "title": "Finding the real cause",
+  "idea": "Look past the symptom to what is really going on.",
+  "models": [
+   125,
+   7,
+   323,
+   18,
+   215,
+   358,
+   330,
+   30,
+   38
+  ]
+ },
+ {
+  "id": "X2",
+  "part": "X",
+  "sort": 2,
+  "title": "How systems push back",
+  "idea": "Loops, balances and bottlenecks that decide how a system responds.",
+  "models": [
+   126,
+   353,
+   132,
+   355,
+   137,
+   341
+  ]
+ },
+ {
+  "id": "X3",
+  "part": "X",
+  "sort": 3,
+  "title": "How problems spread",
+  "idea": "Chains, tipping points and the ways to contain them.",
+  "models": [
+   189,
+   350,
+   159,
+   336,
+   163,
+   354,
+   170,
+   292
+  ]
+ },
+ {
+  "id": "X4",
+  "part": "X",
+  "sort": 4,
+  "title": "When fixes backfire",
+  "idea": "Solutions that create new problems.",
+  "models": [
+   154,
+   192,
+   157,
+   13,
+   257,
+   260,
+   288,
+   178
+  ]
+ },
+ {
+  "id": "X5",
+  "part": "X",
+  "sort": 5,
+  "title": "Rewards and rules",
+  "idea": "Incentives, measures and regulations, and how they go wrong.",
+  "models": [
+   237,
+   241,
+   255,
+   135,
+   138,
+   267,
+   142,
+   283,
+   286
+  ]
+ }
+]

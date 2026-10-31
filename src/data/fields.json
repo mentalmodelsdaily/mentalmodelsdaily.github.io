@@ -1,0 +1,82 @@
+[
+ {
+  "slug": "physics",
+  "label": "Physics",
+  "drawing": "drawings/fields/physics.png"
+ },
+ {
+  "slug": "chemistry",
+  "label": "Chemistry",
+  "drawing": "drawings/fields/chemistry.png"
+ },
+ {
+  "slug": "biology",
+  "label": "Biology",
+  "drawing": "drawings/fields/biology.png"
+ },
+ {
+  "slug": "mathematics",
+  "label": "Mathematics",
+  "drawing": "drawings/fields/mathematics.png"
+ },
+ {
+  "slug": "equations",
+  "label": "Equations",
+  "drawing": "drawings/fields/equations.png"
+ },
+ {
+  "slug": "statistics-probability",
+  "label": "Statistics and Probability",
+  "drawing": "drawings/fields/statistics-probability.png"
+ },
+ {
+  "slug": "psychology",
+  "label": "Psychology",
+  "drawing": "drawings/fields/psychology.png"
+ },
+ {
+  "slug": "heuristics-bias",
+  "label": "Heuristics and Bias",
+  "drawing": "drawings/fields/heuristics-bias.png"
+ },
+ {
+  "slug": "human-nature-judgement",
+  "label": "Human Nature and Judgement",
+  "drawing": "drawings/fields/human-nature-judgement.png"
+ },
+ {
+  "slug": "fallacy",
+  "label": "Fallacy",
+  "drawing": "drawings/fields/fallacy.png"
+ },
+ {
+  "slug": "economics",
+  "label": "Economics",
+  "drawing": "drawings/fields/economics.png"
+ },
+ {
+  "slug": "sociology",
+  "label": "Sociology",
+  "drawing": "drawings/fields/sociology.png"
+ },
+ {
+  "slug": "game-theory",
+  "label": "Game Theory",
+  "drawing": "drawings/fields/game-theory.png"
+ },
+ {
+  "slug": "military-war",
+  "label": "Military and War",
+  "drawing": "drawings/fields/military-war.png"
+ },
+ {
+  "slug": "systems",
+  "label": "Systems",
+  "drawing": "drawings/fields/systems.png"
+ },
+ {
+  "slug": "general-thinking",
+  "label": "General Thinking",
+  "drawing": "drawings/fields/general-thinking.png"
+ }
+]

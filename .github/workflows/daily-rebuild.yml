@@ -1,0 +1,23 @@
+# Rebuild the site each morning so /today/ and the Home hero change (SPEC.md §1).
+name: Daily rebuild
+
+on:
+  schedule:
+    - cron: "15 5 * * *" # 05:15 UTC, after the podcast's 05:00 release
+  workflow_dispatch:
+
+permissions: {}
+
+jobs:
+  deploy-hook:
+    runs-on: ubuntu-latest
+    steps:
+      - name: Call the Cloudflare Pages deploy hook
+        env:
+          CF_DEPLOY_HOOK: ${{ secrets.CF_DEPLOY_HOOK }}
+        run: |
+          if [ -z "$CF_DEPLOY_HOOK" ]; then
+            echo "CF_DEPLOY_HOOK is not set yet; nothing to do."
+            exit 0
+          fi
+          curl --fail --silent --show-error -X POST "$CF_DEPLOY_HOOK"

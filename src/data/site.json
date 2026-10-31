@@ -1,0 +1,53 @@
+{
+ "name": "Mental Models Daily",
+ "url": "https://mentalmodelsdaily.com",
+ "hero_line": "One mental model a day to elevate your daily decision making.",
+ "ai_note": "Written with AI assistance and checked against published sources by Mental Models Daily.",
+ "ui": {
+  "read_today": "Read today's model",
+  "explore": "Explore the 365",
+  "buy": "Buy",
+  "notify": "Notify me",
+  "buy_amazon": "Buy on Amazon",
+  "kindle": "Kindle",
+  "coming": "Coming 1 January 2027",
+  "in_almanac": "In the Almanac",
+  "almanac_more": "Both stories in full, three ways to use it and where it misleads.",
+  "get_almanac": "Get the Almanac",
+  "in_deck": "In the Core Deck",
+  "see_deck": "See the deck",
+  "practise": "Practise it",
+  "see_workbook": "See the Workbook",
+  "listen_watch": "Listen · Watch",
+  "related": "Related",
+  "more_cards": "54 more in the box",
+  "tomorrow": "Tomorrow's model arrives at 6am.",
+  "email_consent": "We'll email you the cards and a model now and then. Unsubscribe any time.",
+  "email_placeholder": "Your email",
+  "email_button": "Send me the cards",
+  "opens_soon": "Opens soon",
+  "search_placeholder": "Search 365 models",
+  "cookie_settings": "Cookie settings",
+  "consent_title": "Play from {provider}?",
+  "consent_text": "This loads {provider}'s player, which may set cookies. Nothing loads until you choose.",
+  "accept": "Accept",
+  "reject": "Reject",
+  "not_found": "This page isn't here."
+ },
+ "mailerlite": {
+  "form_action": null,
+  "groups": {
+   "printable": null,
+   "notify_deck": null,
+   "notify_almanac": null
+  }
+ },
+ "associates_tags": {
+  "home": null,
+  "model": null,
+  "product": null
+ },
+ "analytics_token": null,
+ "contact_email": null,
+ "deck_shipping": null
+}
