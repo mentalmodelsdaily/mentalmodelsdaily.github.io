@@ -5,7 +5,9 @@
       "url": [
         "http://localhost/",
         "http://localhost/about/",
-        "http://localhost/privacy/"
+        "http://localhost/explore/",
+        "http://localhost/explore/risk/",
+        "http://localhost/models/margin-of-safety/"
       ],
       "numberOfRuns": 1
     },

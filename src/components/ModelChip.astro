@@ -1,0 +1,8 @@
+---
+interface Props { no: number; slug: string; name: string; part: string }
+const { no, slug, name, part } = Astro.props;
+---
+<a class="model-chip" href={`/models/${slug}/`} data-part={part}>
+  <span class="label">No. {no}</span>
+  <span class="model-chip__name">{name}</span>
+</a>

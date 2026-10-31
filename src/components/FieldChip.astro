@@ -1,0 +1,12 @@
+---
+interface Props {
+  label: string;
+  slug: string;
+  /** A link (filters on part pages); a plain chip otherwise. */
+  href?: string;
+}
+const { label, slug, href } = Astro.props;
+---
+{href
+  ? <a class="chip label" href={href} data-field-chip={slug}>{label}</a>
+  : <span class="chip label" data-field={slug}>{label}</span>}

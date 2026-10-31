@@ -1,0 +1,64 @@
+---
+// Explore: the eight situations, then all 365 from A to Z (SPEC.md §6.2). Search arrives in milestone 4.
+import Base from "../../layouts/Base.astro";
+import PartTile from "../../components/PartTile.astro";
+import { getCatalogue } from "../../lib/catalogue";
+import { getChrome } from "../../lib/data";
+import { optionalAsset } from "../../lib/assets";
+import { initial } from "../../lib/text";
+
+const { ui } = await getChrome();
+const { parts, models, field } = await getCatalogue();
+
+const collator = new Intl.Collator("en-GB", { sensitivity: "base", numeric: true });
+const sorted = [...models].sort((a, b) => collator.compare(a.name, b.name));
+const groups = new Map<string, typeof models>();
+for (const m of sorted) {
+  const letter = initial(m.name);
+  groups.set(letter, [...(groups.get(letter) ?? []), m]);
+}
+const letters = [...groups.keys()].sort((a, b) => (a === "#" ? -1 : b === "#" ? 1 : a.localeCompare(b)));
+---
+<Base title={ui("explore_title")} description={ui("explore_intro")}>
+  <div class="wrap">
+    <header class="page-head">
+      <h1>{ui("explore")}</h1>
+      <p class="measure">{ui("explore_intro")}</p>
+    </header>
+
+    <ul class="part-tiles">
+      {parts.map((p) => (
+        <PartTile
+          code={p.code}
+          slug={p.slug}
+          numeral={p.numeral}
+          title={p.title}
+          question={p.question}
+          count={models.filter((m) => m.part === p.code).length}
+          drawing={optionalAsset(p.drawing)}
+          countLabel={ui("model_count")}
+        />
+      ))}
+    </ul>
+
+    <section class="a-z" aria-labelledby="a-z">
+      <h2 id="a-z">{ui("a_to_z")}</h2>
+      <nav class="a-z__jump label" aria-label={ui("jump_to_letter")}>
+        <ul>{letters.map((l) => <li><a href={`#letter-${l === "#" ? "num" : l}`}>{l}</a></li>)}</ul>
+      </nav>
+      {letters.map((l) => (
+        <section class="a-z__group" aria-labelledby={`letter-${l === "#" ? "num" : l}`}>
+          <h3 class="a-z__letter" id={`letter-${l === "#" ? "num" : l}`}>{l}</h3>
+          <ul class="a-z__list">
+            {groups.get(l)!.map((m) => (
+              <li data-part={m.part}>
+                <a href={`/models/${m.slug}/`}>{m.name}</a>
+                <span class="label">{ui("no")} {m.no} · {field(m.field).label}</span>
+              </li>
+            ))}
+          </ul>
+        </section>
+      ))}
+    </section>
+  </div>
+</Base>

@@ -1,0 +1,26 @@
+---
+// One of the eight situations: drawing, numeral, name, question, model count, its colour along the edge.
+import type { ImageMetadata } from "astro";
+import Drawing from "./Drawing.astro";
+
+interface Props {
+  code: string;
+  slug: string;
+  numeral: string;
+  title: string;
+  question: string;
+  count: number;
+  drawing: ImageMetadata | null;
+  countLabel: string;
+}
+const { code, slug, numeral, title, question, count, drawing, countLabel } = Astro.props;
+---
+<li class="part-tile" data-part={code}>
+  <a class="part-tile__link" href={`/explore/${slug}/`}>
+    {drawing && <Drawing src={drawing} alt="" size="sm" part={code} vtName={`part-${code}`} />}
+    <span class="part-tile__numeral label">{numeral}</span>
+    <span class="part-tile__title">{title}</span>
+    <span class="part-tile__question">{question}</span>
+    <span class="part-tile__count label">{countLabel.replace("{n}", String(count))}</span>
+  </a>
+</li>
