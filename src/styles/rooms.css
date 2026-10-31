@@ -1,0 +1,17 @@
+/* Rooms (SPEC.md §5): each product has its cover's colours. */
+[data-room="paper"] {
+  --paper: var(--cream); --text: var(--ink); --muted: #5b4a40; --rule: rgba(17,17,17,.18);
+  --draw: var(--ink); --accent: var(--rust);
+}
+[data-room="workbook"] {
+  --paper: var(--cream); --text: var(--terracotta); --muted: #7a4d3d; --rule: rgba(147,95,76,.3);
+  --draw: var(--terracotta); --accent: var(--terracotta);
+}
+[data-room="almanac"] {
+  --paper: var(--terracotta); --text: var(--cream); --muted: var(--cream); --rule: rgba(255,250,229,.35);
+  --draw: var(--cream); --accent: var(--sand);
+}
+[data-room="deck"] {
+  --paper: var(--chocolate); --text: var(--cream); --muted: #f0d9b0; --rule: rgba(225,161,64,.4);
+  --draw: var(--gold); --accent: var(--gold);
+}

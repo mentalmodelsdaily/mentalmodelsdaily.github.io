@@ -1,17 +1,12 @@
 ---
-// Milestone 0: a blank page so the pipeline (build, headers, checks) can be proven end to end.
+// Home is built in milestone 4; until then a plain page in the new layout.
+import Base from "../layouts/Base.astro";
+import { getSite } from "../lib/data";
+const site = await getSite();
 ---
-<!doctype html>
-<html lang="en-GB">
-  <head>
-    <meta charset="utf-8" />
-    <meta name="viewport" content="width=device-width, initial-scale=1" />
-    <title>Mental Models Daily</title>
-    <meta name="description" content="One mental model a day to elevate your daily decision making." />
-    <link rel="canonical" href="https://mentalmodelsdaily.com/" />
-    <meta property="og:image" content="https://mentalmodelsdaily.com/og-home.jpg" />
-  </head>
-  <body>
-    <h1>Mental Models Daily</h1>
-  </body>
-</html>
+<Base description={site.hero_line}>
+  <div class="wrap page-head measure">
+    <h1>{site.name}</h1>
+    <p>{site.hero_line}</p>
+  </div>
+</Base>

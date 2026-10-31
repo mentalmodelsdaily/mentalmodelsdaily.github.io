@@ -1,0 +1,21 @@
+---
+// One template for About and the small print (SPEC.md §6.11).
+interface Props {
+  title: string;
+  updated: Date;
+  draft: boolean;
+  ui: (key: string) => string;
+}
+const { title, updated, draft, ui } = Astro.props;
+const date = updated.toLocaleDateString("en-GB", { day: "numeric", month: "long", year: "numeric", timeZone: "Europe/London" });
+---
+<article class="wrap">
+  <header class="page-head measure">
+    {draft && <p class="draft-note label">{ui("draft")}</p>}
+    <h1>{title}</h1>
+    <p class="label">{ui("updated")} <time datetime={updated.toISOString().slice(0, 10)}>{date}</time></p>
+  </header>
+  <div class="prose">
+    <slot />
+  </div>
+</article>
