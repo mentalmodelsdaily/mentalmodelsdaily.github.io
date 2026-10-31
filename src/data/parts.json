@@ -1,0 +1,122 @@
+[
+ {
+  "code": "D",
+  "numeral": "I",
+  "title": "Decisions",
+  "slug": "decisions",
+  "question": "Which way should I go?",
+  "idea": "Models for making a decision.",
+  "drawing": "drawings/parts/D.png",
+  "colours": {
+   "bg": "#935F4C",
+   "fg": "#FFFAE5",
+   "accent": "#EFCFA0"
+  },
+  "count": 35
+ },
+ {
+  "code": "R",
+  "numeral": "II",
+  "title": "Risk",
+  "slug": "risk",
+  "question": "What could go wrong, and what will I do if it does?",
+  "idea": "Acting when you cannot know what happens next, and protecting yourself in case it goes wrong.",
+  "drawing": "drawings/parts/R.png",
+  "colours": {
+   "bg": "#EFCFA0",
+   "fg": "#914110",
+   "accent": "#614E41"
+  },
+  "count": 32
+ },
+ {
+  "code": "P",
+  "numeral": "III",
+  "title": "People",
+  "slug": "people",
+  "question": "Why do people act as they do, and how do I work with them?",
+  "idea": "Understanding others, and getting people to pull together.",
+  "drawing": "drawings/parts/P.png",
+  "colours": {
+   "bg": "#532200",
+   "fg": "#E1A140",
+   "accent": "#EFCFA0"
+  },
+  "count": 60
+ },
+ {
+  "code": "W",
+  "numeral": "IV",
+  "title": "Work",
+  "slug": "work",
+  "question": "How do I get the right things done?",
+  "idea": "Models for getting work done.",
+  "drawing": "drawings/parts/W.png",
+  "colours": {
+   "bg": "#D0B49F",
+   "fg": "#3F3129",
+   "accent": "#53433A"
+  },
+  "count": 43
+ },
+ {
+  "code": "S",
+  "numeral": "V",
+  "title": "Strategy",
+  "slug": "strategy",
+  "question": "How do I win when others want the same thing?",
+  "idea": "Models for strategy and competition.",
+  "drawing": "drawings/parts/S.png",
+  "colours": {
+   "bg": "#914110",
+   "fg": "#FFFAE5",
+   "accent": "#EFCFA0"
+  },
+  "count": 56
+ },
+ {
+  "code": "E",
+  "numeral": "VI",
+  "title": "Evidence",
+  "slug": "evidence",
+  "question": "Is this really true?",
+  "idea": "Checking whether something is really true before you trust it.",
+  "drawing": "drawings/parts/E.png",
+  "colours": {
+   "bg": "#E1A140",
+   "fg": "#532200",
+   "accent": "#5A3510"
+  },
+  "count": 68
+ },
+ {
+  "code": "M",
+  "numeral": "VII",
+  "title": "Your own mind",
+  "slug": "your-own-mind",
+  "question": "Is my own thinking leading me astray?",
+  "idea": "How your own judgement can be quietly pulled off course.",
+  "drawing": "drawings/parts/M.png",
+  "colours": {
+   "bg": "#705C4E",
+   "fg": "#FFFAE5",
+   "accent": "#EFCFA0"
+  },
+  "count": 31
+ },
+ {
+  "code": "X",
+  "numeral": "VIII",
+  "title": "Fixing problems",
+  "slug": "fixing-problems",
+  "question": "Why does this keep going wrong, and how do I fix it for good?",
+  "idea": "Models for fixing problems and systems.",
+  "drawing": "drawings/parts/X.png",
+  "colours": {
+   "bg": "#231C18",
+   "fg": "#FFFAE5",
+   "accent": "#E1A140"
+  },
+  "count": 40
+ }
+]

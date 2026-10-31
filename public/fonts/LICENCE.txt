@@ -1,0 +1,2 @@
+Sorts Mill Goudy (Barry Schwartz) and IBM Plex Sans Condensed (IBM) are licensed under the SIL Open Font License 1.1: https://openfontlicense.org. Files from Google Fonts.
+Roxborough CF is not included: it is a commercial font; add roxborough-cf.woff2 here only once the web licence is bought.

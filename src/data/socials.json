@@ -1,0 +1,32 @@
+[
+ {
+  "name": "Instagram",
+  "handle": "@mentalmodelsdaily",
+  "url": "https://www.instagram.com/mentalmodelsdaily/"
+ },
+ {
+  "name": "X",
+  "handle": "@mindmodelsdaily",
+  "url": "https://x.com/mindmodelsdaily"
+ },
+ {
+  "name": "YouTube",
+  "handle": "@MentalModelsDaily",
+  "url": "https://www.youtube.com/@MentalModelsDaily"
+ },
+ {
+  "name": "Spotify",
+  "handle": "Mental Models Daily",
+  "url": "https://podcasters.spotify.com/pod/show/mental-models-daily"
+ },
+ {
+  "name": "Apple Podcasts",
+  "handle": "Mental Models Daily",
+  "url": null
+ },
+ {
+  "name": "RSS",
+  "handle": "Feed",
+  "url": null
+ }
+]
