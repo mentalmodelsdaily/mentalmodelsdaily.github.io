@@ -7,10 +7,10 @@
     "node": ">=22"
   },
   "scripts": {
-    "dev": "astro dev",
-    "build": "astro build",
+    "dev": "node scripts/parts-css.mjs && astro dev",
+    "build": "node scripts/parts-css.mjs && astro build",
     "preview": "astro preview",
-    "check": "astro check && node scripts/verify.mjs"
+    "check": "node scripts/parts-css.mjs && astro check && node scripts/verify.mjs"
   },
   "dependencies": {
     "@astrojs/sitemap": "3.7.4",

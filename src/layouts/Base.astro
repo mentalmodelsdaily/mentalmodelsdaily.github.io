@@ -1,12 +1,16 @@
 ---
 // Every page: <head>, skip link, header, footer (SPEC.md §2, §6).
+// The exported Goudy and Plex faces (public/fonts/fonts.css) are bundled with our styles: one request.
+import "../../public/fonts/fonts.css";
 import "../styles/tokens.css";
+import "../styles/parts.generated.css";
 import "../styles/rooms.css";
 import "../styles/base.css";
 import { existsSync } from "node:fs";
 import { join } from "node:path";
 import Header from "../components/Header.astro";
 import Footer from "../components/Footer.astro";
+import ConsentDialog from "../components/ConsentDialog.astro";
 import { getChrome } from "../lib/data";
 import ogFallback from "../assets/og/home.jpg";
 
@@ -48,9 +52,7 @@ const ld = jsonLd ? JSON.stringify(jsonLd).replace(/</g, "\\u003c") : null;
 
     <link rel="preload" href="/fonts/goudy-normal-400-latin.woff2" as="font" type="font/woff2" crossorigin />
     <link rel="preload" href="/fonts/plex-normal-400-latin.woff2" as="font" type="font/woff2" crossorigin />
-    <link rel="stylesheet" href="/fonts/fonts.css" />
     {hasDisplayFont && <link rel="stylesheet" href="/fonts/display.css" />}
-    <link rel="stylesheet" href="/parts.css" />
 
     <link rel="icon" href="/favicon.svg" type="image/svg+xml" />
     <link rel="icon" href="/favicon.ico" sizes="32x32" />
@@ -77,5 +79,10 @@ const ld = jsonLd ? JSON.stringify(jsonLd).replace(/</g, "\\u003c") : null;
       <slot />
     </main>
     <Footer name={site.name} aiNote={site.ai_note} socials={socials} smallPrint={smallPrint} ui={ui} />
+    <ConsentDialog ui={ui} />
+    <script src="../scripts/consent.ts"></script>
+    {site.analytics_token && (
+      <script is:inline defer src="https://static.cloudflareinsights.com/beacon.min.js" data-cf-beacon={JSON.stringify({ token: site.analytics_token })}></script>
+    )}
   </body>
 </html>

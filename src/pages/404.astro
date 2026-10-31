@@ -1,0 +1,27 @@
+---
+// 404 (SPEC.md §6.12): a drawing, a search box and today's model.
+import Base from "../layouts/Base.astro";
+import Drawing from "../components/Drawing.astro";
+import Search from "../components/Search.astro";
+import ModelChip from "../components/ModelChip.astro";
+import { getChrome } from "../lib/data";
+import { getCatalogue } from "../lib/catalogue";
+import { todaysModelId } from "../lib/today";
+import { optionalAsset } from "../lib/assets";
+
+const { ui } = await getChrome();
+const { model, part } = await getCatalogue();
+const today = model(await todaysModelId());
+// The Fixing problems situation's drawing.
+const drawing = optionalAsset(part("X").drawing);
+---
+<Base title={ui("not_found")} description={ui("not_found")} noindex>
+  <div class="wrap not-found">
+    {drawing && <Drawing src={drawing} alt="" size="md" class="not-found__drawing" />}
+    <h1>{ui("not_found")}</h1>
+    <Search ui={ui} id="search-404" />
+    <h2 class="label">{ui("today_title")}</h2>
+    <ModelChip no={today.no} slug={today.slug} name={today.name} part={today.part} />
+  </div>
+  <script src="../scripts/search.ts"></script>
+</Base>

@@ -4,13 +4,13 @@
       "staticDistDir": "./dist",
       "url": [
         "http://localhost/",
-        "http://localhost/about/",
         "http://localhost/explore/",
         "http://localhost/explore/risk/",
         "http://localhost/models/margin-of-safety/",
         "http://localhost/deck/",
         "http://localhost/workbook/",
-        "http://localhost/almanac/"
+        "http://localhost/almanac/",
+        "http://localhost/podcast/"
       ],
       "numberOfRuns": 1
     },

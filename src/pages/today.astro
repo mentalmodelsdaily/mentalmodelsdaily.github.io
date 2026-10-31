@@ -1,0 +1,45 @@
+---
+// Today's model, as on its model page (SPEC.md §6.10). noindex; canonical points at the model page.
+import Base from "../layouts/Base.astro";
+import Drawing from "../components/Drawing.astro";
+import EmailForm from "../components/EmailForm.astro";
+import PodcastFacade from "../components/PodcastFacade.astro";
+import { getShop } from "../lib/rooms";
+import { getCatalogue } from "../lib/catalogue";
+import { todaysModelId } from "../lib/today";
+import { optionalAsset, ogImage } from "../lib/assets";
+import { paragraphs } from "../lib/text";
+
+const { ui, groups, formAction } = await getShop();
+const { model, part, field } = await getCatalogue();
+const m = model(await todaysModelId());
+const p = part(m.part);
+const drawing = optionalAsset(m.drawing);
+---
+<Base title={ui("today_title")} description={m.one_liner} og={ogImage(m.slug)} part={m.part} noindex canonical={`/models/${m.slug}/`}>
+  <article class="model wrap" data-part={m.part}>
+    <header class="model__head">
+      <p class="model__kicker label">
+        <span>{ui("today_title")}</span> · <span>{ui("no")} {m.no}</span> · <a href={`/explore/${p.slug}/`}>{p.title}</a> · <span>{field(m.field).label}</span>
+      </p>
+      {drawing && <Drawing src={drawing} alt={`Drawing: ${m.name}`} size="lg" part={m.part} draw vtName={`model-${m.id}`} class="model__drawing" />}
+      <h1 class="model__name">{m.name}</h1>
+      <p class="model__line">{m.one_liner}</p>
+    </header>
+    <hr class="rule" />
+    <div class="model__teaser measure">{paragraphs(m.teaser).map((para) => <p>{para}</p>)}</div>
+    <hr class="rule" />
+    <section class="model__more measure" aria-label={ui("in_almanac")}>
+      <div class="model__offer">
+        <h2 class="label">{ui("in_almanac")}</h2>
+        <p class="model__stories">{m.stories.map((s, i) => <>{i > 0 && " · "}<span>“{s.title}”, {s.year}</span></>)}</p>
+      </div>
+      {m.episode && <PodcastFacade title={m.episode.title} url={m.episode.url} playLabel={ui("play_episode")} meta={ui("listen_watch")} />}
+      <p><a class="button button--primary" href={`/models/${m.slug}/`}>{ui("today_full")}</a></p>
+    </section>
+    <section class="today__next" aria-labelledby="tomorrow">
+      <h2 id="tomorrow" class="today__tomorrow">{ui("tomorrow")}</h2>
+      <EmailForm id="daily" action={formAction} group={groups.printable ?? null} ui={ui} />
+    </section>
+  </article>
+</Base>

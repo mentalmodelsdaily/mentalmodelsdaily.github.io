@@ -1,12 +1,113 @@
 ---
-// Home is built in milestone 4; until then a plain page in the new layout.
+// Home (SPEC.md §6.1).
 import Base from "../layouts/Base.astro";
-import { getSite } from "../lib/data";
-const site = await getSite();
+import Drawing from "../components/Drawing.astro";
+import ProductCard from "../components/ProductCard.astro";
+import PartTile from "../components/PartTile.astro";
+import Pair from "../components/Pair.astro";
+import FlipCard from "../components/FlipCard.astro";
+import PodcastFacade from "../components/PodcastFacade.astro";
+import YouTubeFacade from "../components/YouTubeFacade.astro";
+import EmailForm from "../components/EmailForm.astro";
+import { getShop } from "../lib/rooms";
+import { getCatalogue } from "../lib/catalogue";
+import { todaysModelId } from "../lib/today";
+import { asset, optionalAsset, ogImage } from "../lib/assets";
+import { formatPrice } from "../lib/buy";
+import { getCollection } from "astro:content";
+import streaks from "../assets/brand/streaks.svg?url";
+
+const { products, site, ui, groups, state, priceNote, pairBooks, formAction } = await getShop();
+const { parts, models, model } = await getCatalogue();
+const today = model(await todaysModelId());
+const todayDrawing = optionalAsset(today.drawing);
+
+const cards = [
+  { key: "deck" as const, name: ui("product_deck"), role: products.deck.role, image: asset("products/deck-front.png"), alt: products.deck.title, price: formatPrice(products.deck.price) },
+  { key: "workbook" as const, name: ui("product_workbook"), role: products.workbook.role, image: asset("products/workbook-front.png"), alt: products.workbook.title, price: formatPrice(products.workbook.price) },
+  { key: "almanac" as const, name: ui("product_almanac"), role: products.almanac.role, image: asset("products/almanac-front.png"), alt: products.almanac.title, price: formatPrice(products.almanac.price) },
+];
+const fan = products.deck.fan_cards.map((ref) => ({ ref, name: models.find((m) => m.deck === ref)?.name ?? ref, front: asset(`cards/${ref}-front.png`), back: asset(`cards/${ref}-back.png`) }));
+
+const episodes = (await getCollection("episodes")).map((e) => e.data).sort((a, b) => a.sort - b.sort);
+const latest = episodes[0];
+const latestModel = latest?.model ? model(latest.model) : null;
+const video = episodes.find((e) => e.youtube_id);
+
+const jsonLd = [
+  { "@context": "https://schema.org", "@type": "Organization", name: site.name, url: site.url, logo: new URL("/icon-512.png", site.url).href },
+  {
+    "@context": "https://schema.org",
+    "@type": "WebSite",
+    name: site.name,
+    url: site.url,
+    potentialAction: { "@type": "SearchAction", target: `${site.url}/explore/?q={search_term_string}`, "query-input": "required name=search_term_string" },
+  },
+];
 ---
-<Base description={site.hero_line}>
-  <div class="wrap page-head measure">
-    <h1>{site.name}</h1>
-    <p>{site.hero_line}</p>
+<Base description={site.hero_line} og={ogImage("home")} jsonLd={jsonLd}>
+  <section class="hero" style={`--streaks: url("${streaks}")`}>
+    <div class="wrap hero__inner">
+      <div class="hero__brand">
+        <span class="hero__mark" aria-hidden="true"></span>
+        <p class="label hero__the">The</p>
+        <h1 class="hero__name">{site.name}</h1>
+        <p class="hero__line">{site.hero_line}</p>
+      </div>
+      <a class="hero__today" href={`/models/${today.slug}/`} data-part={today.part}>
+        {todayDrawing && <Drawing src={todayDrawing} alt={`Drawing: ${today.name}`} size="md" part={today.part} draw vtName={`model-${today.id}`} />}
+        <span class="label hero__kicker">{ui("today_title")} · {ui("no")} {today.no}</span>
+        <span class="hero__model">{today.name}</span>
+        <span class="hero__model-line">{today.one_liner}</span>
+        <span class="button">{ui("read_today")}</span>
+      </a>
+    </div>
+  </section>
+
+  <div class="wrap">
+    <section class="home__section" aria-labelledby="products">
+      <h2 id="products" class="label home__heading">{ui("home_products")}</h2>
+      <div class="product-cards">
+        {cards.map((c) => (
+          <ProductCard {...c} priceNote={priceNote} state={state(c.key)} buyLabel={c.key === "deck" ? ui("buy") : ui("buy_amazon")} notifyLabel={ui("notify")} comingLabel={ui("coming")} />
+        ))}
+      </div>
+    </section>
+
+    <section class="home__section" aria-labelledby="explore">
+      <h2 id="explore" class="home__title"><a href="/explore/">{ui("explore")}</a></h2>
+      <ul class="part-tiles">
+        {parts.map((p) => (
+          <PartTile code={p.code} slug={p.slug} numeral={p.numeral} title={p.title} question={p.question} count={models.filter((m) => m.part === p.code).length} drawing={optionalAsset(p.drawing)} countLabel={ui("model_count")} />
+        ))}
+      </ul>
+    </section>
+
+    <Pair heading={ui("pair_heading")} books={pairBooks} priceNote={priceNote} ui={ui} />
+
+    <section class="home__section" aria-labelledby="pick">
+      <h2 id="pick" class="home__title">{ui("pick_card")}</h2>
+      <div class="card-fan">
+        {fan.map((c) => <FlipCard front={c.front} back={c.back} name={c.name} flipLabel={ui("flip")} frontLabel={ui("card_front")} backLabel={ui("card_back")} />)}
+      </div>
+      <p><a class="button" href="/deck/">{ui("see_deck")}</a></p>
+    </section>
+
+    {latest && (
+      <section class="home__section" aria-labelledby="listen">
+        <h2 id="listen" class="home__title">{ui("listen_and_watch")}</h2>
+        <div class="media-grid">
+          <PodcastFacade title={latest.title} url={latest.url} playLabel={ui("play_episode")} meta={ui("latest_episode")} />
+          {video?.youtube_id && <YouTubeFacade youtubeId={video.youtube_id} title={video.title} playLabel={ui("play_video")} />}
+        </div>
+        {latestModel && <p><a href={`/models/${latestModel.slug}/`}>{latestModel.name}</a> · {latestModel.one_liner}</p>}
+      </section>
+    )}
+
+    <section class="home__section free-teaser" aria-labelledby="free">
+      <h2 id="free" class="home__title">{ui("free_heading")}</h2>
+      <EmailForm id="printable" action={formAction} group={groups.printable ?? null} ui={ui} />
+    </section>
   </div>
+  <script src="../scripts/flip-card.ts"></script>
 </Base>

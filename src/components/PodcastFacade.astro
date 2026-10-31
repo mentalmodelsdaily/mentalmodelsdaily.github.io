@@ -1,0 +1,20 @@
+---
+// The podcast player, as a branded placeholder. Spotify's player loads only after play and Accept
+// (SPEC.md §9.4); without an embeddable Spotify id, or on Reject, the button links out instead.
+interface Props {
+  title: string;
+  /** The episode or show page (always works). */
+  url: string;
+  /** open.spotify.com/embed/… URL, when the export has one. */
+  embed?: string | null;
+  playLabel: string;
+  meta?: string;
+}
+const { title, url, embed, playLabel, meta } = Astro.props;
+---
+<div class="facade facade--audio" data-facade={embed ? "spotify" : undefined} data-provider="Spotify" data-embed={embed ?? undefined} data-title={title}>
+  <span class="facade__mark" aria-hidden="true"></span>
+  {meta && <p class="label facade__meta">{meta}</p>}
+  <p class="facade__title">{title}</p>
+  <a class="button button--primary facade__play" href={url} rel="noopener">{playLabel}</a>
+</div>

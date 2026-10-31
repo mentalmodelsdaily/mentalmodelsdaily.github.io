@@ -1,7 +1,8 @@
 ---
-// Explore: the eight situations, then all 365 from A to Z (SPEC.md §6.2). Search arrives in milestone 4.
+// Explore: search, the eight situations, then all 365 from A to Z (SPEC.md §6.2).
 import Base from "../../layouts/Base.astro";
 import PartTile from "../../components/PartTile.astro";
+import Search from "../../components/Search.astro";
 import { getCatalogue } from "../../lib/catalogue";
 import { getChrome } from "../../lib/data";
 import { optionalAsset } from "../../lib/assets";
@@ -24,6 +25,7 @@ const letters = [...groups.keys()].sort((a, b) => (a === "#" ? -1 : b === "#" ? 
     <header class="page-head">
       <h1>{ui("explore")}</h1>
       <p class="measure">{ui("explore_intro")}</p>
+      <Search ui={ui} />
     </header>
 
     <ul class="part-tiles">
@@ -61,4 +63,5 @@ const letters = [...groups.keys()].sort((a, b) => (a === "#" ? -1 : b === "#" ? 
       ))}
     </section>
   </div>
+  <script src="../../scripts/search.ts"></script>
 </Base>
