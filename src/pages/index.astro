@@ -1,5 +1,6 @@
 ---
 // Home (SPEC.md §6.1).
+import { drawingMasks } from "../lib/drawing";
 import Base from "../layouts/Base.astro";
 import Drawing from "../components/Drawing.astro";
 import ProductCard from "../components/ProductCard.astro";
@@ -44,8 +45,9 @@ const jsonLd = [
     potentialAction: { "@type": "SearchAction", target: `${site.url}/explore/?q={search_term_string}`, "query-input": "required name=search_term_string" },
   },
 ];
+const preloadMask = todayDrawing ? (await drawingMasks(todayDrawing, "md")).avif : undefined;
 ---
-<Base description={site.hero_line} og={ogImage("home")} jsonLd={jsonLd}>
+<Base preloadMask={preloadMask} description={site.hero_line} og={ogImage("home")} jsonLd={jsonLd}>
   <section class="hero" style={`--streaks: url("${streaks}")`}>
     <div class="wrap hero__inner">
       <div class="hero__brand">

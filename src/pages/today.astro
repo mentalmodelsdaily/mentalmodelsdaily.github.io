@@ -1,5 +1,6 @@
 ---
 // Today's model, as on its model page (SPEC.md §6.10). noindex; canonical points at the model page.
+import { drawingMasks } from "../lib/drawing";
 import Base from "../layouts/Base.astro";
 import Drawing from "../components/Drawing.astro";
 import EmailForm from "../components/EmailForm.astro";
@@ -15,8 +16,9 @@ const { model, part, field } = await getCatalogue();
 const m = model(await todaysModelId());
 const p = part(m.part);
 const drawing = optionalAsset(m.drawing);
+const preloadMask = drawing ? (await drawingMasks(drawing, "lg")).avif : undefined;
 ---
-<Base title={ui("today_title")} description={m.one_liner} og={ogImage(m.slug)} part={m.part} noindex canonical={`/models/${m.slug}/`}>
+<Base preloadMask={preloadMask} title={ui("today_title")} description={m.one_liner} og={ogImage(m.slug)} part={m.part} noindex canonical={`/models/${m.slug}/`}>
   <article class="model wrap" data-part={m.part}>
     <header class="model__head">
       <p class="model__kicker label">

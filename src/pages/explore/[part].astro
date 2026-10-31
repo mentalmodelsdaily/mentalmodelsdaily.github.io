@@ -1,5 +1,6 @@
 ---
 // A part page: the situation, then each theme with its models in book order (SPEC.md §6.3).
+import { drawingMasks } from "../../lib/drawing";
 import Base from "../../layouts/Base.astro";
 import Drawing from "../../components/Drawing.astro";
 import ModelRow from "../../components/ModelRow.astro";
@@ -38,8 +39,9 @@ const jsonLd = {
     { "@type": "ListItem", position: 2, name: part.title, item: new URL(`/explore/${part.slug}/`, site.url).href },
   ],
 };
+const preloadMask = drawing ? (await drawingMasks(drawing, "md")).avif : undefined;
 ---
-<Base title={part.title} description={`${part.question} ${part.idea}`} part={part.code} jsonLd={jsonLd}>
+<Base preloadMask={preloadMask} title={part.title} description={`${part.question} ${part.idea}`} part={part.code} jsonLd={jsonLd}>
   <div class="wrap part-page" data-part={part.code}>
     <Breadcrumbs label={ui("breadcrumbs")} items={[{ name: ui("explore_title"), href: "/explore/" }, { name: part.title, href: `/explore/${part.slug}/` }]} />
 

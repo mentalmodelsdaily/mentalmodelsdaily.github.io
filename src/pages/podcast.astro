@@ -41,7 +41,7 @@ const jsonLd = {
       </div>
     </div>
 
-    <section class="home__section" aria-labelledby="latest">
+    <section class="page__section" aria-labelledby="latest">
       <h2 id="latest" class="home__title">{ui("latest")}</h2>
       <ol class="episodes">
         {episodes.map((e) => {
@@ -58,7 +58,7 @@ const jsonLd = {
       </ol>
     </section>
 
-    <section class="home__section" aria-labelledby="subscribe">
+    <section class="page__section" aria-labelledby="subscribe">
       <h2 id="subscribe" class="home__title">{ui("subscribe")}</h2>
       <ul class="chips">
         {socials.map((s) => <li><a class="chip label" href={s.url} rel="me noopener">{s.name}</a></li>)}

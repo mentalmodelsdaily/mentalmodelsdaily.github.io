@@ -2,7 +2,7 @@
 // A pencil drawing recoloured by CSS: the file is a mask over var(--draw) (SPEC.md §5, BRAND.md).
 // It sits in a fixed 4:3 box so nothing shifts while it loads.
 import type { ImageMetadata } from "astro";
-import { getImage } from "astro:assets";
+import { drawingMasks } from "../lib/drawing";
 
 interface Props {
   src: ImageMetadata;
@@ -18,9 +18,13 @@ interface Props {
 }
 const { src, alt, size = "md", part, draw = false, vtName, class: className } = Astro.props;
 
-const width = { sm: 240, md: 640, lg: 1200 }[size];
-const mask = await getImage({ src, width: Math.min(width, src.width), format: "webp", quality: 80 });
-const style = [`--mask: url("${mask.src}")`, vtName ? `view-transition-name: ${vtName}` : null].filter(Boolean).join("; ");
+// Browsers that cannot use AVIF in image-set() get the WebP (base.css chooses with @supports).
+const { webp, avif } = await drawingMasks(src, size);
+const style = [
+  `--mask: url("${webp}")`,
+  `--mask-set: image-set(url("${avif}") type("image/avif"), url("${webp}") type("image/webp"))`,
+  vtName ? `view-transition-name: ${vtName}` : null,
+].filter(Boolean).join("; ");
 ---
 <div
   class:list={["drawing", `drawing--${size}`, { "drawing--part": part, "drawing--draw": draw }, className]}
