@@ -18,8 +18,9 @@ interface Props {
   books: Book[];
   priceNote: string | null;
   ui: (key: string) => string;
+  placement?: "home" | "product";
 }
-const { heading, books, priceNote, ui } = Astro.props;
+const { heading, books, priceNote, ui, placement = "product" } = Astro.props;
 ---
 <section class="pair" aria-labelledby="pair-heading">
   <h2 id="pair-heading" class="label pair__heading">{heading}</h2>
@@ -30,8 +31,8 @@ const { heading, books, priceNote, ui } = Astro.props;
         <p class="pair__line">{b.line}</p>
         {b.price && <p class="label pair__price">{b.price}{priceNote && <> · {priceNote}</>}</p>}
         <p class="pair__buttons">
-          <BuyButton buyKey={b.key} state={b.paperback} label={ui("buy_amazon")} notifyLabel={ui("notify")} comingLabel={ui("coming")} notifyHref={`/${b.key}/#notify`} />
-          {b.kindle === "buy" && <BuyButton buyKey={`kindle-${b.key}`} state="buy" label={ui("kindle")} notifyLabel={ui("notify")} comingLabel={ui("coming")} />}
+          <BuyButton buyKey={b.key} state={b.paperback} label={ui("buy_amazon")} notifyLabel={ui("notify")} comingLabel={ui("coming")} notifyHref={`/${b.key}/#notify`} placement={placement} />
+          {b.kindle === "buy" && <BuyButton buyKey={`kindle-${b.key}`} placement={placement} state="buy" label={ui("kindle")} notifyLabel={ui("notify")} comingLabel={ui("coming")} />}
         </p>
       </article>
     ))}

@@ -4,7 +4,7 @@ import { createHash } from "node:crypto";
 import { existsSync, readFileSync, readdirSync, statSync } from "node:fs";
 import { join, relative, extname } from "node:path";
 
-const DIST = new URL("../dist/", import.meta.url).pathname;
+const DIST = process.env.DIST ? process.env.DIST.replace(/\/?$/, "/") : new URL("../dist/", import.meta.url).pathname;
 const GUARD = new URL("./paid_guard.json", import.meta.url).pathname;
 
 // Hosts a page may reference, matching the CSP in public/_headers.
@@ -176,6 +176,37 @@ if (existsSync(join(DIST, "models"))) {
   for (const [href, page] of broken) fail(`${page}: links to ${href}, which does not exist`);
 } else {
   notes.push("no /models/ yet: route counts skipped");
+}
+
+// --- Short links (SPEC.md §4) ----------------------------------------------------
+
+const REDIRECTS = join(DIST, "_redirects");
+if (existsSync(REDIRECTS)) {
+  const rules = readFileSync(REDIRECTS, "utf8")
+    .split("\n")
+    .filter((l) => l.trim() && !l.startsWith("#"))
+    .map((l) => l.trim().split(/\s+/));
+  const from = new Map(rules.map(([f, t, code]) => [f, { to: t, code }]));
+  const required = [
+    "/today", "/listen", "/watch", "/free", "/book", "/book/*",
+    "/buy/deck", "/buy/workbook", "/buy/almanac", "/buy/kindle-workbook", "/buy/kindle-almanac",
+  ];
+  for (const r of required) if (!from.has(r)) fail(`_redirects: no rule for ${r}`);
+  for (const [f, { to, code }] of from) {
+    if (f === to) fail(`_redirects: ${f} redirects to itself`);
+    if (!["301", "302"].includes(code)) fail(`_redirects: ${f} has status ${code}`);
+    if (to.startsWith("/")) {
+      const path = to.split("#")[0];
+      const target = join(DIST, path, path.endsWith("/") ? "index.html" : "");
+      if (!existsSync(target)) fail(`_redirects: ${f} goes to ${to}, which does not exist`);
+    }
+  }
+  // A real page must not be shadowed by a redirect.
+  for (const f of from.keys()) {
+    if (f.endsWith("/") && existsSync(join(DIST, f, "index.html"))) fail(`_redirects: ${f} would hide a real page`);
+  }
+} else if (existsSync(join(DIST, "models"))) {
+  notes.push("no _redirects yet: short links skipped");
 }
 
 // --- Report -----------------------------------------------------------------

@@ -1,0 +1,73 @@
+/* Motion (SPEC.md §8): like paper, never like an app. Everything is inside
+   prefers-reduced-motion: no-preference, so with reduced motion the end state shows at once.
+   Only transform, opacity and mask-position are animated, so nothing shifts. */
+
+@media (prefers-reduced-motion: no-preference) {
+  /* 1. Page changes: cross-document view transitions, no script router. */
+  @view-transition { navigation: auto; }
+  ::view-transition-group(*) { animation-duration: 300ms; animation-timing-function: var(--ease); }
+  /* Arriving in a product room washes from one colour to the next, more slowly. (The new page styles
+     the transition, so the slow wash plays on the way in; leaving a room is the default cross-fade.) */
+  html:has(body:not([data-room="paper"]))::view-transition-old(root),
+  html:has(body:not([data-room="paper"]))::view-transition-new(root) { animation-duration: 600ms; }
+
+  /* 2. A drawing draws itself in, once, left to right: a second mask layer sweeps across. */
+  .drawing--draw {
+    -webkit-mask:
+      var(--mask) center / contain no-repeat,
+      linear-gradient(to right, #000 40%, transparent 60%) 100% 0 / 260% 100% no-repeat;
+    -webkit-mask-composite: source-in;
+    mask:
+      var(--mask) center / contain no-repeat,
+      linear-gradient(to right, #000 40%, transparent 60%) 100% 0 / 260% 100% no-repeat;
+    mask-composite: intersect;
+    animation: draw-in var(--t-slow) var(--ease) 120ms both;
+  }
+  @keyframes draw-in {
+    from { -webkit-mask-position: center, 100% 0; mask-position: center, 100% 0; }
+    to { -webkit-mask-position: center, 0 0; mask-position: center, 0 0; }
+  }
+
+  /* 3. Sections fade and rise as they scroll in. Browsers without scroll timelines show them as they are. */
+  @supports (animation-timeline: view()) {
+    .home__section, .room__section, .theme, .pair, .model__more, .model__related {
+      animation: rise linear both;
+    }
+    /* A separate rule (same specificity, later), so the minifier cannot fold the timeline into the shorthand, which drops it. */
+    :is(.home__section, .room__section, .theme, .pair, .model__more, .model__related) {
+      animation-timeline: view();
+      animation-range: entry 0% cover 25%;
+    }
+  }
+  @keyframes rise {
+    from { opacity: 0; transform: translateY(12px); }
+    to { opacity: 1; transform: none; }
+  }
+
+  /* 5. A card turns over in 3D. */
+  .flip-card.is-flippable .flip-card__inner {
+    transform-style: preserve-3d;
+    transition: transform 500ms var(--ease);
+  }
+  .flip-card.is-flippable .flip-card__face { backface-visibility: hidden; opacity: 1; }
+  .flip-card.is-flippable .flip-card__face--back { transform: rotateY(180deg); }
+  .flip-card.is-flippable:has([aria-pressed="true"]) .flip-card__inner { transform: rotateY(180deg); }
+  .flip-card.is-flippable:has([aria-pressed="true"]) .flip-card__face--front { opacity: 1; }
+
+  /* 6. Products and tiles lift a little. */
+  .product-card, .part-tile__link, .room__also-link img, .pair__cover img {
+    transition: transform var(--t-fast) var(--ease), box-shadow var(--t-fast) var(--ease);
+  }
+  .product-card:hover, .product-card:focus-within,
+  .part-tile__link:hover, .part-tile__link:focus-visible,
+  .room__also-link:hover img, .room__also-link:focus-visible img,
+  .pair__cover:hover img, .pair__cover:focus-visible img {
+    transform: translateY(-4px);
+    box-shadow: 0 10px 24px -14px rgba(17, 17, 17, .45);
+  }
+}
+
+/* With reduced motion the card faces simply cross-fade. */
+@media (prefers-reduced-motion: reduce) {
+  .flip-card__face { transition: opacity var(--t-fast) linear; }
+}
