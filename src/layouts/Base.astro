@@ -81,8 +81,6 @@ const ld = jsonLd ? JSON.stringify(jsonLd).replace(/</g, "\\u003c") : null;
     <Footer name={site.name} aiNote={site.ai_note} socials={socials} smallPrint={smallPrint} ui={ui} />
     <ConsentDialog ui={ui} />
     <script src="../scripts/consent.ts"></script>
-    {site.analytics_token && (
-      <script is:inline defer src="https://static.cloudflareinsights.com/beacon.min.js" data-cf-beacon={JSON.stringify({ token: site.analytics_token })}></script>
-    )}
+    {/* Cloudflare Pages injects its cookie-free Web Analytics beacon at the edge: none is added here. */}
   </body>
 </html>
