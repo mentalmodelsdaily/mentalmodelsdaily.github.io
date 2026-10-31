@@ -1,0 +1,104 @@
+---
+// The Core Deck's room: cream and gold on chocolate (SPEC.md §6.5).
+import Base from "../layouts/Base.astro";
+import RoomHero from "../components/RoomHero.astro";
+import Film from "../components/Film.astro";
+import FlipCard from "../components/FlipCard.astro";
+import BuyButton from "../components/BuyButton.astro";
+import EmailForm from "../components/EmailForm.astro";
+import ProductCover from "../components/ProductCover.astro";
+import { getShop } from "../lib/rooms";
+import { getCatalogue } from "../lib/catalogue";
+import { asset, ogImage } from "../lib/assets";
+import { formatPrice } from "../lib/buy";
+
+const { products, ui, groups, state, priceNote, formAction, site } = await getShop();
+const { models } = await getCatalogue();
+const deck = products.deck;
+const listing = deck.listing;
+const cardName = (ref: string) => models.find((m) => m.deck === ref)?.name ?? ref;
+const cards = deck.public_cards.map((ref) => ({ ref, name: cardName(ref), front: asset(`cards/${ref}-front.png`), back: asset(`cards/${ref}-back.png`) }));
+const inBox = Array.isArray(listing.in_the_box) ? listing.in_the_box : [listing.in_the_box];
+
+const jsonLd = deck.buy_url && products.launch_mode === "live" && deck.price
+  ? {
+      "@context": "https://schema.org",
+      "@type": "Product",
+      name: deck.title,
+      description: listing.short,
+      brand: { "@type": "Brand", name: site.name },
+      image: new URL(ogImage("deck") ?? "/", site.url).href,
+      offers: { "@type": "Offer", price: deck.price.GBP, priceCurrency: "GBP", availability: "https://schema.org/InStock", url: new URL("/buy/deck/", site.url).href },
+    }
+  : undefined;
+---
+<Base title={ui("product_deck")} description={deck.meta_description ?? listing.short} og={ogImage("deck")} room="deck" jsonLd={jsonLd}>
+  <RoomHero
+    product={ui("product_deck")}
+    cover={asset("products/deck-3d.png")}
+    coverAlt={deck.title}
+    title={deck.title}
+    lines={[deck.line]}
+    price={formatPrice(deck.price)}
+    priceNote={priceNote}
+    vtName="product-deck"
+  >
+    <BuyButton buyKey="deck" state={state("deck")} label={ui("buy")} notifyLabel={ui("notify")} comingLabel={ui("coming")} primary />
+  </RoomHero>
+
+  <div class="wrap room">
+    <Film name="deck" label={ui("film_deck")} playLabel={ui("play")} pauseLabel={ui("pause")} />
+
+    <section class="room__section" aria-labelledby="cards">
+      <h2 id="cards">{ui("cards_heading")}</h2>
+      <div class="card-grid">
+        {cards.map((c) => <FlipCard front={c.front} back={c.back} name={c.name} flipLabel={ui("flip")} frontLabel={ui("card_front")} backLabel={ui("card_back")} />)}
+      </div>
+      <div class="card-backs" aria-label={ui("more_cards")} role="img">
+        {Array.from({ length: 9 }, () => <span class="card-backs__card"></span>)}
+      </div>
+      <p class="label card-backs__label">{ui("more_cards")}</p>
+    </section>
+
+    <section class="room__section room__columns" aria-labelledby="about-deck">
+      <div>
+        <h2 id="about-deck">{ui("about_deck")}</h2>
+        <p class="room__lede">{listing.short}</p>
+        {listing.description.map((p) => <p>{p}</p>)}
+      </div>
+      <div>
+        <h2 class="label">{ui("how_card_works")}</h2>
+        <ul class="room__list">
+          {listing.ways.map((w) => (typeof w === "string" ? <li>{w}</li> : <li><span class="label">{w.title}</span> {w.text}</li>))}
+        </ul>
+      </div>
+    </section>
+
+    <section class="room__section room__columns" aria-labelledby="in-the-box">
+      <div>
+        <h2 id="in-the-box">{ui("whats_in_box")}</h2>
+        {inBox.map((p) => <p>{p}</p>)}
+        <ProductCover src={asset("products/deck-pair.png")} alt={deck.title} sizes="(min-width: 48rem) 30rem, 90vw" class="room__image" />
+      </div>
+      <div>
+        <h2 class="label">{ui("specs")}</h2>
+        <table class="specs">
+          <tbody>
+            {listing.specs.map(([k, v]) => <tr><th scope="row">{k}</th><td>{v}</td></tr>)}
+          </tbody>
+        </table>
+        <h2 class="label">{ui("for_whom")}</h2>
+        <p>{listing.for_whom}</p>
+        {listing.closing && <p class="room__closing">{listing.closing}</p>}
+      </div>
+    </section>
+
+    {state("deck") === "notify" && (
+      <section class="room__section notify" aria-label={ui("notify_heading")}>
+        <EmailForm id="notify" action={formAction} group={groups.notify_deck ?? null} heading={ui("notify_heading")} ui={ui} buttonLabel={ui("notify")} />
+      </section>
+    )}
+  </div>
+  <script src="../scripts/flip-card.ts"></script>
+  <script src="../scripts/film.ts"></script>
+</Base>

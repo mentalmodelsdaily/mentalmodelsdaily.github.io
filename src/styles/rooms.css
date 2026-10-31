@@ -9,7 +9,7 @@
 }
 [data-room="almanac"] {
   --paper: var(--terracotta); --text: var(--cream); --muted: var(--cream); --rule: rgba(255,250,229,.35);
-  --draw: var(--cream); --accent: var(--sand);
+  --draw: var(--cream); --accent: var(--cream); /* sand on terracotta is only 3.5:1 */
 }
 [data-room="deck"] {
   --paper: var(--chocolate); --text: var(--cream); --muted: #f0d9b0; --rule: rgba(225,161,64,.4);

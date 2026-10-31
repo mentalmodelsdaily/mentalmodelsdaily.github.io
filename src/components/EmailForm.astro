@@ -1,0 +1,40 @@
+---
+// A plain MailerLite form: no MailerLite script on our pages (SPEC.md §9.3).
+// While form_action is null it renders disabled, with "Opens soon".
+interface Props {
+  id?: string;
+  action: string | null;
+  /** MailerLite group id for this list, or null until it exists. */
+  group: string | null;
+  heading?: string;
+  ui: (key: string) => string;
+  buttonLabel?: string;
+}
+const { id, action, group, heading, ui, buttonLabel = ui("email_button") } = Astro.props;
+const open = Boolean(action);
+const fieldId = `${id ?? "email"}-address`;
+---
+<form class="email-form" id={id} method="post" action={action ?? undefined} aria-describedby={`${fieldId}-consent`}>
+  {heading && <h2 class="email-form__heading">{heading}</h2>}
+  <div class="email-form__row">
+    <label class="visually-hidden" for={fieldId}>{ui("email_label")}</label>
+    <input
+      id={fieldId}
+      type="email"
+      name="fields[email]"
+      autocomplete="email"
+      required
+      placeholder={ui("email_placeholder")}
+      disabled={!open}
+    />
+    {group && <input type="hidden" name="groups[]" value={group} />}
+    <div class="email-form__trap" aria-hidden="true">
+      <label for={`${fieldId}-trap`}>{ui("honeypot")}</label>
+      <input id={`${fieldId}-trap`} type="text" name="website" tabindex="-1" autocomplete="off" />
+    </div>
+    <button class="button button--primary" type="submit" disabled={!open}>{open ? buttonLabel : ui("opens_soon")}</button>
+  </div>
+  <p class="email-form__consent" id={`${fieldId}-consent`}>
+    {ui("email_consent")} <a href="/privacy/">{ui("privacy_link")}</a>.
+  </p>
+</form>

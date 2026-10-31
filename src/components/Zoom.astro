@@ -1,0 +1,20 @@
+---
+// A page that opens large in a <dialog> (SPEC.md §7). Without JavaScript the link opens the large image.
+import type { ImageMetadata } from "astro";
+import { Picture, getImage } from "astro:assets";
+
+interface Props {
+  src: ImageMetadata;
+  alt: string;
+  enlargeLabel: string;
+  closeLabel: string;
+}
+const { src, alt, enlargeLabel, closeLabel } = Astro.props;
+const large = await getImage({ src, width: Math.min(1600, src.width), format: "webp" });
+---
+<figure class="zoom">
+  <a class="zoom__link" href={large.src} data-zoom data-alt={alt} data-close={closeLabel}>
+    <Picture src={src} alt={alt} widths={[320, 480, 720]} sizes="(min-width: 64rem) 22rem, (min-width: 40rem) 45vw, 90vw" formats={["avif", "webp"]} />
+    <span class="zoom__hint label">{enlargeLabel}</span>
+  </a>
+</figure>

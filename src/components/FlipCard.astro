@@ -1,0 +1,29 @@
+---
+// A deck card with front and back. A real <button> with aria-pressed turns it over (SPEC.md §7).
+// Without JavaScript both faces show side by side.
+import type { ImageMetadata } from "astro";
+import { Picture } from "astro:assets";
+
+interface Props {
+  front: ImageMetadata;
+  back: ImageMetadata;
+  name: string;
+  flipLabel: string;
+  frontLabel: string;
+  backLabel: string;
+}
+const { front, back, name, flipLabel, frontLabel, backLabel } = Astro.props;
+const sizes = "(min-width: 64rem) 18rem, (min-width: 40rem) 40vw, 80vw";
+---
+<div class="flip-card" data-flip-card>
+  <button class="flip-card__button" type="button" aria-pressed="false" aria-label={`${flipLabel}: ${name}`} hidden>
+  </button>
+  <div class="flip-card__inner">
+    <figure class="flip-card__face flip-card__face--front">
+      <Picture src={front} alt={`${name}, ${frontLabel.toLowerCase()} of the card`} widths={[320, 640]} sizes={sizes} formats={["avif", "webp"]} />
+    </figure>
+    <figure class="flip-card__face flip-card__face--back">
+      <Picture src={back} alt={`${name}, ${backLabel.toLowerCase()} of the card`} widths={[320, 640]} sizes={sizes} formats={["avif", "webp"]} />
+    </figure>
+  </div>
+</div>

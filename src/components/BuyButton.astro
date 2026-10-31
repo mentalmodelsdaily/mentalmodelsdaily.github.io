@@ -1,0 +1,18 @@
+---
+// Always links to the /buy/* short link, so a page and a printed QR code behave the same (SPEC.md §10).
+// Before launch, or while the link is null, it becomes Notify me (#notify) or a quiet "Coming" note.
+interface Props {
+  buyKey: string;
+  state: "buy" | "notify" | "coming";
+  label: string;
+  notifyLabel: string;
+  comingLabel: string;
+  /** The product page holding the Notify me form, when it is not this page. */
+  notifyHref?: string;
+  primary?: boolean;
+}
+const { buyKey, state, label, notifyLabel, comingLabel, notifyHref = "#notify", primary = false } = Astro.props;
+---
+{state === "buy" && <a class:list={["button", { "button--primary": primary }]} href={`/buy/${buyKey}`}>{label}</a>}
+{state === "notify" && <a class:list={["button", { "button--primary": primary }]} href={notifyHref}>{notifyLabel}</a>}
+{state === "coming" && <span class="button" aria-disabled="true">{comingLabel}</span>}

@@ -3,6 +3,7 @@
   /* brand */
   --terracotta: #935F4C; --rust: #914110; --sand: #EFCFA0; --taupe: #D0B49F; --cream: #FFFAE5;
   --cocoa: #705C4E; --ink: #111; --chocolate: #532200; --gold: #E1A140;
+  --box-backdrop: #F2E9CF; /* the backdrop the deck box images carry (BRAND.md) */
   --paper: var(--cream); --text: var(--ink); --muted: #5b4a40; --rule: rgba(17,17,17,.18);
   --draw: var(--text);
   --accent: var(--rust);
